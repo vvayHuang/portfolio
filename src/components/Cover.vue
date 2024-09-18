@@ -1,6 +1,6 @@
 <script setup>
-import lax from "lax.js";
 import { onMounted } from "vue";
+import lax from "lax.js";
 
 onMounted(() => {
   // Setup lax
@@ -12,14 +12,19 @@ onMounted(() => {
 
   // Add your elements
   lax.addElements(
-    ".scroll-left",
+    ".display-title-scroll",
     {
       scrollY: {
         translateX: [
           ["elInY", "elOutY"],
-          [400, 0],
+          [-200, 100],
         ],
+        opacity: [
+        [400, 968],
+        [1, 0]
+      ]
       },
+      
     },
     []
   );
@@ -27,15 +32,40 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="cover" class=" overflow-hidden">
-    <h1 class="display-1 fw-bolder text-uppercase mb-0 lh-1 text-nowrap scroll-left">vvay huang</h1>
-    <div class="container d-flex flex-column h-100">
-      <div class="row align-items-center h-100">
-        <div class="col-lg-3">
-          <p class="mt-auto">
-            我叫黃俊維，是一位熱愛設計的求職者，目前正在積極尋求網頁設計師/UI設計師的工作機會
-          </p>
+  <section id="cover" class="overflow-hidden" style="height: 100vh">
+    <div class="d-flex flex-column h-100 justify-content-center">
+      <img class="display-title-scroll mb-3 img-fluid" src="../assets/VVAY HUANG.png" alt="" />
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <p class="d-none d-md-block animate__animated animate__fadeInUp">
+              我叫黃俊維，是一位熱愛設計的求職者，目前正在積極尋求網頁設計師/UI設計師的工作機會
+            </p>
+            <p class="d-block d-md-none">
+              我叫黃俊維，是一位熱愛設計的求職者，目前正在積極尋求網頁設計師/UI設計師的工作機會
+            </p>
+          </div>
         </div>
+      </div>
+      <div
+        class="position-absolute top-0 start-0 z-n1 animate__animated animate__fadeInLeft animate__slow"
+      >
+        <img
+          class="img-fluid"
+          style="filter: brightness(0.5)"
+          src="../assets/CLOUD-1.webp"
+          alt=""
+        />
+      </div>
+      <div
+        class="position-absolute bottom-0 end-0 animate__animated animate__fadeInRight"
+      >
+        <img
+          class="img-fluid"
+          style="filter: brightness(0.5)"
+          src="../assets/CLOUD-2.webp"
+          alt=""
+        />
       </div>
     </div>
   </section>

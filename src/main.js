@@ -1,12 +1,18 @@
-import './assets/main.scss'
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
+import "./assets/scss/main.scss";
+// Import all of Bootstrap's JS
+import * as bootstrap from 'bootstrap'
 
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import "animate.css";
 
-const app = createApp(App)
 
-app.use(router)
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
 
-app.mount('#untitled')
+
+
+const app = createApp(App);
+
+app.use(router);
+
+app.mount("#app");

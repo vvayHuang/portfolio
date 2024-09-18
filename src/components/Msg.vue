@@ -5,7 +5,7 @@ import IconArrow90degDown from './icons/IconArrow90degDown.vue';
 <template>
   <section id="MSG">
     <div class="container">
-      <div class="row justify-content-lg-end">
+      <div class="row">
         <div class="col-lg-6">
           <MsgContact>
             <template #heading>我的聯絡方式</template>

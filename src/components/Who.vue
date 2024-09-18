@@ -8,6 +8,15 @@ import Arrow90degDownIcon from "./icons/IconArrow90degDown.vue";
   <section id="WHO">
     <div class="container">
       <div class="row justify-content-between gy-5 flex-column-reverse  flex-lg-row ">
+        <div class="col-lg-6">
+          <WhoAboutMe>
+            <template #icon>
+              <Arrow90degDownIcon />
+            </template>
+            <template #heading>關於我</template>
+            <template #textContent></template>
+          </WhoAboutMe>
+        </div>
         <div class="col-lg-4">
           <ul class="list-unstyled">
             <li class="mb-5">
@@ -29,15 +38,6 @@ import Arrow90degDownIcon from "./icons/IconArrow90degDown.vue";
               </WhoAdvantage>
             </li>
           </ul>
-        </div>
-        <div class="col-lg-6">
-          <WhoAboutMe>
-            <template #icon>
-              <Arrow90degDownIcon />
-            </template>
-            <template #heading>關於我</template>
-            <template #textContent></template>
-          </WhoAboutMe>
         </div>
       </div>
     </div>
