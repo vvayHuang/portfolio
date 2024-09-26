@@ -10,18 +10,27 @@
   <slot name="list">
     <ul class="list-unstyled">
       <li class=" py-2">
-        <span class="fw-medium ">熟悉 HTML、CSS 和 JavaScript 等前端開發技術</span>
+        <span class="fw-medium ">熟悉 HTML、CSS，略懂 JavaScript 前端開發技術</span>
       </li>
       <li class=" py-2">
         <span class="fw-medium "
-          >熟悉各種 UI 設計工具，如 Figma</span
+          >熟悉 Figma UI／UX 設計工具</span
         >
       </li>
       <li class=" py-2">
-        <span class="fw-medium ">擁有良好的溝通和協作能力</span>
+        <span class="fw-medium "
+          >熟悉 Bootstrap，略懂 Tailwind 前端開發框架</span
+        >
       </li>
       <li class=" py-2">
-        <span class="fw-medium ">能夠獨立工作並按時完成項目</span>
+        <span class="fw-medium "
+          >略懂 Vue3 前端開發框架</span
+        >
+      </li>
+      <li class=" py-2">
+        <span class="fw-medium "
+          >略懂 git、Github 版本控制</span
+        >
       </li>
     </ul> 
   </slot>

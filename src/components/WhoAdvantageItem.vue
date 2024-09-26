@@ -21,10 +21,10 @@ import IconArrowUpRight from './icons/IconArrowUpRight.vue';
         <IconArrowUpRight />
         <span class="fw-medium ms-3">擁有扎實的基礎知識和良好的學習能力</span>
       </li>
-      <li class=" py-2">
+      <!-- <li class=" py-2">
         <IconArrowUpRight />
         <span class="fw-medium ms-3">善於溝通和協作，能夠與團隊成員高效合作</span>
-      </li>
+      </li> -->
     </ul>
   </slot>
 </template>
