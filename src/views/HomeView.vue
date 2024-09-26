@@ -8,12 +8,12 @@ import PageFooter from "../components/PageFooter.vue";
 </script>
 
 <template>
-  <Navbar/>
+  <header><Navbar/></header>
   <main>
     <Cover />
     <Prj />
     <Who />
     <Msg />
   </main>
-  <PageFooter/>
+  <footer><PageFooter/></footer>
 </template>
