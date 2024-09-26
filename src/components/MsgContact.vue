@@ -13,7 +13,7 @@ import IconArrowUpRight from "./icons/IconArrowUpRight.vue";
   </div>
   <slot name="textContent">
     <p class="fs-md-3 fs-6  fw-bold mb-4">
-      如果您有興趣與我合作，請通過電子郵件地址聯繫我。
+      如果您有興趣合作，請透過電子郵件地址聯繫我。
     </p>
   </slot>
   <slot name="link">
@@ -21,7 +21,7 @@ import IconArrowUpRight from "./icons/IconArrowUpRight.vue";
       <li>
         <a class="nav-link d-inline-block " href="mailto:momoopsoops@gmail.com">
           <IconArrowUpRight />
-          <span class="fw-medium ms-3">(MAIL)</span>
+          <span class="fw-medium ms-3 text-capitalize">mail</span>
         </a>
       </li>
     </ul>
