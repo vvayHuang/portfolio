@@ -3,7 +3,7 @@
 </script>
 <template>
   <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-lg-end justify-content-md-center">
       <div class="col-auto">
         <div class="progress-stacked mb-3" style="height: 8px">
           <div
