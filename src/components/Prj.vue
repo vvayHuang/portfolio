@@ -1,6 +1,7 @@
 <script setup>
-import PrjItem from './PrjItem.vue'
-import IconArrow from './icons/IconArrow90degDown.vue';
+import Modal from "./Modal.vue";
+import PrjItem from "./PrjItem.vue";
+import IconArrow from "./icons/IconArrow90degDown.vue";
 </script>
 
 <template>
@@ -13,65 +14,47 @@ import IconArrow from './icons/IconArrow90degDown.vue';
         </template>
       </PrjItem>
       <ul class="list-unstyled">
-        <li class="py-2 border-bottom">
-          <div class="row row-cols-2 row-cols-md-3 align-items-center ">
+        <li class="py-md-2 py-4 border-bottom position-relative">
+          <div class="row row-cols-md-3 align-items-center">
             <div class="col-lg-6 col">
-              <div class="row">
-                <div class="col-auto"><p class="mb-0">2023</p></div>
-                <div class="col-auto"><p class="mb-0">GalaxyBoyz</p></div>
-              </div>
+              <a
+                class="btn p-0 text-start w-100 border-0 stretched-link"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <span class="me-3">2023</span>
+                <h3 class="fs-6 d-inline">GalaxyBoyz v1.0</h3>
+              </a>
             </div>
-            <div class="col-lg-3 col">
-              <div class="row justify-content-end justify-content-md-start ">
-                <div class="col-auto">
+            <div class="col-lg-3 col-auto">
+              <ul class="list-unstyled d-flex position-relative">
+                <li class="z-2">
                   <a
                     href="https://www.figma.com/design/RX78vjYDu0Wtd3591akmX9/GalaxyBoyz?m=auto&t=1tlrYtTjsZWEFB0q-6"
                     target="_blank"
-                    class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-uppercase"
-                    >(FIGMA)</a
+                    class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-capitalize me-5"
+                    >figma</a
                   >
-                </div>
-                <div class="col-auto">
+                </li>
+                <li class="z-2">
                   <a
                     href="https://github.com/vvayHuang/galaxyboyz"
                     target="_blank"
-                    class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-uppercase"
-                    >(github)</a
+                    class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-capitalize"
+                    >github</a
                   >
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="py-2 border-bottom">
-          <div class="row row-cols-2 row-cols-md-3 align-items-center ">
-            <div class="col-lg-6 col">
-              <div class="row">
-                <div class="col-auto"><p class="mb-0">2022</p></div>
-                <div class="col-auto"><p class="mb-0">Life Record</p></div>
-              </div>
-            </div>
-            <div class="col-lg-3 col">
-              <div class="row justify-content-end justify-content-md-start ">
-                <div class="col-auto">
-                  <a
-                    href="https://github.com/vvayHuang/lifeRecord"
-                    target="_blank"
-                    class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-uppercase"
-                    >(github)</a
-                  >
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
             <div class="col-lg-3">
-              <div class="row justify-content-end d-none  d-md-flex ">
-                <div class="col-auto">
+              <div class="row justify-content-end d-none d-md-flex position-relative">
+                <div class="col-auto z-2">
                   <a
-                    href="https://vvayhuang.github.io/lifeRecord/"
+                    href="https://vvayhuang.github.io/galaxyboyz/"
                     target="_blank"
-                    class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover d-flex  align-items-center py-2"
+                    class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover d-flex align-items-center py-2 "
                     ><span>Launch</span>
-                    <span class="text-bg-dark p-2 rounded-circle ms-3 lh-1 ">
+                    <span class="text-bg-dark p-2 rounded-circle ms-3 lh-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -92,35 +75,39 @@ import IconArrow from './icons/IconArrow90degDown.vue';
             </div>
           </div>
         </li>
-        <li class="py-2 border-bottom">
-          <div class="row row-cols-2 row-cols-md-3 align-items-center ">
+        <li class="py-md-2 py-4 border-bottom position-relative">
+          <div class="row row-cols-md-3 align-items-center">
             <div class="col-lg-6 col">
-              <div class="row">
-                <div class="col-auto"><p class="mb-0">2022</p></div>
-                <div class="col-auto"><p class="mb-0">blog</p></div>
-              </div>
+              <a
+                class="btn p-0 text-start w-100 border-0 stretched-link"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <span class="me-3">2022</span>
+                <h3 class="fs-6 d-inline">生活唱片 Life Record</h3>
+              </a>
             </div>
-            <div class="col-lg-3 col">
-              <div class="row justify-content-end justify-content-md-start ">
-                <div class="col-auto">
+            <div class="col-lg-3 col-auto">
+              <ul class="list-unstyled d-flex position-relative">
+                <li class="z-2">
                   <a
-                    href="https://vvayhuang.github.io/blog/"
+                    href="https://github.com/vvayHuang/lifeRecord"
                     target="_blank"
-                    class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-uppercase"
-                    >(github)</a
+                    class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-capitalize"
+                    >github</a
                   >
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
             <div class="col-lg-3">
-              <div class="row justify-content-end d-none  d-md-flex ">
-                <div class="col-auto">
+              <div class="row justify-content-end d-none d-md-flex position-relative">
+                <div class="col-auto z-2">
                   <a
-                    href="https://vvayhuang.github.io/blog/"
+                    href="https://vvayhuang.github.io/lifeRecord/"
                     target="_blank"
-                    class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover d-flex  align-items-center py-2"
+                    class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover d-flex align-items-center py-2"
                     ><span>Launch</span>
-                    <span class="text-bg-dark p-2 rounded-circle ms-3 lh-1 ">
+                    <span class="text-bg-dark p-2 rounded-circle ms-3 lh-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -142,12 +129,13 @@ import IconArrow from './icons/IconArrow90degDown.vue';
           </div>
         </li>
       </ul>
+      <Modal />
     </div>
   </section>
 </template>
 
 <style scoped>
-#PRJ{
+#PRJ {
   margin-bottom: 160px;
 }
 </style>
