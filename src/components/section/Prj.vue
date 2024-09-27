@@ -35,7 +35,7 @@ import IconGithub from "../icons/IconGithub.vue";
                     href="https://www.figma.com/design/RX78vjYDu0Wtd3591akmX9/GalaxyBoyz?m=auto&t=1tlrYtTjsZWEFB0q-6"
                     target="_blank"
                     class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-capitalize me-5"
-                    ><IconFigma/></a
+                    ><IconFigma style="width: 24px;height: 24px;"/></a
                   >
                 </li>
                 <li class="z-2">
@@ -43,7 +43,7 @@ import IconGithub from "../icons/IconGithub.vue";
                     href="https://github.com/vvayHuang/galaxyboyz"
                     target="_blank"
                     class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-capitalize"
-                    ><IconGithub/></a
+                    ><IconGithub style="width: 24px;height: 24px;"/></a
                   >
                 </li>
               </ul>
@@ -96,7 +96,7 @@ import IconGithub from "../icons/IconGithub.vue";
                     href="https://github.com/vvayHuang/lifeRecord"
                     target="_blank"
                     class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-capitalize"
-                    ><IconGithub/></a
+                    ><IconGithub style="width: 24px;height: 24px;"/></a
                   >
                 </li>
               </ul>

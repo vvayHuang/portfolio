@@ -1,5 +1,6 @@
 <script setup>
 import IconGithub from "./icons/IconGithub.vue";
+import IconFigma from "./icons/IconFigma.vue";
 import IconLink45deg from "./icons/IconLink45deg.vue";
 </script>
 <template>
@@ -10,22 +11,22 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
     aria-labelledby="GbModalLabel"
     aria-hidden="true"
   >
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content overflow-hidden">
-        <div class="modal-header p-0 border-0">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content overflow-hidden bg-transparent border-0">
+        <div class="modal-header border-0 justify-content-center">
           <img
             class="img-fluid"
-            src="../assets/img/gbv1-preview-1.png"
+            src="../assets/img/gbv1-preview-2.gif"
             alt=""
           />
           <button
             type="button"
-            class="btn-close position-absolute top-0"
+            class="btn-close position-absolute"
             data-bs-dismiss="modal"
             aria-label="Close"
           ></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body text-bg-light">
           <div class="container">
             <div class="flex-column flex-md-row justify-content-between row">
               <div class="col">
@@ -34,8 +35,24 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
                   GalaxyBoyz
                 </h1>
                 <div class="mb-md-3">
-                  <a href="https://github.com/vvayHuang/galaxyboyz" class="link-dark me-3 d-inline" target="_blank"><IconGithub /></a>
-                  <a href="https://vvayhuang.github.io/galaxyboyz/" class="link-dark" target="_blank"><IconLink45deg /></a>
+                  <a
+                    href="https://github.com/vvayHuang/galaxyboyz"
+                    class="link-dark me-3 d-inline"
+                    target="_blank"
+                    ><IconGithub
+                  /></a>
+                  <a
+                    href="https://vvayhuang.github.io/galaxyboyz/"
+                    class="link-dark me-3"
+                    target="_blank"
+                    ><IconLink45deg
+                  /></a>
+                  <a
+                    href="https://vvayhuang.github.io/galaxyboyz/"
+                    class="link-dark"
+                    target="_blank"
+                    ><IconFigma
+                  /></a>
                 </div>
                 <div class="mb-3">
                   <span class="badge rounded-pill text-bg-light text-capitalize"
@@ -185,35 +202,39 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
 span {
   font-size: 12px;
 }
+.btn-close {
+  top: 4%;
+  left: 1%;
+}
 .progress[aria-label="Segment one"] .progress-bar {
-  background-color: #C6538C;
+  background-color: #c6538c;
 }
 
 .progress[aria-label="Segment two"] .progress-bar {
-  background-color: #E34C26;
+  background-color: #e34c26;
 }
 
 .progress[aria-label="Segment three"] .progress-bar {
-  background-color: #A91D50;
+  background-color: #a91d50;
 }
 
 .progress[aria-label="Segment four"] .progress-bar {
-  background-color: #F1E05B;
+  background-color: #f1e05b;
 }
 
 li:nth-of-type(1) .bi-circle-fill {
-  fill: #C6538C; 
+  fill: #c6538c;
 }
 
 li:nth-of-type(2) .bi-circle-fill {
-  fill: #E34C26;
+  fill: #e34c26;
 }
 
 li:nth-of-type(3) .bi-circle-fill {
-  fill: #A91D50; 
+  fill: #a91d50;
 }
 
 li:nth-of-type(4) .bi-circle-fill {
-  fill: #F1E05B; 
+  fill: #f1e05b;
 }
 </style>
