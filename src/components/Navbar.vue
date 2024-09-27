@@ -17,7 +17,7 @@ onMounted(() => {
         <span class="flex-grow-1 d-none d-lg-block text-light">©2024</span>
         <div class=" bg-dark overflow-hidden ">
           <a class="navbar-brand me-0" href="#">
-            <img class="logo" src="../assets/logo.png" alt="Logo" />
+            <img class="logo" src="../assets/img/logo.png" alt="Logo" />
           </a>
         </div>
         <ul class="navbar-nav mb-lg-0 flex-row flex-grow-1 justify-content-end">
