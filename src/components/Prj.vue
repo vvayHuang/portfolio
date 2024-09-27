@@ -20,7 +20,7 @@ import IconArrow from "./icons/IconArrow90degDown.vue";
               <a
                 class="btn p-0 text-start w-100 border-0 stretched-link"
                 data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
+                data-bs-target="#GbModal"
               >
                 <span class="me-3">2023</span>
                 <h3 class="fs-6 d-inline">GalaxyBoyz v1.0</h3>

@@ -1,25 +1,173 @@
+<script setup>
+import IconGithub from "./icons/IconGithub.vue";
+import IconLink45deg from "./icons/IconLink45deg.vue";
+</script>
 <template>
-    <!-- Modal -->
   <div
     class="modal fade"
-    id="exampleModal"
+    id="GbModal"
     tabindex="-1"
-    aria-labelledby="exampleModalLabel"
+    aria-labelledby="GbModalLabel"
     aria-hidden="true"
   >
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content overflow-hidden">
+        <div class="modal-header p-0 border-0">
+          <img
+            class="img-fluid"
+            src="../assets/gbv1-preview-1.png"
+            alt=""
+          />
           <button
             type="button"
-            class="btn-close"
+            class="btn-close position-absolute top-0"
             data-bs-dismiss="modal"
             aria-label="Close"
           ></button>
         </div>
-        <div class="modal-body">...</div>
-        <div class="modal-footer">
+        <div class="modal-body">
+          <div class="container">
+            <div class="flex-column flex-md-row justify-content-between row">
+              <div class="col">
+                <h2 class="text-secondary fs-5">樂團形象官網</h2>
+                <h1 class="modal-title mb-md-3" id="GbModalLabel">
+                  GalaxyBoyz
+                </h1>
+                <div class="mb-md-3">
+                  <a href="https://github.com/vvayHuang/galaxyboyz" class="link-dark me-3 d-inline" target="_blank"><IconGithub /></a>
+                  <a href="https://vvayhuang.github.io/galaxyboyz/" class="link-dark" target="_blank"><IconLink45deg /></a>
+                </div>
+                <div class="mb-3">
+                  <span class="badge rounded-pill text-bg-light text-capitalize"
+                    >vite</span
+                  >
+                  <span class="badge rounded-pill text-bg-light text-capitalize"
+                    >bootstrap</span
+                  >
+                  <span class="badge rounded-pill text-bg-light text-capitalize"
+                    >ejs</span
+                  >
+                  <span class="badge rounded-pill text-bg-light text-capitalize"
+                    >recraft</span
+                  >
+                </div>
+                <div class="progress-stacked mb-3" style="height: 8px">
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Segment one"
+                    aria-valuenow="43.7"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 43.7%"
+                  >
+                    <div class="progress-bar"></div>
+                  </div>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Segment two"
+                    aria-valuenow="41.8"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 41.8%"
+                  >
+                    <div class="progress-bar"></div>
+                  </div>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Segment three"
+                    aria-valuenow="12.7"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 12.7%"
+                  >
+                    <div class="progress-bar"></div>
+                  </div>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Segment four"
+                    aria-valuenow="1.8"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 1.8%"
+                  >
+                    <div class="progress-bar"></div>
+                  </div>
+                </div>
+                <ul class="list-unstyled d-inline-flex flex-wrap">
+                  <li class="me-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8"
+                      height="8"
+                      fill="currentColor"
+                      class="bi bi-circle-fill me-2"
+                      viewBox="0 0 16 16"
+                    >
+                      <circle cx="8" cy="8" r="8" />
+                    </svg>
+                    <span class="text-muted me-1 text-uppercase">scss</span>
+                    <span class="text-muted ms-md-1 me-md-1">43.7%</span>
+                  </li>
+                  <li class="me-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8"
+                      height="8"
+                      fill="currentColor"
+                      class="bi bi-circle-fill me-2"
+                      viewBox="0 0 16 16"
+                    >
+                      <circle cx="8" cy="8" r="8" />
+                    </svg>
+                    <span class="text-muted me-1 text-uppercase">html</span>
+                    <span class="text-muted ms-md-1 me-md-1">41.8%</span>
+                  </li>
+                  <li class="me-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8"
+                      height="8"
+                      fill="currentColor"
+                      class="bi bi-circle-fill me-2"
+                      viewBox="0 0 16 16"
+                    >
+                      <circle cx="8" cy="8" r="8" />
+                    </svg>
+                    <span class="text-muted me-1 text-uppercase">ejs</span>
+                    <span class="text-muted ms-md-1 me-md-1">12.7%</span>
+                  </li>
+                  <li class="me-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8"
+                      height="8"
+                      fill="currentColor"
+                      class="bi bi-circle-fill me-2"
+                      viewBox="0 0 16 16"
+                    >
+                      <circle cx="8" cy="8" r="8" />
+                    </svg>
+                    <span class="text-muted ms-1 me-1">JavaScript</span>
+                    <span class="text-muted ms-md-1 me-md-1">1.8%</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Ipsum modi cupiditate temporibus doloremque pariatur
+                  asperiores quisquam, illo ex! Ratione, accusamus! Rem, quae
+                  cum? In, temporibus odit nulla iusto nesciunt possimus?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="modal-footer">
           <button
             type="button"
             class="btn btn-secondary"
@@ -28,8 +176,44 @@
             Close
           </button>
           <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
 </template>
+<style scoped>
+span {
+  font-size: 12px;
+}
+.progress[aria-label="Segment one"] .progress-bar {
+  background-color: #C6538C;
+}
+
+.progress[aria-label="Segment two"] .progress-bar {
+  background-color: #E34C26;
+}
+
+.progress[aria-label="Segment three"] .progress-bar {
+  background-color: #A91D50;
+}
+
+.progress[aria-label="Segment four"] .progress-bar {
+  background-color: #F1E05B;
+}
+
+li:nth-of-type(1) .bi-circle-fill {
+  fill: #C6538C; 
+}
+
+li:nth-of-type(2) .bi-circle-fill {
+  fill: #E34C26;
+}
+
+li:nth-of-type(3) .bi-circle-fill {
+  fill: #A91D50; 
+}
+
+li:nth-of-type(4) .bi-circle-fill {
+  fill: #F1E05B; 
+}
+</style>
