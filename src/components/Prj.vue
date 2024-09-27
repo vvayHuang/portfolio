@@ -2,6 +2,8 @@
 import Modal from "./Modal.vue";
 import PrjItem from "./PrjItem.vue";
 import IconArrow from "./icons/IconArrow90degDown.vue";
+import IconFigma from "./icons/IconFigma.vue";
+import IconGithub from "./icons/IconGithub.vue";
 </script>
 
 <template>
@@ -33,7 +35,7 @@ import IconArrow from "./icons/IconArrow90degDown.vue";
                     href="https://www.figma.com/design/RX78vjYDu0Wtd3591akmX9/GalaxyBoyz?m=auto&t=1tlrYtTjsZWEFB0q-6"
                     target="_blank"
                     class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-capitalize me-5"
-                    >figma</a
+                    ><IconFigma/></a
                   >
                 </li>
                 <li class="z-2">
@@ -41,7 +43,7 @@ import IconArrow from "./icons/IconArrow90degDown.vue";
                     href="https://github.com/vvayHuang/galaxyboyz"
                     target="_blank"
                     class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-capitalize"
-                    >github</a
+                    ><IconGithub/></a
                   >
                 </li>
               </ul>
@@ -94,7 +96,7 @@ import IconArrow from "./icons/IconArrow90degDown.vue";
                     href="https://github.com/vvayHuang/lifeRecord"
                     target="_blank"
                     class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-capitalize"
-                    >github</a
+                    ><IconGithub/></a
                   >
                 </li>
               </ul>
