@@ -2,7 +2,7 @@
 import WhoSkill from "./WhoMySkillItem.vue";
 import WhoAboutMe from "./WhoAboutMeItem.vue";
 import WhoAdvantage from "./WhoAdvantageItem.vue";
-import Arrow90degDownIcon from "./icons/IconArrow90degDown.vue";
+import Arrow90degDownIcon from "../icons/IconArrow90degDown.vue";
 </script>
 <template>
   <section id="WHO">

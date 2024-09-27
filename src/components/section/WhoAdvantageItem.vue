@@ -1,5 +1,5 @@
 <script setup>
-import IconArrowUpRight from './icons/IconArrowUpRight.vue';
+import IconArrowUpRight from '../icons/IconArrowUpRight.vue';
 </script>
 
 <template>

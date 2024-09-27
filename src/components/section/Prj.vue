@@ -1,9 +1,9 @@
 <script setup>
-import Modal from "./Modal.vue";
+import Modal from "../Modal.vue";
 import PrjItem from "./PrjItem.vue";
-import IconArrow from "./icons/IconArrow90degDown.vue";
-import IconFigma from "./icons/IconFigma.vue";
-import IconGithub from "./icons/IconGithub.vue";
+import IconArrow from "../icons/IconArrow90degDown.vue";
+import IconFigma from "../icons/IconFigma.vue";
+import IconGithub from "../icons/IconGithub.vue";
 </script>
 
 <template>

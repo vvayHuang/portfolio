@@ -1,6 +1,6 @@
 <script setup>
 import MsgContact from './MsgContact.vue';
-import IconArrow90degDown from './icons/IconArrow90degDown.vue';
+import IconArrow90degDown from '../icons/IconArrow90degDown.vue';
 </script>
 <template>
   <section id="MSG">

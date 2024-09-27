@@ -34,7 +34,7 @@ onMounted(() => {
 <template>
   <section id="cover" class="overflow-hidden" style="height: 100vh">
     <div class="d-flex flex-column h-100 justify-content-center">
-      <img class="display-title-scroll mb-3 img-fluid" src="../assets/img/VVAY HUANG.png" alt="" />
+      <img class="display-title-scroll mb-3 img-fluid" src="../../assets/img/VVAY HUANG.png" alt="" />
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
@@ -53,7 +53,7 @@ onMounted(() => {
         <img
           class="img-fluid"
           style="filter: brightness(0.5)"
-          src="../assets/img/CLOUD-1.webp"
+          src="../../assets/img/CLOUD-1.webp"
           alt=""
         />
       </div>
@@ -63,7 +63,7 @@ onMounted(() => {
         <img
           class="img-fluid"
           style="filter: brightness(0.5)"
-          src="../assets/img/CLOUD-2.webp"
+          src="../../assets/img/CLOUD-2.webp"
           alt=""
         />
       </div>
