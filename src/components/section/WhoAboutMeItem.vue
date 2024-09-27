@@ -20,7 +20,7 @@
     <p class="fs-md-2 fs-6  fw-bold mb-4">
       期待將這些學習與實踐經驗運用在實際工作中，為公司提供創新和實用的設計解決方案，並在持續學習中為團隊增值。
     </p>
-    <img class=" mb-2 img-fluid " src="../assets/img/personal-img.png" alt="personal img">
+    <img class=" mb-2 img-fluid " src="../../assets/img/personal-img.png" alt="personal img">
     <p>WAY HUANG (TAKE IN 2022)</p>
   </slot>
 </template>
