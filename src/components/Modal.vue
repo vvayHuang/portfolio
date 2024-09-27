@@ -16,7 +16,7 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
         <div class="modal-header border-0 justify-content-center">
           <img
             class="img-fluid"
-            src="../assets/img/gbv1-preview-2.gif"
+            src="../assets/img/gbv1-preview-1.png"
             alt=""
           />
           <button
