@@ -2,6 +2,7 @@
 import IconGithub from "./icons/IconGithub.vue";
 import IconFigma from "./icons/IconFigma.vue";
 import IconLink45deg from "./icons/IconLink45deg.vue";
+import Carousel from "./carousel.vue";
 </script>
 <template>
   <div
@@ -14,11 +15,22 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content overflow-hidden bg-transparent border-0">
         <div class="modal-header border-0 justify-content-center">
-          <img
-            class="img-fluid"
-            src="../assets/img/gbv1-preview-1.png"
-            alt=""
-          />
+          <div class="container">
+            <div class="row row-cols-lg-2 g-0">
+              <div class="col">
+                <img class=" img-fluid" src="../assets/img/gbv1-preview-1.png" alt="">
+              </div>
+              <div class="col">
+                <img class=" img-fluid" src="../assets/img/gbv1-preview-2.gif" alt="">
+              </div>
+              <div class="col">
+                <img class=" img-fluid" src="../assets/img/gbv1-preview-3.gif" alt="">
+              </div>
+              <div class="col">
+                <img class=" img-fluid" src="../assets/img/gbv1-preview-4.gif" alt="">
+              </div>
+            </div>
+          </div>
           <button
             type="button"
             class="btn-close position-absolute"
@@ -184,16 +196,6 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
             </div>
           </div>
         </div>
-        <!-- <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
-            Close
-          </button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div> -->
       </div>
     </div>
   </div>
