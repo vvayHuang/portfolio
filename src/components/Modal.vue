@@ -2,7 +2,6 @@
 import IconGithub from "./icons/IconGithub.vue";
 import IconFigma from "./icons/IconFigma.vue";
 import IconLink45deg from "./icons/IconLink45deg.vue";
-import Carousel from "./carousel.vue";
 </script>
 <template>
   <div
@@ -16,24 +15,25 @@ import Carousel from "./carousel.vue";
       <div class="modal-content overflow-hidden bg-transparent border-0">
         <div class="modal-header border-0 justify-content-center">
           <div class="container">
-            <div class="row row-cols-lg-2 g-0">
+            <div class="row row-cols-lg-2 row-cols-1 gy-3">
               <div class="col">
                 <img class=" img-fluid" src="../assets/img/gbv1-preview-1.png" alt="">
               </div>
               <div class="col">
-                <img class=" img-fluid" src="../assets/img/gbv1-preview-2.gif" alt="">
+                <img class=" w-100 h-100" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjQwemFrcDZhMTk3YzdsNXFmYnM4djR1OXc2ZDZuajgxYnpxdXlpYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BBNtPGWLuHM6wQuBsj/giphy.gif" alt="">
               </div>
               <div class="col">
-                <img class=" img-fluid" src="../assets/img/gbv1-preview-3.gif" alt="">
+                <img class=" w-100 h-100" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3FhbXoyMWF0dmZ0emtuNGsweGNiM2I1bTFtZGM0a3U3dThvZDZ5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WP49WTehm64Lc4mHDc/giphy.gif" alt="">
               </div>
               <div class="col">
-                <img class=" img-fluid" src="../assets/img/gbv1-preview-4.gif" alt="">
+                <img class=" w-100 h-100" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWM2dmZieWNnMG83eDR2eHY1NnBwZnA3YnlueWE1MjJ1YWN0eGp5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8RA4cP6wDLZybQNgdW/giphy.gif" alt="">
               </div>
+             
             </div>
           </div>
           <button
             type="button"
-            class="btn-close position-absolute"
+            class="btn-close btn-close-white position-absolute"
             data-bs-dismiss="modal"
             aria-label="Close"
           ></button>
