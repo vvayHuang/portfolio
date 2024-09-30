@@ -4,7 +4,7 @@ import IconArrowUpRight from '../icons/IconArrowUpRight.vue';
 
 <template>
   <div class="d-flex py-lg-2 align-items-end mb-3 mb-md-0">
-    <h4 class="fs-md-4 fs-6 text-secondary">
+    <h4 class=" fs-6 text-secondary">
       <slot name="heading"></slot>
     </h4>
     <i>
