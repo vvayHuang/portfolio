@@ -20,11 +20,10 @@ onMounted(() => {
           [-200, 100],
         ],
         opacity: [
-        [400, 968],
-        [1, 0]
-      ]
+          [400, 968],
+          [1, 0],
+        ],
       },
-      
     },
     []
   );
@@ -34,16 +33,24 @@ onMounted(() => {
 <template>
   <section id="cover" class="overflow-hidden" style="height: 100vh">
     <div class="d-flex flex-column h-100 justify-content-center">
-      <img class="display-title-scroll mb-3 img-fluid" src="../../assets/img/VVAY HUANG.png" alt="" />
+      <img
+        class="display-title-scroll mb-3 img-fluid"
+        src="../../assets/img/VVAY HUANG.png"
+        alt=""
+      />
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
-            <p class="d-none d-md-block animate__animated animate__fadeInUp">
-              我叫黃俊維，是一位熱愛設計的求職者，目前正在積極尋求網頁設計師/UI設計師的工作機會
-            </p>
-            <p class="d-block d-md-none">
-              我叫黃俊維，是一位熱愛設計的求職者，目前正在積極尋求網頁設計師/UI設計師的工作機會
-            </p>
+            <div class="overflow-hidden">
+              <p
+                class="d-none d-md-block animate__animated animate__slideInUp animate__slower mb-0"
+              >
+                我叫黃俊維，是一位熱愛設計的求職者，目前正在積極尋求網頁設計師/UI設計師的工作機會
+              </p>
+              <p class="d-block d-md-none">
+                我叫黃俊維，是一位熱愛設計的求職者，目前正在積極尋求網頁設計師/UI設計師的工作機會
+              </p>
+            </div>
           </div>
         </div>
       </div>

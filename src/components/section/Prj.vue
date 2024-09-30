@@ -146,7 +146,7 @@ ul>li:hover {
     /* transform: scale(1.4); */
     transition: .45s cubic-bezier(.34,1.56,.48,1.19);
     .bi-arrow-up-right{
-      transition: .45s cubic-bezier(.34,1.56,.48,1.19);
+      transition:  .45s cubic-bezier(.34,1.56,.48,1.19);
       transform: rotate(45deg);
   }
   }

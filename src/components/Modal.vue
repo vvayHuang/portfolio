@@ -38,7 +38,7 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
             aria-label="Close"
           ></button>
         </div>
-        <div class="modal-body text-bg-light">
+        <div class="modal-body text-bg-light rounded-3">
           <div class="container">
             <div class="flex-column flex-md-row justify-content-between row">
               <div class="col">
