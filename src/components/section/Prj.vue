@@ -1,9 +1,10 @@
 <script setup>
-import Modal from "../Modal.vue";
+import ModalGbv1 from "../ModalGbv1.vue";
 import PrjItem from "./PrjItem.vue";
 import IconArrow from "../icons/IconArrow90degDown.vue";
 import IconFigma from "../icons/IconFigma.vue";
 import IconGithub from "../icons/IconGithub.vue";
+import ModalLifeRecord from "../ModalLifeRecord.vue";
 </script>
 
 <template>
@@ -25,7 +26,7 @@ import IconGithub from "../icons/IconGithub.vue";
                 data-bs-target="#GbModal"
               >
                 <span class="me-3">2023</span>
-                <h3 class="fs-6 d-inline">GalaxyBoyz v1.0</h3>
+                <h3 class="fs-6 d-inline">GalaxyBoyz</h3>
               </a>
             </div>
             <div class="col-lg-3 col-auto">
@@ -83,7 +84,7 @@ import IconGithub from "../icons/IconGithub.vue";
               <a
                 class="btn p-0 text-start w-100 border-0 stretched-link"
                 data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
+                data-bs-target="#LifeRecordModal"
               >
                 <span class="me-3">2022</span>
                 <h3 class="fs-6 d-inline">生活唱片 Life Record</h3>
@@ -131,7 +132,8 @@ import IconGithub from "../icons/IconGithub.vue";
           </div>
         </li>
       </ul>
-      <Modal />
+      <ModalGbv1 />
+      <ModalLifeRecord/>
     </div>
   </section>
 </template>

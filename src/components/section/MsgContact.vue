@@ -12,7 +12,7 @@ import IconArrowUpRight from "../icons/IconArrowUpRight.vue";
     </i>
   </div>
   <slot name="textContent">
-    <p class=" fs-4 fw-bold mb-4">
+    <p class=" fs-4 fs-6 fw-bold mb-4">
       如果您有興趣合作，請透過電子郵件地址聯繫我。
     </p>
   </slot>
