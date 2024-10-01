@@ -43,11 +43,8 @@ onMounted(() => {
           <div class="col-lg-4">
             <div class="overflow-hidden">
               <p
-                class="d-none d-md-block animate__animated animate__slideInUp animate__slower mb-0"
+                class="animate__animated animate__slideInUp animate__slow mb-0"
               >
-                我叫黃俊維，是一位熱愛設計的求職者，目前正在積極尋求網頁設計師/UI設計師的工作機會
-              </p>
-              <p class="d-block d-md-none">
                 我叫黃俊維，是一位熱愛設計的求職者，目前正在積極尋求網頁設計師/UI設計師的工作機會
               </p>
             </div>
