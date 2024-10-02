@@ -48,14 +48,14 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
                     <div class="col">
                       <img
                         class=" object-cover w-100 h-100"
-                        src="../assets/img/gb-preview-1.gif"
+                        src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjNsNTRlZzl4cWFteW16Z3poa2M3eHBrZHAyOXFhM2Vnc2owYW1xNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qYzoWu3arnVKqLLrdo/giphy.gif"
                         alt=""
                       />
                     </div>
                     <div class="col">
                       <img
                         class=" object-cover w-100 h-100"
-                        src="../assets/img/gb-preview-2.gif"
+                        src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDB4anhtdHZhb3lqNTNpMmM5bmtpZTdubGRtd3N0M3R5ZnF5Y2duaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/F47nvpdaWdQh2CEkfm/giphy.gif"
                         alt=""
                       />
                     </div>
