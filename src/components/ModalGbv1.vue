@@ -14,26 +14,89 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content overflow-hidden bg-transparent border-0">
         <div class="modal-header border-0 justify-content-center">
-          <div class="container">
-            <div class="row row-cols-md-2 row-cols-1 g-lg-3 g-md-2 gy-2">
-              <div class="col">
-                <img class=" img-fluid" src="../assets/img/gbv1-preview-1.png" alt="">
+          <div id="carouselExampleCaptions" class="carousel slide w-100">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="container d-flex flex-column justify-content-center h-100">
+                  <div class="row row-cols-lg-2 row-cols-1 g-lg-3 g-md-2 gy-2">
+                    <div class="col">
+                      <img
+                        class=" object-cover w-100 h-100"
+                        src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3FhbXoyMWF0dmZ0emtuNGsweGNiM2I1bTFtZGM0a3U3dThvZDZ5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WP49WTehm64Lc4mHDc/giphy.gif"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col">
+                      <img
+                        class=" object-cover w-100 h-100"
+                        src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWM2dmZieWNnMG83eDR2eHY1NnBwZnA3YnlueWE1MjJ1YWN0eGp5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8RA4cP6wDLZybQNgdW/giphy.gif"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-caption d-none d-lg-block">
+                  <h5>GalaxyBoyz ver1.0</h5>
+                  <p>
+                    自學figma，自行切版的第一個版本
+                  </p>
+                </div>
               </div>
-              <div class="col">
-                <img class=" w-100 h-100" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjQwemFrcDZhMTk3YzdsNXFmYnM4djR1OXc2ZDZuajgxYnpxdXlpYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BBNtPGWLuHM6wQuBsj/giphy.gif" alt="">
+              <div class="carousel-item ">
+                <div class="container d-flex flex-column justify-content-center h-100">
+                  <div class="row row-cols-lg-2 row-cols-1 g-lg-3 g-md-2 gy-2">
+                    <div class="col">
+                      <img
+                        class=" object-cover w-100 h-100"
+                        src="../assets/img/gb-preview-1.gif"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col">
+                      <img
+                        class=" object-cover w-100 h-100"
+                        src="../assets/img/gb-preview-2.gif"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-caption d-none d-lg-block">
+                  <h5>GalaxyBoyz ver2.0</h5>
+                  <p>
+                    上完 aapd 設計實戰營的課程後，調整後的版本，更清楚UI/UX設計過程該如何思考及交付
+                  </p>
+                </div>
               </div>
-              <div class="col">
-                <img class=" w-100 h-100" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3FhbXoyMWF0dmZ0emtuNGsweGNiM2I1bTFtZGM0a3U3dThvZDZ5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WP49WTehm64Lc4mHDc/giphy.gif" alt="">
-              </div>
-              <div class="col">
-                <img class=" w-100 h-100" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWM2dmZieWNnMG83eDR2eHY1NnBwZnA3YnlueWE1MjJ1YWN0eGp5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8RA4cP6wDLZybQNgdW/giphy.gif" alt="">
-              </div>
-             
             </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
           <button
             type="button"
-            class="btn-close btn-close-white position-absolute"
+            class="btn-close btn-close-white position-absolute top-0 start-0"
             data-bs-dismiss="modal"
             aria-label="Close"
           ></button>
@@ -186,14 +249,15 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
                 </ul>
               </div>
               <div class="col">
-               <div class=" d-flex flex-column h-100">
+                <div class="d-flex flex-column h-100">
                   <p>
-                    GalaxyBoyz 是虛擬樂團，為它建立一個官方網站。這裡是所有樂迷和新朋友了解我們的首選平台，透過這個網站，你可以探索樂團最新動態、音樂作品、即將到來的巡演、官方商店，並加入我們的粉絲社群。
+                    GalaxyBoyz
+                    是虛擬樂團，為它建立一個官方網站。這裡是所有樂迷和新朋友了解我們的首選平台，透過這個網站，你可以探索樂團最新動態、音樂作品、即將到來的巡演、官方商店，並加入我們的粉絲社群。
                   </p>
-                  <p class=" small mt-auto text-secondary">
+                  <p class="small mt-auto text-secondary">
                     目前完成第二版設計，第二版預計使用 Tailwind 開發。
                   </p>
-               </div>
+                </div>
               </div>
             </div>
           </div>
@@ -205,10 +269,6 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
 <style scoped>
 span {
   font-size: 12px;
-}
-.btn-close {
-  top: 4%;
-  left: 1%;
 }
 .progress[aria-label="Segment one"] .progress-bar {
   background-color: #c6538c;
@@ -241,7 +301,10 @@ li:nth-of-type(3) .bi-circle-fill {
 li:nth-of-type(4) .bi-circle-fill {
   fill: #f1e05b;
 }
-.modal{
+.modal {
   backdrop-filter: blur(20px);
+}
+.carousel-item {
+  height: 500px;
 }
 </style>
