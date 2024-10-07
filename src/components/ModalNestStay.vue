@@ -6,65 +6,26 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
 <template>
   <div
     class="modal fade"
-    id="GbModal"
+    id="NestStayModal"
     tabindex="-1"
-    aria-labelledby="GbModalLabel"
+    aria-labelledby="NestStayModalLabel"
     aria-hidden="true"
   >
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content overflow-hidden bg-transparent border-0">
         <div class="modal-header border-0 justify-content-center">
-          <div id="Gbv1Carousel" class="carousel slide w-100">
+          <div id="lifeRecordCarousel" class="carousel slide w-100">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="container d-flex flex-column justify-content-center h-100">
                   <div class="row row-cols-lg-2 row-cols-1 g-lg-3 g-md-2 gy-2">
-                    <div class="col">
-                      <img
-                        class=" object-cover w-100 h-100"
-                        src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3FhbXoyMWF0dmZ0emtuNGsweGNiM2I1bTFtZGM0a3U3dThvZDZ5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WP49WTehm64Lc4mHDc/giphy.gif"
-                        alt=""
-                      />
-                    </div>
-                    <div class="col">
-                      <img
-                        class=" object-cover w-100 h-100"
-                        src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWM2dmZieWNnMG83eDR2eHY1NnBwZnA3YnlueWE1MjJ1YWN0eGp5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8RA4cP6wDLZybQNgdW/giphy.gif"
-                        alt=""
-                      />
-                    </div>
+                    
                   </div>
                 </div>
                 <div class="carousel-caption d-none d-lg-block">
-                  <h5>GalaxyBoyz ver1.0</h5>
+                  <h5>巢居 Nest Stay</h5>
                   <p>
                     自學figma，自行切版的第一個版本
-                  </p>
-                </div>
-              </div>
-              <div class="carousel-item ">
-                <div class="container d-flex flex-column justify-content-center h-100">
-                  <div class="row row-cols-lg-2 row-cols-1 g-lg-3 g-md-2 gy-2">
-                    <div class="col">
-                      <img
-                        class=" object-cover w-100 h-100"
-                        src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjNsNTRlZzl4cWFteW16Z3poa2M3eHBrZHAyOXFhM2Vnc2owYW1xNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qYzoWu3arnVKqLLrdo/giphy.gif"
-                        alt=""
-                      />
-                    </div>
-                    <div class="col">
-                      <img
-                        class=" object-cover w-100 h-100"
-                        src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDB4anhtdHZhb3lqNTNpMmM5bmtpZTdubGRtd3N0M3R5ZnF5Y2duaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/F47nvpdaWdQh2CEkfm/giphy.gif"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-caption d-none d-lg-block">
-                  <h5>GalaxyBoyz ver2.0</h5>
-                  <p>
-                    上完 aapd 設計實戰營的課程後，調整後的版本，更清楚UI/UX設計過程該如何思考及交付
                   </p>
                 </div>
               </div>
@@ -72,7 +33,7 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
             <button
               class="carousel-control-prev"
               type="button"
-              data-bs-target="#Gbv1Carousel"
+              data-bs-target="#lifeRecordCarousel"
               data-bs-slide="prev"
             >
               <span
@@ -84,7 +45,7 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
             <button
               class="carousel-control-next"
               type="button"
-              data-bs-target="#Gbv1Carousel"
+              data-bs-target="#lifeRecordCarousel"
               data-bs-slide="next"
             >
               <span
@@ -105,9 +66,9 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
           <div class="container">
             <div class="flex-column flex-md-row justify-content-between row">
               <div class="col">
-                <h2 class="text-secondary fs-5">樂團形象官網</h2>
-                <h1 class="modal-title mb-md-3" id="GbModalLabel">
-                  GalaxyBoyz
+                <h2 class="text-secondary fs-5">旅遊訂房app</h2>
+                <h1 class="modal-title mb-md-3" id="NestStayModalLabel">
+                  巢居 Nest Stay
                 </h1>
                 <div class="mb-3">
                   <a
@@ -250,13 +211,38 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
               </div>
               <div class="col">
                 <div class="d-flex flex-column h-100">
-                  <p>
-                    GalaxyBoyz
-                    是虛擬樂團，為它建立一個官方網站。這裡是所有樂迷和新朋友了解我們的首選平台，透過這個網站，你可以探索樂團最新動態、音樂作品、即將到來的巡演、官方商店，並加入我們的粉絲社群。
-                  </p>
-                  <p class="small mt-auto text-secondary">
-                    目前完成第二版設計，第二版預計使用 Tailwind 開發。
-                  </p>
+                 <div class=" mb-3">
+                    <h3 class=" fs-6 text-secondary">動機</h3>
+                    <p>這是參加線上實戰營的作品，想知道自己對於 figma 的掌握程度及自己不足的地方，同時認識相關領域的朋友</p>
+                    <p>
+                      主題是旅遊訂房app，希望可以幫助使用者快速找出演唱會、音樂祭等活動附近可以住宿的地方，並且透過併團的方式節省住宿費用，甚至可以認識有相同喜好的朋友
+                    </p>
+                 </div>
+                  <div class=" mb-3">
+                    <h3 class=" fs-6 text-secondary">過程中遇到的困難</h3>
+                    <ul>
+                      <li>在彼此都不認識的情況下，要怎麼溝通及團隊協作</li>
+                      <li>彼此時間分配不一的情況下，如何讓事情繼續進行</li>
+                      <li>意見不同時要如何達成共識</li>
+                    </ul>
+                  </div>
+                  <div class=" mb-3">
+                    <h3 class=" fs-6 text-secondary">如何解決</h3>
+                    <ul>
+                      <li>多花點時間了解對方個性、做事方式等，多花點時間溝通，了解各個成員的強項及弱項</li>
+                      <li>盡可能擠出時間讓團隊工作進度持續進行，即使發生成員未回覆的狀況，事情還是要持續推</li>
+                      <li>發生意見相佐或衝突時，盡可能溝通並且做出實際行動說服成員</li>
+                    </ul>
+                  </div>
+                  <div class="mb-3">
+                    <h3 class=" fs-6 text-secondary">心得及觀察</h3>
+                    <ul>
+                      <li>每個設計背後都有它的用意及背後的商業邏輯，並非只是好看而已</li>
+                      <li>設計必續不停的反覆驗證，需要給其他人使用，避免自己陷入思考盲區</li>
+                      <li>做出來未必是大家都滿意的成果，心態上調適讓自己能夠不要太執著於某個點上，整體團運行擺在第一</li>
+                    </ul>
+                    
+                  </div>
                 </div>
               </div>
             </div>
