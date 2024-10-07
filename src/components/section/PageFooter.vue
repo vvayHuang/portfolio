@@ -107,7 +107,7 @@
               <circle cx="8" cy="8" r="8" />
             </svg>
             <span class="text-muted ms-1 me-1">sleeping</span>
-            <span class="text-muted  ms-md-1 me-md-1">30%</span>
+            <span class="text-muted  ms-md-1 me-md-1">10%</span>
           </li>
         </ul>
       </div>
