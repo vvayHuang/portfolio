@@ -72,13 +72,7 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
                 </h1>
                 <div class="mb-3">
                   <a
-                    href="https://github.com/vvayHuang/galaxyboyz"
-                    class="link-dark me-3 d-inline"
-                    target="_blank"
-                    ><IconGithub
-                  /></a>
-                  <a
-                    href="https://vvayhuang.github.io/galaxyboyz/"
+                    href="https://jing607.github.io/Nest_Stay/"
                     class="link-dark me-3"
                     target="_blank"
                     ><IconLink45deg
