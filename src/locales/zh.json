@@ -29,5 +29,16 @@
   "my advantage 2": "擁有扎實的基礎知識和良好的學習能力",
   "my contact": "我的聯絡方式",
   "e mail": "電子信箱",
-  "my contact details": "如果您有興趣合作，請透過電子郵件地址聯繫我。"
+  "my contact details": "如果您有興趣合作，請透過電子郵件地址聯繫我。",
+
+  "items": [
+    {
+      "title": "銀河男孩",
+      "content": "2023"
+    },
+    {
+      "title": "第二個標題",
+      "content": "這是第二個內容。"
+    }
+  ]
 }

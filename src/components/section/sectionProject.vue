@@ -1,0 +1,115 @@
+<script setup>
+import ModalGbv1 from "../ModalGbv1.vue";
+import sectionText from "./sectionText.vue";
+import IconArrow from "../icons/IconArrow90degDown.vue";
+import IconFigma from "../icons/IconFigma.vue";
+import IconGithub from "../icons/IconGithub.vue";
+import ModalLifeRecord from "../ModalLifeRecord.vue";
+import ModalNestStay from "../ModalNestStay.vue";
+import projects from "../../data/project";
+import { useI18n } from "vue-i18n";
+
+const { t, locale } = useI18n();
+</script>
+
+<template>
+  <section id="PRJ">
+    <div class="container">
+      <sectionText>
+        <template #heading>{{ t("my project") }}</template>
+        <template #icon>
+          <IconArrow />
+        </template>
+      </sectionText>
+      <ul class="list-unstyled">
+        <li
+          class="py-md-2 py-4 border-bottom position-relative"
+          v-for="project in projects"
+          :key="project.id"
+        >
+          <div class="row row-cols-md-3 align-items-center">
+            <div class="col-lg-6 col">
+              <a
+                class="btn p-0 text-start w-100 border-0 stretched-link"
+                data-bs-toggle="modal"
+                data-bs-target="#GbModal"
+              >
+                <span class="me-3">{{ project.year }}</span>
+                <h3 class="fs-6 d-inline">{{ project.name }}</h3>
+              </a>
+            </div>
+            <div class="col-lg-3 col-auto">
+              <ul class="list-unstyled d-flex position-relative">
+                <li class="z-2">
+                  <a v-if="project.figma"
+                    :href="project.figma"
+                    target="_blank"
+                    class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-capitalize me-5"
+                    ><IconFigma style="width: 24px; height: 24px"
+                  /></a>
+                </li>
+                <li class="z-2">
+                  <a v-if="project.github"
+                    :href="project.github"
+                    target="_blank"
+                    class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-capitalize"
+                    ><IconGithub style="width: 24px; height: 24px"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3">
+              <div
+                class="row justify-content-end d-none d-md-flex position-relative"
+              >
+                <div class="col-auto z-2">
+                  <a
+                    :href="project.webkitURL"
+                    target="_blank"
+                    class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover d-flex align-items-center py-2"
+                    ><span>{{ t("launch") }}</span>
+                    <span class="text-bg-dark p-2 rounded-circle ms-3 lh-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-arrow-up-right"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ModalNestStay />
+      <ModalGbv1 />
+      <ModalLifeRecord />
+    </div>
+  </section>
+</template>
+
+<style scoped>
+#PRJ {
+  margin-bottom: 160px;
+}
+
+ul > li:hover {
+  span {
+    /* transform: scale(1.4); */
+    transition: 0.45s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+    .bi-arrow-up-right {
+      transition: 0.45s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+      transform: rotate(45deg);
+    }
+  }
+}
+</style>

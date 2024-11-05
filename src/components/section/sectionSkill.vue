@@ -1,16 +1,12 @@
 <script setup>
 import { useI18n } from "vue-i18n";
+import SectionText from "./sectionText.vue";
 const { t, locale } = useI18n();
 </script>
 <template>
-  <div class="d-flex py-lg-2 align-items-end mb-3 mb-md-0">
-    <h2 class="fs-6 text-secondary">
-      <slot name="heading"></slot>
-    </h2>
-    <i>
-      <slot name="icon"></slot>
-    </i>
-  </div>
+  <SectionText>
+    <template #heading>{{ t("my skill") }}</template>
+  </SectionText>
   <slot name="list">
     <ul class="list-unstyled">
       <li class="py-2">
