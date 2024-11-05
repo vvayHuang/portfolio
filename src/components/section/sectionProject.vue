@@ -32,7 +32,7 @@ const { t, locale } = useI18n();
               <a
                 class="btn p-0 text-start w-100 border-0 stretched-link"
                 data-bs-toggle="modal"
-                data-bs-target="#GbModal"
+                :data-bs-target="project.module"
               >
                 <span class="me-3">{{ project.year }}</span>
                 <h3 class="fs-6 d-inline">{{ project.name }}</h3>
@@ -90,7 +90,6 @@ const { t, locale } = useI18n();
           </div>
         </li>
       </ul>
-      <ModalNestStay />
       <ModalGbv1 />
       <ModalLifeRecord />
     </div>
