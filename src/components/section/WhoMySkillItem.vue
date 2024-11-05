@@ -1,3 +1,7 @@
+<script setup>
+import { useI18n } from "vue-i18n";
+const { t, locale } = useI18n();
+</script>
 <template>
   <div class="d-flex py-lg-2 align-items-end mb-3 mb-md-0">
     <h2 class="fs-6 text-secondary">
@@ -10,23 +14,19 @@
   <slot name="list">
     <ul class="list-unstyled">
       <li class="py-2">
-        <span class="fw-medium">熟悉 Figma UI／UX 設計工具</span>
+        <span class="fw-medium">{{ t("my skill 1") }}</span>
       </li>
       <li class="py-2">
-        <span class="fw-medium"
-          >熟悉 HTML、CSS，略懂 JavaScript 前端開發技術</span
-        >
+        <span class="fw-medium">{{ t("my skill 2") }}</span>
       </li>
       <li class="py-2">
-        <span class="fw-medium"
-          >熟悉 Bootstrap，略懂 Tailwind 前端開發框架</span
-        >
+        <span class="fw-medium">{{ t("my skill 3") }}</span>
       </li>
       <li class="py-2">
-        <span class="fw-medium">略懂 Vue3 前端開發框架</span>
+        <span class="fw-medium">{{ t("my skill 4") }}</span>
       </li>
       <li class="py-2">
-        <span class="fw-medium">略懂 git、Github 版本控制</span>
+        <span class="fw-medium">{{ t("my skill 5") }}</span>
       </li>
     </ul>
   </slot>

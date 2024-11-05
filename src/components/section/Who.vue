@@ -3,6 +3,8 @@ import WhoSkill from "./WhoMySkillItem.vue";
 import WhoAboutMe from "./WhoAboutMeItem.vue";
 import WhoAdvantage from "./WhoAdvantageItem.vue";
 import Arrow90degDownIcon from "../icons/IconArrow90degDown.vue";
+import { useI18n } from 'vue-i18n';
+const { t, locale } = useI18n();
 </script>
 <template>
   <section id="WHO">
@@ -12,7 +14,7 @@ import Arrow90degDownIcon from "../icons/IconArrow90degDown.vue";
           <ul class="list-unstyled">
             <li class="mb-5">
               <WhoSkill>
-                <template #heading>我的技能</template>
+                <template #heading>{{t('my skill')}}</template>
                 <template #icon>
                   <Arrow90degDownIcon />
                 </template>
@@ -21,7 +23,7 @@ import Arrow90degDownIcon from "../icons/IconArrow90degDown.vue";
             </li>
             <li>
               <WhoAdvantage>
-                <template #heading>我的優勢</template>
+                <template #heading>{{t('my advantage')}}</template>
                 <template #icon>
                   <Arrow90degDownIcon />
                 </template>
@@ -35,7 +37,7 @@ import Arrow90degDownIcon from "../icons/IconArrow90degDown.vue";
             <template #icon>
               <Arrow90degDownIcon />
             </template>
-            <template #heading>關於我</template>
+            <template #heading>{{t('about me')}}</template>
             <template #textContent></template>
           </WhoAboutMe>
         </div>

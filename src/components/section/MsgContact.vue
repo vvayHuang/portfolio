@@ -1,5 +1,7 @@
 <script setup>
 import IconArrowUpRight from "../icons/IconArrowUpRight.vue";
+import { useI18n } from 'vue-i18n';
+const { t, locale } = useI18n();
 </script>
 
 <template>
@@ -12,8 +14,8 @@ import IconArrowUpRight from "../icons/IconArrowUpRight.vue";
     </i>
   </div>
   <slot name="textContent">
-    <p class=" fs-4 fs-6 fw-bold mb-4">
-      如果您有興趣合作，請透過電子郵件地址聯繫我。
+    <p class=" fs-4 fs-6 fw-bold mb-4 py-2">
+      {{t('my contact details')}}
     </p>
   </slot>
   <slot name="link">
@@ -21,7 +23,7 @@ import IconArrowUpRight from "../icons/IconArrowUpRight.vue";
       <li>
         <a class="nav-link d-inline-block " href="mailto:momoopsoops@gmail.com">
           <IconArrowUpRight />
-          <span class="fw-medium ms-3 text-capitalize">mail</span>
+          <span class="fw-medium ms-3 text-capitalize">{{ t('e mail') }}</span>
         </a>
       </li>
     </ul>

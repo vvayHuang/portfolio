@@ -575,6 +575,7 @@ $utilities: map-merge(
     // scss-docs-end utils-text
     // scss-docs-start utils-color
     "color": (
+      responsive: true,
       property: color,
       class: text,
       local-vars: (

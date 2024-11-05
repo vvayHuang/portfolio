@@ -6,13 +6,15 @@ import IconFigma from "../icons/IconFigma.vue";
 import IconGithub from "../icons/IconGithub.vue";
 import ModalLifeRecord from "../ModalLifeRecord.vue";
 import ModalNestStay from "../ModalNestStay.vue";
+import { useI18n } from 'vue-i18n';
+const { t, locale } = useI18n();
 </script>
 
 <template>
   <section id="PRJ">
     <div class="container">
       <PrjItem>
-        <template #heading>我的作品集</template>
+        <template #heading>{{ t('my project') }}</template>
         <template #icon>
           <IconArrow />
         </template>
@@ -57,7 +59,7 @@ import ModalNestStay from "../ModalNestStay.vue";
                     href="https://vvayhuang.github.io/galaxyboyz/"
                     target="_blank"
                     class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover d-flex align-items-center py-2 "
-                    ><span>Launch</span>
+                    ><span>{{ t('launch') }}</span>
                     <span class="text-bg-dark p-2 rounded-circle ms-3 lh-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +112,7 @@ import ModalNestStay from "../ModalNestStay.vue";
                     href="https://vvayhuang.github.io/lifeRecord/"
                     target="_blank"
                     class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover d-flex align-items-center py-2"
-                    ><span>Launch</span>
+                    ><span>{{ t('launch') }}</span>
                     <span class="text-bg-dark p-2 rounded-circle ms-3 lh-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

@@ -1,5 +1,7 @@
 <script setup>
 import IconArrowUpRight from '../icons/IconArrowUpRight.vue';
+import { useI18n } from 'vue-i18n';
+const { t, locale } = useI18n();
 </script>
 
 <template>
@@ -15,16 +17,12 @@ import IconArrowUpRight from '../icons/IconArrowUpRight.vue';
     <ul class="list-unstyled">
       <li class=" py-2">
         <IconArrowUpRight />
-        <span class="fw-medium ms-3">熱愛設計，並擁有強烈的學習意願</span>
+        <span class="fw-medium ms-3">{{ t('my advantage 1') }}</span>
       </li>
       <li class=" py-2">
         <IconArrowUpRight />
-        <span class="fw-medium ms-3">擁有扎實的基礎知識和良好的學習能力</span>
+        <span class="fw-medium ms-3">{{ t('my advantage 2') }}</span>
       </li>
-      <!-- <li class=" py-2">
-        <IconArrowUpRight />
-        <span class="fw-medium ms-3">善於溝通和協作，能夠與團隊成員高效合作</span>
-      </li> -->
     </ul>
   </slot>
 </template>

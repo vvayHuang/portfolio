@@ -2,6 +2,9 @@
 import { onMounted } from "vue";
 import lax from "lax.js";
 
+import { useI18n } from 'vue-i18n';
+const { t, locale } = useI18n();
+
 onMounted(() => {
   // Setup lax
   lax.init();
@@ -45,7 +48,7 @@ onMounted(() => {
               <p
                 class="animate__animated animate__slideInUp animate__slow mb-0"
               >
-                我叫黃俊維，是一位熱愛設計的求職者，目前正在積極尋求網頁設計師/UI設計師的工作機會
+              {{ t('description') }}
               </p>
             </div>
           </div>

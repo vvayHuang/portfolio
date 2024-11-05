@@ -1,6 +1,8 @@
 <script setup>
 import MsgContact from './MsgContact.vue';
 import IconArrow90degDown from '../icons/IconArrow90degDown.vue';
+import { useI18n } from 'vue-i18n';
+const { t, locale } = useI18n();
 </script>
 <template>
   <section id="MSG">
@@ -8,7 +10,7 @@ import IconArrow90degDown from '../icons/IconArrow90degDown.vue';
       <div class="row justify-content-end">
         <div class="col-lg-6">
           <MsgContact>
-            <template #heading>我的聯絡方式</template>
+            <template #heading>{{t('my contact')}}</template>
             <template #icon>
               <IconArrow90degDown />
             </template>

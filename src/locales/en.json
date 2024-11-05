@@ -1,0 +1,34 @@
+{
+  "PRJ": "PRJ",
+  "MSG": "MSG",
+  "WHO": "WHO",
+  "description": "My name is Huang Junwei. I am a job seeker who loves design. I am currently actively seeking job opportunities as a web designer/UI designer.",
+  "my project": "My project",
+  "launch": "Launch",
+  "my skill": "Skill",
+  "my skill 1": "Familiar with Figma UI/UX design tool",
+  "my skill 2": "Familiar with HTML, CSS, and some knowledge of JavaScript front-end development technology",
+  "my skill 3": "Familiar with Bootstrap and a little understanding of Tailwind front-end development framework",
+  "my skill 4": "Have a basic understanding of the Vue3 front-end development framework",
+  "my skill 5": "Some knowledge of git and Github version control",
+  "about me": "About",
+  "avatar": "way huang ( take in 2022)",
+  "about me content 1": 
+    "Hello, I am Huang Junwei. A web designer/UI designer job seeker who loves design is actively seeking related job opportunities.",
+  "about me content 2": 
+    "I have deepened my understanding of front-end technologies such as HTML, CSS, and JavaScript by participating in multimedia design vocational training classes, live web page cutting classes, and Figma practical camps. At the same time, through the Figma practical camp, I mastered the entire process operation from prototype design to delivery and development, better understood the relationship between design and development, and learned how to perfectly combine these technologies with design to create a more interactive and beautiful User interface.",
+   
+  "about me content 3": 
+  "These practical experiences enable me to apply tools flexibly and become familiar with the complete process from requirement analysis to design implementation. Not only in terms of design, I also have the ability to communicate with the development team. I can effectively understand technical requirements and provide appropriate design solutions during collaborative development and iteration processes, and have a deeper understanding of UI/UX design.",
+  
+  "about me content 4": 
+    "I look forward to applying these learning and practical experiences in actual work, providing innovative and practical design solutions to the company, and adding value to the team through continuous learning.",
+
+
+  "my advantage": "Advantage",
+  "my advantage 1": "Love design and have a strong willingness to learn",
+  "my advantage 2": "Have solid basic knowledge and good learning ability",
+  "my contact": "Contact",
+  "e mail": "E-mail",
+  "my contact details": "If you are interested in collaborating, please contact me via email address."
+}
