@@ -254,9 +254,6 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
                     GalaxyBoyz
                     是虛擬樂團，為它建立一個官方網站。這裡是所有樂迷和新朋友了解我們的首選平台，透過這個網站，你可以探索樂團最新動態、音樂作品、即將到來的巡演、官方商店，並加入我們的粉絲社群。
                   </p>
-                  <p class="small mt-auto text-secondary">
-                    目前完成第二版設計，第二版預計使用 Tailwind 開發。
-                  </p>
                 </div>
               </div>
             </div>
