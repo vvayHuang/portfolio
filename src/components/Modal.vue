@@ -40,7 +40,7 @@ function changeTab(module) {
             role="presentation"
           >
             <button
-              class="nav-link rounded-5"
+              class="nav-link rounded-5 text-bg-light bg-gradient"
               :class="{ active: activeTab === project.module, 'text-bg-dark': activeTab === project.module }"
               @click="changeTab(project.module)"
               :id="project.module"

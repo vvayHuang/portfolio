@@ -1,5 +1,10 @@
-import preview1 from '@/assets/img/lr-preview-1.png';
-import preview2 from '@/assets/img/lr-preview-2.png';
+import lrpreview1 from '@/assets/img/lr-preview-1.png';
+import lrpreview2 from '@/assets/img/lr-preview-2.png';
+import gb1preview1 from '@/assets/img/gbv1-preview-1.png';
+import gb1preview2 from '@/assets/img/gbv1-preview-2.png';
+import gb2preview1 from '@/assets/img/gbv2-preview-1.png';
+import gb2preview2 from '@/assets/img/gbv2-preview-2.png';
+import gb2preview3 from '@/assets/img/gbv2-preview-3.png';
 const projectsModal = [
   {
     id: "LifeRecordModal",
@@ -18,8 +23,8 @@ const projectsModal = [
       { label: "JavaScript", value: 0.1 },
     ],
     images: [
-      { src: preview1, alt: "lr-preview-1" },
-      { src: preview2, alt: "lr-preview-2" },
+      { src: lrpreview1, alt: "lr-preview-1" },
+      { src: lrpreview2, alt: "lr-preview-2" },
       { src: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjlib21kY244d3VoczkxdmQ3OTEzOGVlNXV2MXM1a3pzNjF0cndrNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MI5xlX5LSP0CD2Br1C/giphy.gif", alt: "lr-preview-3.png" },
       { src: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTcycW5lczI3eHo4cHQ4ZGRqYmRraTRtZ3pqYnpiZ2F0NHlwbjE1ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RnC0JSwimbgvI3ocTD/giphy.gif", alt: "lr-preview-4.png" },
     ],
@@ -42,8 +47,10 @@ const projectsModal = [
       { label: "JavaScripts", value: 1.8 },
     ],
     images: [
-      { src: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3FhbXoyMWF0dmZ0emtuNGsweGNiM2I1bTFtZGM0a3U3dThvZDZ5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WP49WTehm64Lc4mHDc/giphy.gif", alt: "lr-preview-1" },
-      { src: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWM2dmZieWNnMG83eDR2eHY1NnBwZnA3YnlueWE1MjJ1YWN0eGp5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8RA4cP6wDLZybQNgdW/giphy.gif", alt: "lr-preview-2" },
+      { src: gb1preview1, alt: "gb-preview-1" },
+      { src: gb1preview2, alt: "gb-preview-2" },
+      { src: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3FhbXoyMWF0dmZ0emtuNGsweGNiM2I1bTFtZGM0a3U3dThvZDZ5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WP49WTehm64Lc4mHDc/giphy.gif", alt: "gb-preview-3" },
+      { src: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWM2dmZieWNnMG83eDR2eHY1NnBwZnA3YnlueWE1MjJ1YWN0eGp5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8RA4cP6wDLZybQNgdW/giphy.gif", alt: "gb-preview-4" },
     ],
   },
   {
@@ -56,8 +63,8 @@ const projectsModal = [
     github: "https://github.com/vvayHuang/galaxyBoyzV3",
     webkitURL: "https://vvayhuang.github.io/galaxyBoyzV3/",
     textContent:
-    "  GalaxyBoyz是虛擬樂團，為它建立一個官方網站。這裡是所有樂迷和新朋友了解我們的首選平台，透過這個網站，你可以探索樂團最新動態、音樂作品、即將到來的巡演、官方商店，並加入我們的粉絲社群。",
-    tag: ["vite", "bootstrap", "ejs", "recraft"],
+    "進修完 figma 課程之後，了解設計稿要如何用分子系統的概念去畫，會更有效對於元件的管理，也方便後續的維護，這個概念也同時可運用在程式撰寫上。把設計稿重新整理一番，使用 vue 及 tailwind 完成這個作品",
+    tag: ["vite", "vue", "tailwind","GASP", "recraft"],
     language: [
       { label: "vue", value: 74.1 },
       { label: "JavaScripts", value: 21.8 },
@@ -65,8 +72,10 @@ const projectsModal = [
       { label: "html", value: 0.4 },
     ],
     images: [
-      { src: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3FhbXoyMWF0dmZ0emtuNGsweGNiM2I1bTFtZGM0a3U3dThvZDZ5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WP49WTehm64Lc4mHDc/giphy.gif", alt: "lr-preview-1" },
-      { src: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWM2dmZieWNnMG83eDR2eHY1NnBwZnA3YnlueWE1MjJ1YWN0eGp5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8RA4cP6wDLZybQNgdW/giphy.gif", alt: "lr-preview-2" },
+      { src: gb2preview1, alt: "gb2-preview-1" },
+      { src: gb2preview2, alt: "gb2-preview-2" },
+      { src: gb2preview3, alt: "gb2-preview-3" },
+      { src: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeG84Y2MxY2o1am4wY2V1bXk1OWFoanJ3dGdkZHhlZGc2bG1vcWJncCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mXG3de6F4xUgptp1C7/giphy.gif", alt: "gb2-preview-4" },
     ],
   },
 ];
