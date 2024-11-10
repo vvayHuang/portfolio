@@ -5,6 +5,8 @@ import IconLink45deg from "./icons/IconLink45deg.vue";
 import IconFigma from "./icons/IconFigma.vue";
 import projectsModalData from "../data/projectsModal";
 import IconCircleFill from "./icons/IconCircleFill.vue";
+import { useI18n } from "vue-i18n";
+const { t, locale } = useI18n();
 
 // 預設選中第一個 tab
 const activeTab = ref(projectsModalData[0].module);
@@ -51,7 +53,7 @@ function changeTab(module) {
               aria-controls="pills-home"
               aria-selected="true"
             >
-              {{ project.title }}
+            {{ project.title[$i18n.locale] }}
             </button>
           </li>
         </ul>
@@ -94,9 +96,9 @@ function changeTab(module) {
                   class="flex-column flex-md-row justify-content-between row"
                 >
                   <div class="col">
-                    <h2 class="text-secondary fs-6">{{ project.type }}</h2>
+                    <h2 class="text-secondary fs-6">{{ project.type[$i18n.locale] }}</h2>
                     <h1 class="modal-title mb-md-3" id="LifeRecordModalLabel">
-                      {{ project.title }}
+                      {{ project.title[$i18n.locale] }}
                     </h1>
 
                     <!-- Icon Links -->
@@ -159,7 +161,7 @@ function changeTab(module) {
                   <!-- Text Content -->
                   <div class="col">
                     <div class="d-flex flex-column h-100">
-                      <p>{{ project.textContent }}</p>
+                      <p>{{ project.textContent[$i18n.locale] }}</p>
                     </div>
                   </div>
                 </div>
