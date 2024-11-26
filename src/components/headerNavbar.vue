@@ -12,9 +12,11 @@ function switchLanguage(lang) {
 }
 // 控制 dropdown 顯示狀態
 const isDropdownOpen = ref(false);
+
 function openDropdown() {
   isDropdownOpen.value = true;
 }
+
 function closeDropdown() {
   isDropdownOpen.value = false;
 }
@@ -27,91 +29,65 @@ function closeDropdown() {
           >©2024</span
         >
         <RouterLink class="navbar-brand" to="/"><Logo /></RouterLink>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <navToggleIcon class="text-light" />
-        </button>
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              way huang portfolio
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1">
-              <li class="nav-item">
-                <a
-                  class="nav-link text-dark text-lg-light px-2 px-md-4"
-                  aria-current="page"
-                  href="#PRJ"
-                  >{{ t("PRJ") }}</a
+        <ul class="navbar-nav justify-content-end flex-grow-1 flex-row">
+          <li class="nav-item">
+            <a
+              class="nav-link text-light px-2 px-md-4"
+              aria-current="page"
+              href="#PRJ"
+              >{{ t("PRJ") }}</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light px-2 px-md-4" href="#MSG">{{
+              t("MSG")
+            }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light px-2 px-md-4" href="#WHO">{{
+              t("WHO")
+            }}</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link text-light px-2 px-md-4 dropdown-toggle"
+              href="#"
+              role="button"
+              :aria-expanded="isDropdownOpen"
+              @click.prevent="isDropdownOpen = !isDropdownOpen"
+            >
+              <IconTranslate />
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end dropdown-menu-dark"
+              :class="{ show: isDropdownOpen }"
+              @click.stop
+            >
+              <li>
+                <button
+                  class="dropdown-item"
+                  @click="
+                    switchLanguage('en');
+                    closeDropdown();
+                  "
                 >
+                  英文
+                </button>
               </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-dark text-lg-light px-2 px-md-4"
-                  href="#MSG"
-                  >{{ t("MSG") }}</a
+              <li>
+                <button
+                  class="dropdown-item"
+                  @click="
+                    switchLanguage('zh');
+                    closeDropdown();
+                  "
                 >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-dark text-lg-light px-2 px-md-4"
-                  href="#WHO"
-                  >{{ t("WHO") }}</a
-                >
-              </li>
-              <li
-                class="nav-item dropdown"
-                @mouseover="openDropdown"
-                @mouseleave="closeDropdown"
-                :class="{ show: isDropdownOpen }"
-              >
-                <a
-                  class="nav-link text-dark text-lg-light px-2 px-md-4 dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <IconTranslate />
-                </a>
-                <ul
-                  class="dropdown-menu dropdown-menu-end dropdown-menu-dark"
-                  :class="{ show: isDropdownOpen }"
-                >
-                  <li>
-                    <button class="dropdown-item" @click="switchLanguage('en')">
-                      英文
-                    </button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item" @click="switchLanguage('zh')">
-                      中文
-                    </button>
-                  </li>
-                </ul>
+                  中文
+                </button>
               </li>
             </ul>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </nav>
   </header>
@@ -119,13 +95,17 @@ function closeDropdown() {
 <style scoped>
 header {
   mix-blend-mode: difference;
-  @media (max-width: 768px) {
-    .offcanvas-title {
-      font-size: 48px;
-    }
-    .nav-link {
-      font-size: 48px;
-    }
-  }
+}
+.dropdown-menu {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  right: 0;
+}
+
+.dropdown-menu.show {
+  visibility: visible;
+  opacity: 1;
 }
 </style>
