@@ -2,7 +2,6 @@
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
 import Logo from "./Logo.vue";
-import navToggleIcon from "./icons/IconNavToggleIcon.vue";
 import IconTranslate from "./icons/IconTranslate.vue";
 import { useI18n } from "vue-i18n";
 const { t, locale } = useI18n();
@@ -102,6 +101,7 @@ header {
   position: absolute;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   right: 0;
+  z-index: 1050;
 }
 
 .dropdown-menu.show {
