@@ -39,7 +39,7 @@ const projectsModal = [
   },
   {
     id: "GbModal1",
-    title: { en: "GalaxyBoyz 1.0", zh: "銀河男孩 1.0" },
+    title: { en: "GalaxyBoyz 1.0", zh: "GalaxyBoyz 1.0" },
     type: { en: "official image website", zh: "形象官網" },
     module: "#GbModal1",
 
@@ -71,7 +71,7 @@ const projectsModal = [
   },
   {
     id: "GbModal2",
-    title: { en: "GalaxyBoyz 2.0", zh: "銀河男孩 2.0" },
+    title: { en: "GalaxyBoyz 2.0", zh: "GalaxyBoyz 2.0" },
     type: { en: "official image website", zh: "形象官網" },
     module: "#GbModal2",
     figma:

@@ -19,7 +19,7 @@ const projectsList = [
     webkitURL: "https://vvayhuang.github.io/galaxyboyz/",
   },
   {
-    id: 2,
+    id: 3,
     name: "生活唱片",
     year: 2022,
     module:"#Modal",
