@@ -34,7 +34,7 @@ const { t, locale } = useI18n();
                 :data-bs-target="project.module"
               >
                 <span class="me-3">{{ project.year }}</span>
-                <h3 class="fs-6 d-inline">{{ project.name }}</h3>
+                <h3 class="fs-6 d-inline">{{ project.name[$i18n.locale] }}</h3>
               </a>
             </div>
             <div class="col-lg-3 col-auto">
