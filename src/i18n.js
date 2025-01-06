@@ -4,7 +4,7 @@ import en from './locales/en.json';
 import zh from './locales/zh.json';
 
 const i18n = createI18n({
-  locale: 'zh', // 預設語言
+  locale: 'en', // 預設語言
   messages: {
     en,
     zh,
