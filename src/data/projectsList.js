@@ -2,10 +2,10 @@ const projectsList = [
   {
     id: 4,
     name: { en: "Buddy House", zh: "Buddy House" },
-    year: 2024,
+    year: 2025,
     module:"#Modal",
     figma: "https://www.figma.com/design/lgKC4901ViopAmKbNRokKc/Buddy-House?node-id=1742-44934&t=YCzVZdwqg6PAbMny-1",
-    webkitURL: "https://vvayhuang.github.io/lifeRecord/",
+    webkitURL: "#",
   },
   {
     id: 3,

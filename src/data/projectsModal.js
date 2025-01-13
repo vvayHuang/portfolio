@@ -5,6 +5,10 @@ import gb1preview2 from "@/assets/img/gbv1-preview-2.png";
 import gb2preview1 from "@/assets/img/gbv2-preview-1.png";
 import gb2preview2 from "@/assets/img/gbv2-preview-2.png";
 import gb2preview3 from "@/assets/img/gbv2-preview-3.png";
+import bhpreview1 from "@/assets/img/bh-preview-1.png";
+import bhpreview2 from "@/assets/img/bh-preview-2.png";
+import bhpreview3 from "@/assets/img/bh-preview-3.gif";
+import bhpreview4 from "@/assets/img/bh-preview-4.gif";
 const projectsModal = [
   {
     id: "BuddyHouseModal",
@@ -16,25 +20,23 @@ const projectsModal = [
     github: "",
     webkitURL: "",
     textContent: {
-      en: "After completing the figma course, you will understand how to use the concept of molecular systems to draw design drafts, which will help you manage components more effectively and facilitate subsequent maintenance. This concept can also be applied to programming. Reorganize the design draft and use vue and tailwind to complete this work",
-      zh: "進修完 figma 課程之後，了解設計稿要如何用分子系統的概念去畫，會更有效對於元件的管理，也方便後續的維護，這個概念也同時可運用在程式撰寫上。把設計稿重新整理一番，使用 vue 及 tailwind 完成這個作品",
+      en: "Buddy House is a conceptual restaurant website designed to convey the warmth of “dining and drinking at home,” creating a cozy and welcoming atmosphere. The design was crafted in Figma, using Material Theme Builder to quickly establish a color scheme inspired by the metro green line and a consistent typography system, reinforcing brand recognition. Figma’s Variables feature was employed to efficiently adjust design elements for flexibility and scalability. Illustrations were generated using the AI tool Recraft, producing unique visuals aligned with the brand’s friendly image. This project integrates design and technology, showcasing my skills in brand identity design, tool utilization, and creating a heartfelt dining experience.",
+      zh: "Buddy House 是一個模擬餐廳形象設計的官網，傳遞「來到家裡吃飯喝酒」的溫馨理念，營造輕鬆友善的用餐氛圍。設計稿以 Figma 製作，透過 Material Theme Builder 快速建立綠色（靈感來自捷運綠線）的配色方案和字體系統，確保整體視覺的一致性與品牌辨識度。此外，善用 Figma 的 Variables 功能，靈活調整設計元素，提升設計效率與彈性。網站中的插畫採用 AI 工具 Recraft 生成，打造獨特且符合品牌形象的視覺效果。此專案結合了設計與技術應用，展現了我在品牌形象設計、工具運用以及氛圍營造上的專業能力。",
     },
 
-    tag: ["figma"],
-    language: [
-      { label: "vue", value: 74.1 },
-      { label: "JavaScripts", value: 21.8 },
-      { label: "css", value: 3.7 },
-      { label: "html", value: 0.4 },
-    ],
+    tag: ["figma", "material", "design", "branding","recraft"],
+    // language: [
+    //   { label: "vue", value: 74.1 },
+    //   { label: "JavaScripts", value: 21.8 },
+    //   { label: "css", value: 3.7 },
+    //   { label: "html", value: 0.4 },
+    // ],
     images: [
-      { src: gb2preview1, alt: "gb2-preview-1" },
-      { src: gb2preview2, alt: "gb2-preview-2" },
-      { src: gb2preview3, alt: "gb2-preview-3" },
-      {
-        src: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeG84Y2MxY2o1am4wY2V1bXk1OWFoanJ3dGdkZHhlZGc2bG1vcWJncCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mXG3de6F4xUgptp1C7/giphy.gif",
-        alt: "gb2-preview-4",
-      },
+      { src: bhpreview1, alt: "bh-preview-1" },
+      { src: bhpreview2, alt: "bh-preview-2" },
+      { src: bhpreview3, alt: "bh-preview-3" },
+      { src: bhpreview4, alt: "bh-preview-4" },
+      
     ],
   },
   {
@@ -47,8 +49,8 @@ const projectsModal = [
     github: "https://github.com/vvayHuang/galaxyBoyzV3",
     webkitURL: "https://vvayhuang.github.io/galaxyBoyzV3/",
     textContent: {
-      en: "After completing the figma course, you will understand how to use the concept of molecular systems to draw design drafts, which will help you manage components more effectively and facilitate subsequent maintenance. This concept can also be applied to programming. Reorganize the design draft and use vue and tailwind to complete this work",
-      zh: "進修完 figma 課程之後，了解設計稿要如何用分子系統的概念去畫，會更有效對於元件的管理，也方便後續的維護，這個概念也同時可運用在程式撰寫上。把設計稿重新整理一番，使用 vue 及 tailwind 完成這個作品",
+      en: "GalaxyBoyz is a project that simulates the official website of a modern music band. Starting with design drafts created in Figma, the second version update focuses on improving layout and user experience to better reflect a professional artist image. The website is developed using Vue 3 and Vite for efficiency, combined with Tailwind CSS to create a responsive and modern design. This project demonstrates my ability to integrate frontend development with design, using detailed layouts and interactive features to emulate the feel of a real band website, delivering a professional and creative brand image.",
+      zh: "GalaxyBoyz 是一個模擬當代藝人樂團官網的設計與開發作品。我先以 Figma 製作設計稿，並在第二版更新中優化版面設計與用戶體驗，確保網站風格與內容更符合專業藝人形象。網站開發採用 Vue 3 搭配 Vite，提高開發效率，同時結合 Tailwind CSS，打造快速且具現代感的響應式設計。此作品展示了我在前端開發與設計上的整合能力，並透過細緻的排版與互動細節模擬真實樂團官網，傳遞專業且富有創意的品牌形象。",
     },
 
     tag: ["vite", "vue", "tailwind", "GASP", "recraft"],
@@ -77,8 +79,8 @@ const projectsModal = [
     github: "https://github.com/vvayHuang/galaxyboyz",
     webkitURL: "https://vvayhuang.github.io/galaxyboyz/",
     textContent: {
-      en: "GalaxyBoyz is a virtual band, for which an official website has been established. This is the first choice platform for all music fans and new friends to learn about us. Through this website, you can explore the latest news of the band, music works, upcoming tours, official store, and join our fan community.",
-      zh: "GalaxyBoyz是虛擬樂團，為它建立一個官方網站。這裡是所有樂迷和新朋友了解我們的首選平台，透過這個網站，你可以探索樂團最新動態、音樂作品、即將到來的巡演、官方商店，並加入我們的粉絲社群。",
+      en: "GalaxyBoyz is a website project designed to emulate the professional and creative image of a modern band. The design drafts were created using Figma and presented in the first version, showcasing the core design concepts and functional planning. The development process utilized the Bootstrap framework along with Vite to achieve rapid development and responsive design, ensuring a seamless user experience across different devices. With its clear structure and refined layout, the website replicates the style of an authentic band website. This project combines design and development, demonstrating my frontend skills and creative potential.",
+      zh: "GalaxyBoyz 是一個專為模擬樂團形象設計的官網作品，展現了當代樂團的專業與創意。網站設計稿使用 Figma 製作，並以第一版呈現，完整體現設計概念與功能規劃。開發過程採用 Bootstrap 框架結合 Vite，實現快速開發與響應式設計，確保網站在不同裝置上皆能提供良好的使用體驗。此網站以清晰的結構與細膩的排版，模擬真實樂團官網的風格，是一次結合設計與開發的實踐經驗，充分展現我的前端技術與創意能力。",
     },
     tag: ["vite", "bootstrap", "ejs", "recraft"],
     language: [
@@ -108,8 +110,8 @@ const projectsModal = [
     github: "https://github.com/vvayHuang/lifeRecord",
     webkitURL: "https://vvayhuang.github.io/lifeRecord/",
     textContent: {
-      en: "Life Record Life Record is a fictional record website I designed specifically for music lovers. In this work, musical elements and modern design styles are combined to create a music platform that is both dynamic and professional. The website displays album information, artist introductions, and functions for purchasing and listening to music, aiming to provide users with a smooth interactive experience. This work wants to show my strength in web design and UI/UX, as well as my passion and understanding of music culture.",
-      zh: "生活唱片 Life Record 是我設計的一個虛構的唱片網站，專為音樂愛好者量身打造。在這個作品中，結合了音樂元素與現代化的設計風格，創造了一個既充滿活力又專業的音樂平台。網站中展示了專輯資訊、音樂人介紹，以及購買和收聽音樂的功能，旨在為用戶提供一個流暢的互動體驗。這個作品想展現了我在網頁設計和UI/UX上的實力，也體現了我對音樂文化的熱情與理解。",
+      en: "Life Record is a mock online record store website designed for music enthusiasts. The platform offers a variety of record genres, allowing users to browse album covers, descriptions, and tracks with ease. Users can fill out a notification form for records they are interested in, ensuring a seamless connection for inquiries or reservations. Additionally, the website features a music news section to keep users informed about the latest updates in the industry. Developed with Bootstrap, the site achieves a clean design and responsive layout, ensuring an excellent user experience across devices. This project highlights my planning skills for music-themed websites and my hands-on experience with frontend development.",
+      zh: "生活唱片是一個模擬線上唱片行的網站，專為音樂愛好者打造。網站提供多樣化的唱片類型，使用者可以輕鬆瀏覽專輯封面、介紹與歌曲內容，深入了解每張專輯的特色。此外，若有興趣的唱片，使用者可透過填寫表單通知功能，進一步進行聯繫或預訂。網站也設有音樂新聞區，提供最新的音樂相關資訊，增強用戶的互動與參與感。開發過程中採用 Bootstrap 框架，實現了整潔的版面設計與響應式布局，確保網站在不同裝置上的良好體驗。這項作品展現了我對音樂主題網站的規劃能力與前端開發的實踐經驗。",
     },
     tag: ["vite", "bootstrap"], // 以陣列格式且每個項目用引號包裹
     language: [
