@@ -5,7 +5,7 @@ const projectsList = [
     year: 2025,
     module:"#Modal",
     figma: "https://www.figma.com/design/lgKC4901ViopAmKbNRokKc/Buddy-House?node-id=1742-44934&t=YCzVZdwqg6PAbMny-1",
-    webkitURL: "#",
+    webkitURL: "https://www.figma.com/proto/lgKC4901ViopAmKbNRokKc/Buddy-House?page-id=1278%3A4751&node-id=1278-4763&viewport=231%2C465%2C0.11&t=x2in0brapQORmDvG-1&scaling=contain&content-scaling=fixed&starting-point-node-id=1278%3A4763&show-proto-sidebar=1",
   },
   {
     id: 3,
