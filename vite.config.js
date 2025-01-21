@@ -5,7 +5,8 @@ import liveReload from 'vite-plugin-live-reload'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/portfolio/',
+  // 上傳 godaddy 之後的路徑 base必須是/，不然會出錯
+  base: '/',
   plugins: [
     vue(),
     liveReload(['./src/*html']),
