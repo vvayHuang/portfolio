@@ -89,14 +89,15 @@ const { t, locale } = useI18n();
   margin-bottom: 160px;
 }
 
-ul > li:hover {
-  span {
-    /* transform: scale(1.4); */
+ul > li {
+  .bi-arrow-up-right {
     transition: 0.45s cubic-bezier(0.34, 1.56, 0.48, 1.19);
-    .bi-arrow-up-right {
-      transition: 0.45s cubic-bezier(0.34, 1.56, 0.48, 1.19);
-      transform: rotate(45deg);
-    }
+  }
+}
+
+ul > li:hover {
+  .bi-arrow-up-right {
+    transform: rotate(45deg);
   }
 }
 </style>

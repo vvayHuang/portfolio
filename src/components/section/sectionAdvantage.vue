@@ -26,7 +26,15 @@ const { t, locale } = useI18n();
 </template>
 
 <style scoped>
-i {
-  transform: rotateY(180deg);
+ul > li {
+  .bi-arrow-up-right {
+    transition: 0.45s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+  }
+}
+
+ul > li:hover {
+  .bi-arrow-up-right {
+    transform: rotate(45deg);
+  }
 }
 </style>

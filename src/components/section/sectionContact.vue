@@ -43,4 +43,15 @@ section {
   margin-top: 24px;
   margin-bottom: 160px;
 }
+ul > li {
+  .bi-arrow-up-right {
+    transition: 0.45s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+  }
+}
+
+ul > li:hover {
+  .bi-arrow-up-right {
+    transform: rotate(45deg);
+  }
+}
 </style>
