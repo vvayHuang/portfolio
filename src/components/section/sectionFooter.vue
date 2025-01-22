@@ -52,7 +52,7 @@
               <div class="progress-bar"></div>
             </div>
           </div>
-          <span class="text-muted me-3 d-inline-flex">© 2024 vvayHuang</span>
+          <span class="text-muted me-3 d-inline-flex">© 2025 vvayHuang</span>
           <ul class="list-unstyled d-inline-flex flex-wrap">
             <li class=" me-3">
               <svg
@@ -142,18 +142,18 @@ span {
 }
 
 li:nth-of-type(1) .bi-circle-fill {
-  fill: var(--bs-gray-800); /* SCSS 顏色 */
+  fill: var(--bs-gray-800); 
 }
 
 li:nth-of-type(2) .bi-circle-fill {
-  fill: var(--bs-gray-700); /* HTML 顏色 */
+  fill: var(--bs-gray-700); 
 }
 
 li:nth-of-type(3) .bi-circle-fill {
-  fill: var(--bs-gray-600); /* EJS 顏色 */
+  fill: var(--bs-gray-600); 
 }
 
 li:nth-of-type(4) .bi-circle-fill {
-  fill: var(--bs-gray-500); /* JavaScript 顏色 */
+  fill: var(--bs-gray-500); 
 }
 </style>

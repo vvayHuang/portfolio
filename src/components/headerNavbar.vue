@@ -25,7 +25,7 @@ function closeDropdown() {
     <nav class="navbar navbar-expand-lg fixed-bottom">
       <div class="container">
         <span class="flex-grow-1 d-none d-lg-block text-dark text-lg-light"
-          >©2024</span
+          >©2025</span
         >
         <RouterLink class="navbar-brand" to="/"><Logo /></RouterLink>
         <ul class="navbar-nav justify-content-end flex-grow-1 flex-row">
