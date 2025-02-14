@@ -34,7 +34,7 @@ function changeTab(module) {
         ></button>
 
         <!-- Nav Pills -->
-        <ul class="bg-light mb-3 nav nav-pills p-3 rounded-5" id="pills-tab" role="tablist">
+        <ul class="bg-light mb-3 nav nav-pills p-2 rounded-5" id="pills-tab" role="tablist">
           <li
             v-for="(project, index) in projectsModalData"
             :key="index"
@@ -42,7 +42,7 @@ function changeTab(module) {
             role="presentation"
           >
             <button
-              class="nav-link rounded-4 text-bg-light bg-gradient"
+              class="nav-link text-bg-light bg-gradient"
               :class="{ active: activeTab === project.module, 'text-bg-dark': activeTab === project.module }"
               @click="changeTab(project.module)"
               :id="project.module"
@@ -175,6 +175,9 @@ function changeTab(module) {
   </div>
 </template>
 <style scoped>
+.nav-link{
+  border-radius: 24px;
+}
 .modal {
   backdrop-filter: blur(20px);
 }
