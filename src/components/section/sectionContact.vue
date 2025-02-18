@@ -23,7 +23,7 @@ const { t, locale } = useI18n();
             <li>
               <a
                 class="nav-link d-inline-block"
-                href="mailto:momoopsoops@gmail.com"
+                href="mailto:jyunwayhuang@gmail.com"
               >
                 <IconArrowUpRight />
                 <span class="fw-medium ms-3 text-capitalize">{{
