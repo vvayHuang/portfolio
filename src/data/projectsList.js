@@ -9,7 +9,7 @@ const projectsList = [
   },
   {
     id: 3,
-    name: { en: "GalaxyBoyz 2.0", zh: "GalaxyBoyz 2.0" },
+    name: { en: "GalaxyBoyz", zh: "GalaxyBoyz" },
     year: 2024,
     module:"#Modal",
     figma:
@@ -17,15 +17,15 @@ const projectsList = [
     github: "https://github.com/vvayHuang/galaxyBoyzV3",
     webkitURL: "https://vvayhuang.github.io/galaxyBoyzV3/",
   },
-  {
-    id: 2,
-    name: { en: "GalaxyBoyz 1.0", zh: "GalaxyBoyz 1.0" },
-    year: 2023,
-    module:"#Modal",
+  // {
+  //   id: 2,
+  //   name: { en: "GalaxyBoyz 1.0", zh: "GalaxyBoyz 1.0" },
+  //   year: 2023,
+  //   module:"#Modal",
     
-    github: "https://github.com/vvayHuang/galaxyboyz",
-    webkitURL: "https://vvayhuang.github.io/galaxyboyz/",
-  },
+  //   github: "https://github.com/vvayHuang/galaxyboyz",
+  //   webkitURL: "https://vvayhuang.github.io/galaxyboyz/",
+  // },
   {
     id: 1,
     name: { en: "Life Record", zh: "生活唱片" },

@@ -93,9 +93,9 @@ function changeTab(module) {
             <div class="modal-body text-bg-light rounded-3">
               <div class="container">
                 <div
-                  class="flex-column flex-md-row justify-content-between row"
+                  class="flex-column flex-lg-row row"
                 >
-                  <div class="col">
+                  <div class="col col-lg-4">
                     <h2 class="text-secondary fs-6">{{ project.type[$i18n.locale] }}</h2>
                     <h1 class="modal-title mb-md-3" id="LifeRecordModalLabel">
                       {{ project.title[$i18n.locale] }}
@@ -161,7 +161,38 @@ function changeTab(module) {
                   <!-- Text Content -->
                   <div class="col">
                     <div class="d-flex flex-column h-100">
-                      <p>{{ project.textContent[$i18n.locale] }}</p>
+                      <h3 class=" mb-4">{{ project.projectOverview[$i18n.locale] }}</h3>
+                      <p>{{ project.description[$i18n.locale] }}</p>
+                      <h3 class=" mt-4 mb-4">{{  project.technologiesUsed[$i18n.locale] }}</h3>
+                      <ul>
+                        <li v-for="(item, index) in project.technologiesUsedItem" :key="index">
+                          <p>{{ item[$i18n.locale] }}</p>
+                        </li>
+                      </ul>
+                      <h3 class=" mt-4 mb-4">{{  project.responsibilities[$i18n.locale] }}</h3>
+                      <ul>
+                        <li v-for="(item, index) in project.responsibilitiesItem" :key="index">
+                          <p>{{ item[$i18n.locale] }}</p>
+                        </li>
+                      </ul>
+                      <h3 class=" mt-4 mb-4">{{  project.keyFeatures[$i18n.locale] }}</h3>
+                      <ul>
+                        <li v-for="(item, index) in project.keyFeaturesItem" :key="index">
+                          <p>{{ item[$i18n.locale] }}</p>
+                        </li>
+                      </ul>
+                      <h3 class=" mt-4 mb-4">{{  project.challengesOutcomes[$i18n.locale] }}</h3>
+                      <ul>
+                        <li v-for="(item, index) in project.challengesOutcomesItem" :key="index">
+                          <p>{{ item[$i18n.locale] }}</p>
+                        </li>
+                      </ul>
+                      <h3 class=" mt-4 mb-4">{{  project.lessonsLearned[$i18n.locale] }}</h3>
+                      <ul>
+                        <li v-for="(item, index) in project.lessonsLearnedItem" :key="index">
+                          <p>{{ item[$i18n.locale] }}</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
