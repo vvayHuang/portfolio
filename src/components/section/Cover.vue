@@ -1,25 +1,25 @@
 <script setup>
-import { onMounted } from "vue";
-import lax from "lax.js";
+import { onMounted } from 'vue'
+import lax from 'lax.js'
 
-import { useI18n } from 'vue-i18n';
-const { t, locale } = useI18n();
+import { useI18n } from 'vue-i18n'
+const { t, locale } = useI18n()
 
 onMounted(() => {
   // Setup lax
-  lax.init();
+  lax.init()
 
-  lax.addDriver("scrollY", function () {
-    return window.scrollY;
-  });
+  lax.addDriver('scrollY', function () {
+    return window.scrollY
+  })
 
   // Add your elements
   lax.addElements(
-    ".display-title-scroll",
+    '.display-title-scroll',
     {
       scrollY: {
         translateX: [
-          ["elInY", "elOutY"],
+          ['elInY', 'elOutY'],
           [-200, 100],
         ],
         opacity: [
@@ -28,9 +28,9 @@ onMounted(() => {
         ],
       },
     },
-    []
-  );
-});
+    [],
+  )
+})
 </script>
 
 <template>
@@ -45,10 +45,8 @@ onMounted(() => {
         <div class="row">
           <div class="col-lg-4">
             <div class="overflow-hidden">
-              <p
-                class="animate__animated animate__slideInUp animate__slow mb-0"
-              >
-              {{ t('description') }}
+              <p class="animate__animated animate__slideInUp animate__slow mb-0">
+                {{ t('description') }}
               </p>
             </div>
           </div>
@@ -65,7 +63,7 @@ onMounted(() => {
         />
       </div>
       <div
-        class="position-absolute bottom-0 end-0 animate__animated animate__fadeInRight"
+        class="position-absolute bottom-0 end-0 animate__animated animate__fadeInRight animate__slow"
       >
         <img
           class="img-fluid"
@@ -81,6 +79,7 @@ onMounted(() => {
 <style scoped>
 #cover {
   height: calc(100vh - 56px);
-  margin-bottom: 80px;
+  padding-bottom: 80px;
+  margin-bottom: 56px;
 }
 </style>
