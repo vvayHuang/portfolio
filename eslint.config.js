@@ -15,4 +15,5 @@ export default [
     "airbnb-base",
     "prettier" // 確保 ESLint 不會與 Prettier 衝突
   ] },
+  {plugins:["prettier"], rules: { "prettier/prettier": "error" }},
 ];
