@@ -1,19 +1,19 @@
 <script setup>
-import { ref } from "vue";
-import IconGithub from "./icons/IconGithub.vue";
-import IconLink45deg from "./icons/IconLink45deg.vue";
-import IconFigma from "./icons/IconFigma.vue";
-import projectsModalData from "../data/projectsModal";
-import IconCircleFill from "./icons/IconCircleFill.vue";
-import { useI18n } from "vue-i18n";
-const { t, locale } = useI18n();
+import { ref } from 'vue'
+import IconGithub from './icons/IconGithub.vue'
+import IconLink45deg from './icons/IconLink45deg.vue'
+import IconFigma from './icons/IconFigma.vue'
+import projectsModalData from '../data/projectsModal'
+import IconCircleFill from './icons/IconCircleFill.vue'
+import { useI18n } from 'vue-i18n'
+const { t, locale } = useI18n()
 
 // 預設選中第一個 tab
-const activeTab = ref(projectsModalData[0].module);
+const activeTab = ref(projectsModalData[0].module)
 
 // 切換tab
 function changeTab(module) {
-  activeTab.value = module;
+  activeTab.value = module
 }
 </script>
 <template>
@@ -43,7 +43,10 @@ function changeTab(module) {
           >
             <button
               class="nav-link text-bg-light bg-gradient"
-              :class="{ active: activeTab === project.module, 'text-bg-dark': activeTab === project.module }"
+              :class="{
+                active: activeTab === project.module,
+                'text-bg-dark': activeTab === project.module,
+              }"
               @click="changeTab(project.module)"
               :id="project.module"
               data-bs-toggle="pill"
@@ -53,7 +56,7 @@ function changeTab(module) {
               aria-controls="pills-home"
               aria-selected="true"
             >
-            {{ project.title[$i18n.locale] }}
+              {{ project.title[$i18n.locale] }}
             </button>
           </li>
         </ul>
@@ -75,16 +78,8 @@ function changeTab(module) {
             >
               <div class="container">
                 <div class="row row-cols-md-2 row-cols-1 g-lg-3 g-md-2 gy-2">
-                  <div
-                    v-for="(image, index) in project.images"
-                    :key="index"
-                    class="col"
-                  >
-                    <img
-                      class="w-100 h-100"
-                      :src="image.src"
-                      :alt="image.alt"
-                    />
+                  <div v-for="(image, index) in project.images" :key="index" class="col">
+                    <img class="w-100 h-100" :src="image.src" :alt="image.alt" />
                   </div>
                 </div>
               </div>
@@ -92,9 +87,7 @@ function changeTab(module) {
 
             <div class="modal-body text-bg-light rounded-3">
               <div class="container">
-                <div
-                  class="flex-column flex-lg-row row"
-                >
+                <div class="flex-column flex-lg-row row">
                   <div class="col col-lg-4">
                     <h2 class="text-secondary fs-6">{{ project.type[$i18n.locale] }}</h2>
                     <h1 class="modal-title mb-md-3" id="LifeRecordModalLabel">
@@ -137,11 +130,9 @@ function changeTab(module) {
                         class="d-flex align-items-center me-3"
                       >
                         <IconCircleFill class="me-3" />
+                        <small class="text-muted me-1 text-uppercase">{{ language.label }}</small>
                         <small class="text-muted me-1 text-uppercase">{{
-                          language.label
-                        }}</small>
-                        <small class="text-muted me-1 text-uppercase">{{
-                          language.value + "%"
+                          language.value + '%'
                         }}</small>
                       </li>
                     </ul>
@@ -161,33 +152,45 @@ function changeTab(module) {
                   <!-- Text Content -->
                   <div class="col">
                     <div class="d-flex flex-column h-100">
-                      <h3 class=" mb-4 text-secondary">{{ project.projectOverview[$i18n.locale] }}</h3>
+                      <h3 class="mb-4 text-secondary">
+                        {{ project.projectOverview[$i18n.locale] }}
+                      </h3>
                       <p>{{ project.description[$i18n.locale] }}</p>
-                      <h3 class=" mt-4 mb-4 text-secondary">{{  project.technologiesUsed[$i18n.locale] }}</h3>
+                      <h3 class="mt-4 mb-4 text-secondary">
+                        {{ project.technologiesUsed[$i18n.locale] }}
+                      </h3>
                       <ul>
                         <li v-for="(item, index) in project.technologiesUsedItem" :key="index">
                           <p>{{ item[$i18n.locale] }}</p>
                         </li>
                       </ul>
-                      <h3 class=" mt-4 mb-4 text-secondary">{{  project.responsibilities[$i18n.locale] }}</h3>
+                      <h3 class="mt-4 mb-4 text-secondary">
+                        {{ project.responsibilities[$i18n.locale] }}
+                      </h3>
                       <ul>
                         <li v-for="(item, index) in project.responsibilitiesItem" :key="index">
                           <p>{{ item[$i18n.locale] }}</p>
                         </li>
                       </ul>
-                      <h3 class=" mt-4 mb-4 text-secondary">{{  project.keyFeatures[$i18n.locale] }}</h3>
+                      <h3 class="mt-4 mb-4 text-secondary">
+                        {{ project.keyFeatures[$i18n.locale] }}
+                      </h3>
                       <ul>
                         <li v-for="(item, index) in project.keyFeaturesItem" :key="index">
                           <p>{{ item[$i18n.locale] }}</p>
                         </li>
                       </ul>
-                      <h3 class=" mt-4 mb-4 text-secondary">{{  project.challengesOutcomes[$i18n.locale] }}</h3>
+                      <h3 class="mt-4 mb-4 text-secondary">
+                        {{ project.challengesOutcomes[$i18n.locale] }}
+                      </h3>
                       <ul>
                         <li v-for="(item, index) in project.challengesOutcomesItem" :key="index">
                           <p>{{ item[$i18n.locale] }}</p>
                         </li>
                       </ul>
-                      <h3 class=" mt-4 mb-4 text-secondary">{{  project.lessonsLearned[$i18n.locale] }}</h3>
+                      <h3 class="mt-4 mb-4 text-secondary">
+                        {{ project.lessonsLearned[$i18n.locale] }}
+                      </h3>
                       <ul>
                         <li v-for="(item, index) in project.lessonsLearnedItem" :key="index">
                           <p>{{ item[$i18n.locale] }}</p>
@@ -206,7 +209,7 @@ function changeTab(module) {
   </div>
 </template>
 <style scoped>
-.nav-link{
+.nav-link {
   border-radius: 24px;
 }
 .modal {
