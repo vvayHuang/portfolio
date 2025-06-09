@@ -1,5 +1,5 @@
 import "./assets/scss/main.scss";
-import * as bootstrap from "bootstrap";
+// import * as bootstrap from "bootstrap";
 import "animate.css";
 
 import { createApp } from "vue";

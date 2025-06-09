@@ -34,7 +34,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="cover" class="overflow-hidden" style="height: 100vh">
+  <section id="cover" class="overflow-hidden">
     <div class="d-flex flex-column h-100 justify-content-center">
       <img
         class="display-title-scroll mb-3 img-fluid"
