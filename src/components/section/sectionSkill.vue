@@ -1,28 +1,28 @@
 <script setup>
-import SectionText from "./sectionText.vue";
-import { useI18n } from "vue-i18n";
-const { t, locale } = useI18n();
+import SectionText from './sectionText.vue'
+import { useI18n } from 'vue-i18n'
+const { t, locale } = useI18n()
 </script>
 <template>
   <SectionText>
-    <template #heading>{{ t("my skill") }}</template>
+    <template #heading>{{ t('my skill') }}</template>
   </SectionText>
   <slot name="list">
     <ul class="list-unstyled">
       <li class="py-2">
-        <span class="fw-medium">{{ t("my skill 1") }}</span>
+        <span class="">{{ t('my skill 1') }}</span>
       </li>
       <li class="py-2">
-        <span class="fw-medium">{{ t("my skill 2") }}</span>
+        <span class="">{{ t('my skill 2') }}</span>
       </li>
       <li class="py-2">
-        <span class="fw-medium">{{ t("my skill 3") }}</span>
+        <span class="">{{ t('my skill 3') }}</span>
       </li>
       <li class="py-2">
-        <span class="fw-medium">{{ t("my skill 4") }}</span>
+        <span class="">{{ t('my skill 4') }}</span>
       </li>
       <li class="py-2">
-        <span class="fw-medium">{{ t("my skill 5") }}</span>
+        <span class="">{{ t('my skill 5') }}</span>
       </li>
     </ul>
   </slot>

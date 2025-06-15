@@ -1,21 +1,21 @@
 <script setup>
-import IconArrow from "../icons/IconArrow90degDown.vue";
-import IconFigma from "../icons/IconFigma.vue";
-import IconGithub from "../icons/IconGithub.vue";
-import IconRight from "../icons/IconRight.vue";
-import sectionText from "./sectionText.vue";
-import Modal from "../Modal.vue";
-import projects from "../../data/projectsList";
-import { useI18n } from "vue-i18n";
+import IconArrow from '../icons/IconArrow90degDown.vue'
+import IconFigma from '../icons/IconFigma.vue'
+import IconGithub from '../icons/IconGithub.vue'
+import IconRight from '../icons/IconRight.vue'
+import sectionText from './sectionText.vue'
+import Modal from '../Modal.vue'
+import projects from '../../data/projectsList'
+import { useI18n } from 'vue-i18n'
 
-const { t, locale } = useI18n();
+const { t, locale } = useI18n()
 </script>
 
 <template>
   <section id="PRJ">
     <div class="container">
       <sectionText>
-        <template #heading>{{ t("my project") }}</template>
+        <template #heading>{{ t('my project') }}</template>
         <template #icon>
           <IconArrow />
         </template>
@@ -60,17 +60,15 @@ const { t, locale } = useI18n();
               </ul>
             </div>
             <div class="col-lg-3">
-              <div
-                class="row justify-content-end d-none d-md-flex position-relative"
-              >
+              <div class="row justify-content-end d-none d-md-flex position-relative">
                 <div class="col-auto z-2">
                   <a
                     :href="project.webkitURL"
                     target="_blank"
                     class="link-dark link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover d-flex align-items-center py-2"
-                    ><span>{{ t("launch") }}</span>
-                    <span class="text-bg-dark p-2 rounded-circle ms-3 lh-1">
-                      <IconRight/>
+                    ><span>{{ t('launch') }}</span>
+                    <span class="text-bg-dark p-2 rounded-circle ms-3 lh-1 circle-icon">
+                      <IconRight />
                     </span>
                   </a>
                 </div>
@@ -79,7 +77,7 @@ const { t, locale } = useI18n();
           </div>
         </li>
       </ul>
-      <Modal/>
+      <Modal />
     </div>
   </section>
 </template>
@@ -90,7 +88,8 @@ const { t, locale } = useI18n();
 }
 
 ul > li {
-  .bi-arrow-up-right {
+  .bi-arrow-up-right,
+  .circle-icon {
     transition: 0.45s cubic-bezier(0.34, 1.56, 0.48, 1.19);
   }
 }
@@ -98,6 +97,9 @@ ul > li {
 ul > li:hover {
   .bi-arrow-up-right {
     transform: rotate(45deg);
+  }
+  .circle-icon {
+    background-color: var(--bs-primary) !important;
   }
 }
 </style>
