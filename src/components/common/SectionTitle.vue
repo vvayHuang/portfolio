@@ -1,5 +1,5 @@
 <script setup>
-import IconArrow90degDown from "../icons/IconArrow90degDown.vue";
+import IconArrow90degDown from '@/icons/IconArrow90degDown.vue'
 </script>
 
 <template>

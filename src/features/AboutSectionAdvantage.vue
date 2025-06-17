@@ -1,8 +1,8 @@
 <script setup>
-import IconArrowUpRight from '../icons/IconArrowUpRight.vue'
 import { useI18n } from 'vue-i18n'
-import SectionText from './sectionText.vue'
 const { t, locale } = useI18n()
+import SectionText from '@/components/common/SectionTitle.vue'
+import IconArrowUpRight from '@/icons/IconArrowUpRight.vue'
 </script>
 
 <template>

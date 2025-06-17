@@ -1,11 +1,11 @@
 <script setup>
-import IconArrow from '../icons/IconArrow90degDown.vue'
-import IconFigma from '../icons/IconFigma.vue'
-import IconGithub from '../icons/IconGithub.vue'
-import IconRight from '../icons/IconRight.vue'
-import sectionText from './sectionText.vue'
-import Modal from '../Modal.vue'
-import projects from '../../data/projectsList'
+import IconArrow from '@/icons/IconArrow90degDown.vue'
+import IconFigma from '@/icons/IconFigma.vue'
+import IconGithub from '@/icons/IconGithub.vue'
+import IconRight from '@/icons/IconRight.vue'
+import SectionText from '@//components/common/SectionTitle.vue'
+import Modal from '@/components/Modal.vue'
+import projects from '@/data/projectsList.js'
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
@@ -14,12 +14,12 @@ const { t, locale } = useI18n()
 <template>
   <section id="PRJ">
     <div class="container">
-      <sectionText>
+      <SectionText>
         <template #heading>{{ t('my project') }}</template>
         <template #icon>
           <IconArrow />
         </template>
-      </sectionText>
+      </SectionText>
       <ul class="list-unstyled">
         <li
           class="py-md-2 py-4 border-bottom position-relative"

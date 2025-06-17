@@ -1,19 +1,15 @@
 <script setup>
-import Cover from '../components/section/Cover.vue'
-import Prj from '../components/section/sectionProject.vue'
-import Who from '../components/section/sectionAbout.vue'
-import Msg from '../components/section/sectionContact.vue'
-import Navbar from '../components/headerNavbar.vue'
-import sectionFooter from '../components/section/sectionFooter.vue'
+import CoverSection from '@/features/CoverSection.vue'
+import ProjectsSection from '@/features/ProjectsSection.vue'
+import AboutSection from '@/features/AboutSection.vue'
+import ContactSection from '@/features/ContactSection.vue'
 </script>
 
 <template>
-  <Navbar />
   <main>
-    <Cover />
-    <Prj />
-    <Who />
-    <Msg />
+    <CoverSection />
+    <ProjectsSection />
+    <AboutSection />
+    <ContactSection />
   </main>
-  <sectionFooter />
 </template>

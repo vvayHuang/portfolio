@@ -1,11 +1,11 @@
 <script setup>
 import { ref } from 'vue'
-import IconGithub from './icons/IconGithub.vue'
-import IconLink45deg from './icons/IconLink45deg.vue'
-import IconFigma from './icons/IconFigma.vue'
-import projectsModalData from '../data/projectsModal'
-import IconCircleFill from './icons/IconCircleFill.vue'
 import { useI18n } from 'vue-i18n'
+import IconGithub from '@/icons/IconGithub.vue'
+import IconLink45deg from '@/icons/IconLink45deg.vue'
+import IconFigma from '@/icons/IconFigma.vue'
+import projectsModalData from '../data/projectsModal'
+import IconCircleFill from '@/icons/IconCircleFill.vue'
 const { t, locale } = useI18n()
 
 // 預設選中第一個 tab

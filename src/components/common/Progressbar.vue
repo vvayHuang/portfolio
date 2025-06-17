@@ -1,6 +1,6 @@
 <script setup>
-import IconCircleFill from "./icons/IconCircleFill.vue"
-import projectsModalData from "../data/projectsModal";
+import IconCircleFill from '@/components/icons/IconCircleFill.vue'
+import projectsModalData from '@/data/projectsModal'
 </script>
 <template>
   <div v-for="(project, projectIndex) in projectsModalData" :key="projectIndex">
@@ -22,7 +22,7 @@ import projectsModalData from "../data/projectsModal";
   </div>
   <ul class="list-unstyled d-inline-flex flex-wrap">
     <li class="me-3">
-     <IconCircleFill/>
+      <IconCircleFill />
       <span class="text-muted me-1 text-uppercase">html</span>
       <span class="text-muted ms-md-1 me-md-1">54.7%</span>
     </li>
@@ -83,25 +83,25 @@ span {
   backdrop-filter: blur(20px);
 }
 /* 進度條顏色 */
-.progress[aria-label="Segment one"] .progress-bar,
+.progress[aria-label='Segment one'] .progress-bar,
 li:nth-of-type(1) .bi-circle-fill {
   background-color: #c6538c;
   fill: #c6538c;
 }
 
-.progress[aria-label="Segment two"] .progress-bar,
+.progress[aria-label='Segment two'] .progress-bar,
 li:nth-of-type(2) .bi-circle-fill {
   background-color: #e34c26;
   fill: #e34c26;
 }
 
-.progress[aria-label="Segment three"] .progress-bar,
+.progress[aria-label='Segment three'] .progress-bar,
 li:nth-of-type(3) .bi-circle-fill {
   background-color: #a91d50;
   fill: #a91d50;
 }
 
-.progress[aria-label="Segment four"] .progress-bar,
+.progress[aria-label='Segment four'] .progress-bar,
 li:nth-of-type(4) .bi-circle-fill {
   background-color: #f1e05b;
   fill: #f1e05b;
