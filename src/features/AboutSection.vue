@@ -1,6 +1,6 @@
 <script setup>
 import AboutSectionSkill from '@/features/AboutSectionSkill.vue'
-import AboutSectionDescription from '@/features/AboutSectionDescription.vue'
+import AboutSectionInfo from '@/features/AboutSectionInfo.vue'
 import AboutSectionAdvantage from '@/features/AboutSectionAdvantage.vue'
 </script>
 <template>
@@ -8,17 +8,11 @@ import AboutSectionAdvantage from '@/features/AboutSectionAdvantage.vue'
     <div class="container">
       <div class="row justify-content-between gy-5 flex-column-reverse flex-lg-row">
         <div class="col-lg-4">
-          <ul class="list-unstyled">
-            <li class="mb-5">
-              <AboutSectionSkill />
-            </li>
-            <li>
-              <AboutSectionAdvantage />
-            </li>
-          </ul>
+          <AboutSectionSkill />
+          <AboutSectionAdvantage />
         </div>
         <div class="col-lg-6">
-          <AboutSectionDescription />
+          <AboutSectionInfo />
         </div>
       </div>
     </div>

@@ -2,39 +2,40 @@
 import { useI18n } from 'vue-i18n'
 const { t, locale } = useI18n()
 import SectionText from '@/components/common/SectionTitle.vue'
-import IconArrowUpRight from '@/icons/IconArrowUpRight.vue'
+import List from '@/components/common/List.vue'
+
+const sectionText = {
+  en: 'My Advantage',
+  zh: '我的優勢',
+}
+
+const advantages = [
+  {
+    id: 1,
+    text: {
+      en: 'Passionate about design and always eager to learn.',
+      zh: '對設計充滿熱情，並保持強烈的學習意願。',
+    },
+  },
+  {
+    id: 2,
+    text: {
+      en: 'Possess strong foundational knowledge and a quick learning ability.',
+      zh: '具備扎實的基礎知識與快速的學習能力。',
+    },
+  },
+]
 </script>
 
 <template>
-  <SectionText>
-    <template #heading>{{ t('my advantage') }}</template>
-  </SectionText>
-  <slot name="list">
-    <ul class="list-unstyled">
-      <li class="py-2">
-        <div class="d-flex align-items-center">
-          <IconArrowUpRight class="d-block" />
-          <span class="ms-3">{{ t('my advantage 1') }}</span>
-        </div>
-      </li>
-      <li class="py-2">
-        <IconArrowUpRight />
-        <span class="ms-3">{{ t('my advantage 2') }}</span>
-      </li>
-    </ul>
-  </slot>
+  <div class="about-advantage">
+    <SectionText>
+      <template #heading>{{ sectionText[locale] }}</template>
+    </SectionText>
+    <List :items="advantages">
+      <template #list-item="{ item, index }">
+        {{ item.text[locale] }}
+      </template>
+    </List>
+  </div>
 </template>
-
-<style scoped>
-ul > li {
-  .bi-arrow-up-right {
-    transition: 0.45s cubic-bezier(0.34, 1.56, 0.48, 1.19);
-  }
-}
-
-ul > li:hover {
-  .bi-arrow-up-right {
-    transform: rotate(45deg);
-  }
-}
-</style>

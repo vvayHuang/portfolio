@@ -2,8 +2,9 @@
 @import 'bootstrap/scss/functions';
 
 // 2. Include any default variable overrides here
-@import './variables/colors.scss';
+// @import './variables/colors.scss';
 @import './variables/typography.scss';
+@import './variables/spacing.scss';
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/variables-dark';
