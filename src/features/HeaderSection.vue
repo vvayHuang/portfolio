@@ -1,8 +1,8 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import Logo from '@/components/common/BrandLogo.vue'
+import BrandLogo from '@/components/common/BrandLogo.vue'
 import IconTranslate from '@/icons/IconTranslate.vue'
 const { t, locale } = useI18n()
 // 切換語言的方法
@@ -19,13 +19,31 @@ function openDropdown() {
 function closeDropdown() {
   isDropdownOpen.value = false
 }
+
+// 關閉下拉選單的函式
+function handleClickOutside(event) {
+  const dropdownMenu = document.querySelector('.dropdown-menu')
+  if (dropdownMenu && !dropdownMenu.contains(event.target)) {
+    closeDropdown()
+  }
+}
+
+// 在元件掛載時添加事件監聽器
+onMounted(() => {
+  document.addEventListener('mousedown', handleClickOutside)
+})
+
+// 在元件卸載時移除事件監聽器
+onBeforeUnmount(() => {
+  document.removeEventListener('mousedown', handleClickOutside)
+})
 </script>
 <template>
   <header class="fixed-top">
     <nav class="navbar navbar-expand-lg fixed-bottom">
       <div class="container">
         <span class="flex-grow-1 d-none d-lg-block text-dark text-lg-light">©2025</span>
-        <RouterLink class="navbar-brand" to="/"><Logo /></RouterLink>
+        <RouterLink class="navbar-brand" to="/"><BrandLogo /></RouterLink>
         <ul class="navbar-nav justify-content-end flex-grow-1 flex-row">
           <li class="nav-item">
             <a class="nav-link text-light px-2 px-md-4" aria-current="page" href="#PRJ">{{
@@ -55,12 +73,12 @@ function closeDropdown() {
             >
               <li>
                 <button class="dropdown-item" @click="(switchLanguage('en'), closeDropdown())">
-                  英文
+                  {{ t('language-en') }}
                 </button>
               </li>
               <li>
                 <button class="dropdown-item" @click="(switchLanguage('zh'), closeDropdown())">
-                  中文
+                  {{ t('language-zh') }}
                 </button>
               </li>
             </ul>
