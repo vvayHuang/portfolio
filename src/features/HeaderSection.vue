@@ -39,11 +39,11 @@ onBeforeUnmount(() => {
 })
 </script>
 <template>
-  <header class="fixed-top">
+  <header class="fixed-top px-lg-6 px-md-2">
     <nav class="navbar navbar-expand-lg fixed-bottom">
-      <div class="container">
+      <div class="container-fluid">
         <span class="flex-grow-1 d-none d-lg-block text-dark text-lg-light">©2025</span>
-        <RouterLink class="navbar-brand" to="/"><BrandLogo /></RouterLink>
+        <RouterLink class="navbar-brand me-md-0" to="/"><BrandLogo /></RouterLink>
         <ul class="navbar-nav justify-content-end flex-grow-1 flex-row">
           <li class="nav-item">
             <a class="nav-link text-light px-2 px-md-4" aria-current="page" href="#PRJ">{{
