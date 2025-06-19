@@ -9,16 +9,17 @@ import projects from '@/data/projectsList.js'
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
+const sectionText = {
+  en: 'My Projects',
+  zh: '我的作品集',
+}
 </script>
 
 <template>
   <section id="section-projects">
     <div class="container">
       <SectionText>
-        <template #heading>{{ t('my project') }}</template>
-        <template #icon>
-          <IconArrow />
-        </template>
+        <template #heading>{{ sectionText[locale] }}</template>
       </SectionText>
       <ul class="list-unstyled">
         <li
@@ -83,7 +84,7 @@ const { t, locale } = useI18n()
 </template>
 
 <style scoped>
-#PRJ {
+#section-projects {
   margin-bottom: 160px;
 }
 

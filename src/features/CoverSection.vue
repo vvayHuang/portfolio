@@ -33,21 +33,31 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
-  // Remove the scrollY driver to prevent stacking
+  // Remove the scrollY driver and registered elements to prevent stacking
   lax.removeDriver('scrollY')
+  lax.removeElements('.display-title-scroll')
 })
+// description 物件用於根據當前語言顯示自我介紹文字，key 為語言代碼（如 'en', 'zh'），value 為對應語言的介紹內容
+const description = {
+  en: 'My name is Huang Jyun Wei. I am a job seeker who loves design. I am currently actively seeking job opportunities as a web designer/UI designer',
+  zh: '我叫黃俊維，是一位熱愛設計的求職者，目前正在積極尋求網頁設計師/UI設計師的工作機會',
+}
 </script>
 
 <template>
-  <section id="cover" class="overflow-hidden">
+  <section id="section-hero" class="overflow-hidden">
     <div class="d-flex flex-column h-100 justify-content-center">
-      <img class="display-title-scroll mb-3 img-fluid" src="@/assets/img/VVAY HUANG.png" alt="" />
+      <img
+        class="display-title-scroll mb-3 img-fluid"
+        src="@/assets/img/vvayhuangCoverImage.png"
+        alt=""
+      />
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
             <div class="overflow-hidden">
               <p class="animate__animated animate__slideInUp animate__slow mb-0">
-                {{ t('description') }}
+                {{ description[locale] }}
               </p>
             </div>
           </div>
@@ -76,7 +86,7 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-#cover {
+#section-hero {
   height: calc(100vh - 56px);
   padding-bottom: 80px;
   margin-bottom: 56px;

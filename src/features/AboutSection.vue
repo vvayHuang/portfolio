@@ -20,7 +20,7 @@ import AboutSectionAdvantage from '@/features/AboutSectionAdvantage.vue'
 </template>
 
 <style scoped>
-#WHO {
+#section-about {
   margin-bottom: 160px;
 }
 </style>

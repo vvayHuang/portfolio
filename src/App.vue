@@ -7,7 +7,7 @@ import FooterSection from '@/features/FooterSection.vue'
 
 <template>
   <HeaderSection />
-  <Loader />
+  <!-- <Loader /> -->
   <router-view />
   <FooterSection />
 </template>

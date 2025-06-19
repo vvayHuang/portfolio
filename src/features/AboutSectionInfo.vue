@@ -36,6 +36,14 @@ const info = [
     },
   },
 ]
+const avatar = {
+  en: 'Way Huang (taken in 2022)',
+  zh: '黃俊維 (攝於 2022)',
+}
+const altText = {
+  en: 'Personal photo',
+  zh: '個人照片',
+}
 </script>
 <template>
   <div class="about-info">
@@ -47,8 +55,8 @@ const info = [
         {{ item.text[locale] }}
       </p>
     </div>
-    <img class="mb-2 img-fluid" src="@/assets/img/personal-img.png" alt="Personal photo" />
-    <p class="small text-capitalize">{{ t('avatar', 'Avatar') }}</p>
+    <img class="mb-2 img-fluid" src="@/assets/img/personal-img.png" :alt="altText[locale]" />
+    <p class="small text-capitalize">{{ avatar[locale] }}</p>
   </div>
 </template>
 <style scoped>

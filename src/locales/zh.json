@@ -4,32 +4,5 @@
   "WHO": "關於",
   "language-zh": "繁體中文",
   "language-en": "英文",
-  "description": "我叫黃俊維，是一位熱愛設計的求職者，目前正在積極尋求網頁設計師/UI設計師的工作機會",
-  "my project": "我的作品集",
-  "launch": "瀏覽",
-  "my skill": "我的技能",
-  "my skill 1": "熟悉 Figma UI／UX 設計工具",
-  "my skill 2": "熟悉 HTML、CSS，略懂 JavaScript 前端開發技術",
-  "my skill 3": "熟悉 Bootstrap，略懂 Tailwind 前端開發框架",
-  "my skill 4": "略懂 Vue3 前端開發框架",
-  "my skill 5": "略懂 git、Github 版本控制",
-  "about me": "關於我",
-  "about me content 1": "您好，我是黃俊維，一名熱愛設計且專注於網頁設計與 UI/UX 設計的工作者，正在積極尋找相關的職業發展機會。",
-  "about me content 2": "我透過多媒體設計職業培訓課程、線上網頁切版實作課程，以及實戰型工作坊，深入學習了 HTML、CSS 與 JavaScript 等前端技術。這些經驗讓我掌握了從 Figma 原型設計到最終實現的完整設計與開發流程。",
-
-  "about me content 3": "此外，我對設計與開發之間的關係有更深入的了解，能夠有效結合技術與設計，打造出既美觀又具互動性的用戶介面。",
-
-  "about me content list": "這些實務經驗讓我具備以下能力：",
-  "about me content list item 1": "靈活應用工具與流程，適應不同的設計需求。",
-  "about me content list item 2": "從需求分析到設計實現，熟悉整體設計工作流程。",
-  "about me content list item 3": "與開發團隊有效溝通，理解技術需求並提供最佳的設計解決方案。",
-  "about me content list item 4": "創造性地解決問題，優化用戶體驗。",
-
-  "my advantage": "我的優勢",
-  "my advantage 1": "對設計充滿熱情，並保持強烈的學習意願。",
-  "my advantage 2": "具備扎實的基礎知識與快速的學習能力。",
-  "my contact": "我的聯絡方式",
-  "avatar": "黃俊維 (攝於 2022)",
-  "e mail": "電子信箱",
-  "my contact details": "如果您有興趣合作，請透過電子郵件地址聯繫我。"
+  "launch": "瀏覽"
 }
