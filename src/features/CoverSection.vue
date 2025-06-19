@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 import lax from 'lax.js'
 
 import { useI18n } from 'vue-i18n'
@@ -31,6 +31,11 @@ onMounted(() => {
     [],
   )
 })
+
+onUnmounted(() => {
+  // Remove the scrollY driver to prevent stacking
+  lax.removeDriver('scrollY')
+})
 </script>
 
 <template>
@@ -52,8 +57,7 @@ onMounted(() => {
         class="position-absolute top-0 start-0 z-n1 animate__animated animate__fadeInLeft animate__slow"
       >
         <img
-          class="img-fluid"
-          style="filter: brightness(0.5)"
+          class="img-fluid cloud-bright"
           src="@/assets/img/CLOUD-1.webp"
           alt="cloud on hero section"
         />
@@ -62,8 +66,7 @@ onMounted(() => {
         class="position-absolute bottom-0 end-0 animate__animated animate__fadeInRight animate__slow"
       >
         <img
-          class="img-fluid"
-          style="filter: brightness(0.5)"
+          class="img-fluid cloud-bright"
           src="@/assets/img/CLOUD-2.webp"
           alt="cloud on hero section"
         />
@@ -77,5 +80,8 @@ onMounted(() => {
   height: calc(100vh - 56px);
   padding-bottom: 80px;
   margin-bottom: 56px;
+}
+.cloud-bright {
+  filter: brightness(0.5);
 }
 </style>

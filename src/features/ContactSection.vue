@@ -6,7 +6,7 @@ import SectionText from '@/components/common/SectionTitle.vue'
 const { t, locale } = useI18n()
 </script>
 <template>
-  <section id="MSG">
+  <section id="section-contact">
     <div class="container">
       <div class="row justify-content-end">
         <div class="col-lg-6">

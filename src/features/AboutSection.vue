@@ -4,7 +4,7 @@ import AboutSectionInfo from '@/features/AboutSectionInfo.vue'
 import AboutSectionAdvantage from '@/features/AboutSectionAdvantage.vue'
 </script>
 <template>
-  <section id="WHO">
+  <section id="section-about">
     <div class="container">
       <div class="row justify-content-between gy-5 flex-column-reverse flex-lg-row">
         <div class="col-lg-4">

@@ -12,7 +12,7 @@ const { t, locale } = useI18n()
 </script>
 
 <template>
-  <section id="PRJ">
+  <section id="section-projects">
     <div class="container">
       <SectionText>
         <template #heading>{{ t('my project') }}</template>
