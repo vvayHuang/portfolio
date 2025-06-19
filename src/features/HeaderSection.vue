@@ -54,7 +54,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <header class="fixed-top px-lg-6 px-md-2">
+  <header class="fixed-top">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <span class="flex-grow-1 d-none d-lg-block text-dark text-lg-light"

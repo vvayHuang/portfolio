@@ -52,11 +52,11 @@ const description = {
         src="@/assets/img/vvayhuangCoverImage.png"
         alt=""
       />
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <div class="overflow-hidden">
-              <p class="animate__animated animate__slideInUp animate__slow mb-0">
+              <p class="animate__animated animate__slideInUp animate__slow mb-0 fs-5">
                 {{ description[locale] }}
               </p>
             </div>
