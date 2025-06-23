@@ -14,7 +14,11 @@ const contact = [
       en: 'If you are interested in collaborating, please contact me via email address.',
       zh: '如果您有興趣合作，請透過電子郵件地址聯繫我。',
     },
-    link: '電子信箱',
+    link: {
+      en: 'e-mail',
+      zh: '電子信箱',
+    },
+
     email: 'jyunwayhuang@gmail.com',
   },
 ]
@@ -34,7 +38,7 @@ const contact = [
             <li>
               <a class="nav-link d-inline-block" :href="`mailto:${contact[0].email}`">
                 <IconArrowUpRight />
-                <span class="fw-medium ms-3 text-capitalize">{{ contact[0].link }}</span>
+                <span class="fw-medium ms-3 text-capitalize">{{ contact[0].link[locale] }}</span>
               </a>
             </li>
           </ul>

@@ -14,14 +14,14 @@ const advantages = [
     id: 1,
     text: {
       en: 'Passionate about design and always eager to learn.',
-      zh: '對設計充滿熱情，並保持強烈的學習意願。',
+      zh: '對設計充滿熱情，並保持強烈的學習意願',
     },
   },
   {
     id: 2,
     text: {
       en: 'Possess strong foundational knowledge and a quick learning ability.',
-      zh: '具備扎實的基礎知識與快速的學習能力。',
+      zh: '具備扎實的基礎知識與快速的學習能力',
     },
   },
 ]

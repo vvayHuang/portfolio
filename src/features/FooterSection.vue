@@ -64,29 +64,29 @@ footer.container-footer {
   margin-bottom: 80px;
 }
 .progress-one {
-  background-color: var(--bs-gray-800) !important;
+  background-color: var(--wh-gray-800);
 }
 .progress-two {
-  background-color: var(--bs-gray-700) !important;
+  background-color: var(--wh-gray-700);
 }
 .progress-three {
-  background-color: var(--bs-gray-600) !important;
+  background-color: var(--wh-gray-600);
 }
 .progress-four {
-  background-color: var(--bs-gray-500) !important;
+  background-color: var(--wh-gray-500);
 }
 
 .circle-one {
-  fill: var(--bs-gray-800) !important;
+  fill: var(--wh-gray-800);
 }
 .circle-two {
-  fill: var(--bs-gray-700) !important;
+  fill: var(--wh-gray-700);
 }
 .circle-three {
-  fill: var(--bs-gray-600) !important;
+  fill: var(--wh-gray-600);
 }
 .circle-four {
-  fill: var(--bs-gray-500) !important;
+  fill: var(--wh-gray-500);
 }
 .progress-height {
   height: 8px;

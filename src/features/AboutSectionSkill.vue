@@ -14,7 +14,7 @@ const skills = [
     id: 1,
     text: {
       en: 'Proficient in using Figma as a UI/UX design tool.',
-      zh: '熟悉 Figma UI／UX 設計工具。',
+      zh: '熟悉 Figma UI／UX 設計工具',
     },
   },
   {
