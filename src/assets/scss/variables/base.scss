@@ -3,3 +3,11 @@ html {
   scroll-behavior: smooth;
 }
 $variable-prefix: wh-;
+
+// Tooltip
+$tooltip-font-size: 1rem;
+$tooltip-bg: rgba(0, 0, 0, 0.8);
+$tooltip-opacity: 1;
+$tooltip-arrow-color: rgba(0, 0, 0, 0.8);
+$tooltip-padding-x: 1rem;
+$tooltip-padding-y: 1rem;

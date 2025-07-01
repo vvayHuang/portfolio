@@ -2,8 +2,19 @@
 import IconGithub from '@/icons/IconGithub.vue'
 import IconLink45deg from '@/icons/IconLink45deg.vue'
 import IconFigma from '@/icons/IconFigma.vue'
+import IconEmail from '@/icons/IconEmail.vue'
 import IconCircleFill from '@/icons/IconCircleFill.vue'
 import projects from '../data/Projects'
+import { onMounted } from 'vue'
+import * as bootstrap from 'bootstrap'
+
+onMounted(() => {
+  // Initialize tooltips
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  )
+})
 </script>
 <template>
   <div
@@ -43,6 +54,14 @@ import projects from '../data/Projects'
           </div>
         </div>
         <div class="modal-body">
+                    <a
+            href="mailto:jyunwayhuang@gmail.com"
+            class="btn btn-primary btn-cta"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            :title="$t('contact_me')"
+            ><IconEmail
+          /></a>
           <div class="row row-cols-md-2 row-cols-1 g-lg-3 g-md-2 gy-2 mb-5">
             <div v-for="(image, index) in project.images" :key="index" class="col">
               <img class="w-100 h-100" :src="image.src" :alt="image.alt" />
@@ -167,6 +186,38 @@ import projects from '../data/Projects'
 .modal-backdrop-filters {
   backdrop-filter: blur(20px);
 }
+
+.btn-cta {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1055; /* Ensure it's above the modal content */
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--wh-primary);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  color: white; /* Ensure text is visible */
+}
+
+.btn-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.modal.show .btn-cta {
+  transition: none !important;
+}
+
+.modal.show .modal-dialog {
+  transform: none !important; /* 移除任何位移 */
+  transition: opacity 0.3s ease-out !important; /* 只保留淡入效果 */
+}
+
 li:nth-of-type(1) .bi-circle-fill {
   fill: var(--wh-gray-800);
 }
