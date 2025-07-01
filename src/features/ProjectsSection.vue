@@ -58,7 +58,7 @@ const sectionTitle = {
                   target="_blank"
                   :data-bs-target="`#${item.module}`"
                   data-bs-toggle="modal"
-                  class="projects-entry-aw-link fs-6 fs-4"
+                  class="projects-entry-aw-link fs-6 fs-md-4"
                   ><span>{{ t('launch') }}</span>
                   <span class="p-2 rounded-circle ms-3 lh-1 circle-icon"><IconRight /></span>
                 </a>
