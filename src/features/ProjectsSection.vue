@@ -82,7 +82,7 @@ const sectionTitle = {
   justify-content: flex-end;
 }
 .projects-entry-aw-link {
-  color: var(--wh-dark);
+  color: var(--wh-secondary);
   font-weight: 500;
   transition: color 0.3s ease-in-out;
   text-decoration: none;
@@ -94,7 +94,7 @@ const sectionTitle = {
   align-items: center;
 }
 .projects-entry-aw-link:hover {
-  color: var(--wh-primary);
+  color: var(--wh-dark);
 }
 .projects-entry-aw-link:focus {
   color: var(--wh-primary);
@@ -107,7 +107,7 @@ const sectionTitle = {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--wh-dark);
+  background-color: var(--wh-secondary);
   color: var(--wh-light);
   transition:
     background-color 0.3s ease-in-out,
@@ -122,6 +122,6 @@ const sectionTitle = {
   transform: rotate(45deg);
 }
 .projects-entry-aw-link:hover .circle-icon {
-  background-color: var(--wh-primary);
+  background-color: var(--wh-dark);
 }
 </style>

@@ -1,11 +1,9 @@
 <script setup>
-import { useI18n } from 'vue-i18n'
 import IconGithub from '@/icons/IconGithub.vue'
 import IconLink45deg from '@/icons/IconLink45deg.vue'
 import IconFigma from '@/icons/IconFigma.vue'
 import IconCircleFill from '@/icons/IconCircleFill.vue'
 import projects from '../data/Projects'
-const { t, locale } = useI18n()
 </script>
 <template>
   <div
