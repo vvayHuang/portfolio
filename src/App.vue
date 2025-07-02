@@ -1,13 +1,19 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import Loader from '@/components/Loader.vue'
+import { onMounted } from 'vue'
+import { useThemeStore } from '@/stores/theme'
+import { RouterView } from 'vue-router'
 import HeaderSection from '@/features/HeaderSection.vue'
 import FooterSection from '@/features/FooterSection.vue'
+
+const themeStore = useThemeStore()
+
+onMounted(() => {
+  themeStore.initTheme()
+})
 </script>
 
 <template>
   <HeaderSection />
-  <!-- <Loader /> -->
   <router-view />
   <FooterSection />
 </template>

@@ -1,9 +1,13 @@
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, computed } from 'vue'
 import lax from 'lax.js'
-
 import { useI18n } from 'vue-i18n'
+import { useThemeStore } from '@/stores/theme'
+
 const { t, locale } = useI18n()
+const themeStore = useThemeStore()
+
+const isDarkMode = computed(() => themeStore.theme === 'dark')
 
 onMounted(() => {
   // Setup lax
@@ -48,7 +52,7 @@ const description = {
   <section id="section-hero" class="overflow-hidden">
     <div class="d-flex flex-column h-100 justify-content-center">
       <img
-        class="display-title-scroll mb-3 img-fluid"
+        class="display-title-scroll mb-3 img-fluid" :class="{'dark-mode-filter': isDarkMode}"
         src="@/assets/img/vvayhuangCoverImage.png"
         alt=""
       />
@@ -93,5 +97,9 @@ const description = {
 }
 .cloud-bright {
   filter: brightness(0.5);
+}
+
+.dark-mode-filter {
+  filter: invert(1);
 }
 </style>
