@@ -17,7 +17,7 @@ const projectsModal = [
     figma:
       'https://www.figma.com/design/lgKC4901ViopAmKbNRokKc/Buddy-House?node-id=1742-44934&t=YCzVZdwqg6PAbMny-1',
     github: 'https://github.com/vvayHuang/buddyhouseV2',
-    websiteURL: 'https://buddy-house2-0.vercel.app/',
+    websiteURL: 'https://buddy-house.vercel.app/',
     projectOverview: { en: 'Project Overview', zh: '專案簡介' },
     description: {
       en: 'Buddy House is a conceptual restaurant website designed to convey the warmth of “dining and drinking at home,” creating a cozy and welcoming atmosphere. The design was crafted in Figma, using Material Theme Builder to quickly establish a color scheme inspired by the metro green line and a consistent typography system, reinforcing brand recognition. Figma’s Variables feature was employed to efficiently adjust design elements for flexibility and scalability. Illustrations were generated using the AI tool Recraft, producing unique visuals aligned with the brand’s friendly image. This project integrates design and technology, showcasing my skills in brand identity design, tool utilization, and creating a heartfelt dining experience.',
