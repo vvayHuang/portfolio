@@ -7,7 +7,7 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 import i18n from './i18n'
-import { VueGtag } from 'vue-gtag-next'
+import VueGtag from 'vue-gtag-next'
 
 const app = createApp(App)
 const pinia = createPinia()
