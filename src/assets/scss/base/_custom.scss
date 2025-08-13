@@ -1,13 +1,4 @@
 // Custom component styles
-
-.nav-link {
-  transition: opacity 0.3s ease;
-}
-
-.nav-link:hover {
-  opacity: 0.7;
-}
-
 [data-bs-theme="dark"] {
   --wh-secondary-rgb: var(--wh-secondary);
   --wh-dark-rgb: var(--wh-light);

@@ -49,8 +49,8 @@ const description = {
 </script>
 
 <template>
-  <section id="section-hero" class="overflow-hidden">
-    <div class="d-flex flex-column h-100 justify-content-center">
+  <section id="section-hero">
+    <div class="d-flex flex-column h-100 justify-content-center overflow-hidden">
       <img
         class="display-title-scroll mb-3 img-fluid" :class="{'dark-mode-filter': isDarkMode}"
         src="@/assets/img/vvayhuangCoverImage.png"
@@ -94,6 +94,8 @@ const description = {
   height: calc(100vh - 56px);
   padding-bottom: 80px;
   margin-bottom: 56px;
+  position: relative;
+  overflow: hidden;
 }
 .cloud-bright {
   filter: brightness(0.5);

@@ -31,7 +31,7 @@ function toggleLanguage() {
 
 <template>
   <header class="fixed-top">
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid d-flex align-items-center">
         <span class="flex-grow-1 d-none d-lg-flex text-dark text-lg-light"
           >©{{ new Date().getFullYear() }}</span
