@@ -30,14 +30,14 @@ function toggleLanguage() {
 </script>
 
 <template>
-  <header class="fixed-top">
+  <header class="header">
     <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid d-flex align-items-center">
-        <span class="flex-grow-1 d-none d-lg-flex text-dark text-lg-light"
+      <div class="container-fluid header-grid align-items-center">
+        <span class="d-none d-lg-flex text-dark text-lg-light"
           >©{{ new Date().getFullYear() }}</span
         >
         <RouterLink class="navbar-brand" to="/"><BrandLogo /></RouterLink>
-        <ul class="navbar-nav flex-row flex-grow-1 justify-content-end">
+        <ul class="navbar-nav flex-row justify-content-end">
           <li class="nav-item">
             <a
               class="nav-link text-light px-2 px-md-4"
@@ -78,7 +78,23 @@ function toggleLanguage() {
   </header>
 </template>
 <style scoped>
-header {
+.header {
   mix-blend-mode: difference;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  margin-top: 1.25rem;
+}
+.header-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
+.header-grid > .navbar-brand {
+  justify-self: center;
+}
+.header-grid > .navbar-nav {
+  justify-self: end;
 }
 </style>
