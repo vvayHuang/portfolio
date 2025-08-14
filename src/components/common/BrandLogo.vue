@@ -22,10 +22,10 @@ onMounted(() => {
   <div class="wrapper">
     <div class="boxes">
       <div class="box">
-        <img class="logo" src="@/assets/img/logo.png" alt="Logo" />
+        <img class="logo" src="@/assets/img/asset-logo.png" alt="Logo" />
       </div>
       <div class="box">
-        <img class="logo" src="@/assets/img/logo.png" alt="Logo" />
+        <img class="logo" src="@/assets/img/asset-logo.png" alt="Logo" />
       </div>
     </div>
   </div>

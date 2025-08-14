@@ -55,7 +55,7 @@ const altText = {
         {{ item.text[locale] }}
       </p>
     </div>
-    <img class="mb-2 img-fluid" src="@/assets/img/personal-img.png" :alt="altText[locale]" />
+    <img class="mb-2 img-fluid" src="@/assets/img/asset-personal-photo.png" :alt="altText[locale]" />
     <p class="small text-capitalize">{{ avatar[locale] }}</p>
   </div>
 </template>

@@ -1,12 +1,12 @@
-import lrpreview1 from '@/assets/img/lr-preview-1.png'
-import lrpreview2 from '@/assets/img/lr-preview-2.png'
-import gb2preview1 from '@/assets/img/gbv2-preview-1.png'
-import gb2preview2 from '@/assets/img/gbv2-preview-2.png'
-import gb2preview3 from '@/assets/img/gbv2-preview-3.png'
-import bhpreview1 from '@/assets/img/bh-preview-1.png'
-import bhpreview2 from '@/assets/img/bh-preview-2.png'
-import bhpreview3 from '@/assets/img/bh-preview-3.gif'
-import bhpreview4 from '@/assets/img/bh-preview-4.gif'
+import lrpreview1 from '@/assets/img/project-life-record-preview-01.png'
+import lrpreview2 from '@/assets/img/project-life-record-preview-02.png'
+import gb2preview1 from '@/assets/img/project-galaxy-boyz-v2-preview-01.png'
+import gb2preview2 from '@/assets/img/project-galaxy-boyz-v2-preview-02.png'
+import gb2preview3 from '@/assets/img/project-galaxy-boyz-v2-preview-03.png'
+import bhpreview1 from '@/assets/img/project-buddy-house-preview-01.png'
+import bhpreview2 from '@/assets/img/project-buddy-house-preview-02.png'
+import bhpreview3 from '@/assets/img/project-buddy-house-preview-03.gif'
+import bhpreview4 from '@/assets/img/project-buddy-house-preview-04.gif'
 const projectsModal = [
   {
     id: 'BuddyHouseModal',
@@ -103,10 +103,10 @@ const projectsModal = [
       { label: 'html', value: 2.9 },
     ],
     images: [
-      { src: bhpreview1, alt: 'bh-preview-1' },
-      { src: bhpreview2, alt: 'bh-preview-2' },
-      { src: bhpreview3, alt: 'bh-preview-3' },
-      { src: bhpreview4, alt: 'bh-preview-4' },
+      { src: bhpreview1, alt: 'Buddy House project preview 1' },
+      { src: bhpreview2, alt: 'Buddy House project preview 2' },
+      { src: bhpreview3, alt: 'Buddy House project preview 3' },
+      { src: bhpreview4, alt: 'Buddy House project preview 4' },
     ],
   },
   {
@@ -221,12 +221,12 @@ const projectsModal = [
       { label: 'html', value: 0.4 },
     ],
     images: [
-      { src: gb2preview1, alt: 'gb2-preview-1' },
-      { src: gb2preview2, alt: 'gb2-preview-2' },
-      { src: gb2preview3, alt: 'gb2-preview-3' },
+      { src: gb2preview1, alt: 'GalaxyBoyz project preview 1' },
+      { src: gb2preview2, alt: 'GalaxyBoyz project preview 2' },
+      { src: gb2preview3, alt: 'GalaxyBoyz project preview 3' },
       {
         src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeG84Y2MxY2o1am4wY2V1bXk1OWFoanJ3dGdkZHhlZGc2bG1vcWJncCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mXG3de6F4xUgptp1C7/giphy.gif',
-        alt: 'gb2-preview-4',
+        alt: 'GalaxyBoyz project preview 4',
       },
     ],
   },
@@ -325,15 +325,15 @@ const projectsModal = [
       { label: 'javascript', value: 0.1 },
     ],
     images: [
-      { src: lrpreview1, alt: 'lr-preview-1' },
-      { src: lrpreview2, alt: 'lr-preview-2' },
+      { src: lrpreview1, alt: 'Life Record project preview 1' },
+      { src: lrpreview2, alt: 'Life Record project preview 2' },
       {
         src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjlib21kY244d3VoczkxdmQ3OTEzOGVlNXV2MXM1a3pzNjF0cndrNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MI5xlX5LSP0CD2Br1C/giphy.gif',
-        alt: 'lr-preview-3.png',
+        alt: 'Life Record project preview 3',
       },
       {
         src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTcycW5lczI3eHo4cHQ4ZGRqYmRraTRtZ3pqYnpiZ2F0NHlwbjE1ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RnC0JSwimbgvI3ocTD/giphy.gif',
-        alt: 'lr-preview-4.png',
+        alt: 'Life Record project preview 4',
       },
     ],
   },

@@ -53,7 +53,7 @@ const description = {
     <div class="d-flex flex-column h-100 justify-content-center overflow-hidden">
       <img
         class="display-title-scroll mb-3 img-fluid" :class="{'dark-mode-filter': isDarkMode}"
-        src="@/assets/img/vvayhuangCoverImage.png"
+        src="@/assets/img/asset-cover-main.png"
         alt=""
       />
       <div class="container-fluid">
@@ -72,7 +72,7 @@ const description = {
       >
         <img
           class="img-fluid cloud-bright"
-          src="@/assets/img/CLOUD-1.webp"
+          src="@/assets/img/ui-cloud-background-01.webp"
           alt="cloud on hero section"
         />
       </div>
@@ -81,7 +81,7 @@ const description = {
       >
         <img
           class="img-fluid cloud-bright"
-          src="@/assets/img/CLOUD-2.webp"
+          src="@/assets/img/ui-cloud-background-02.webp"
           alt="cloud on hero section"
         />
       </div>
