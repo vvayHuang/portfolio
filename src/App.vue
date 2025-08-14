@@ -2,8 +2,8 @@
 import { onMounted } from 'vue'
 import { useThemeStore } from '@/stores/theme'
 import { RouterView } from 'vue-router'
-import HeaderSection from '@/features/HeaderSection.vue'
-import FooterSection from '@/features/FooterSection.vue'
+import HeaderSection from '@/components/layout/HeaderSection.vue'
+import FooterSection from '@/components/layout/FooterSection.vue'
 
 const themeStore = useThemeStore()
 

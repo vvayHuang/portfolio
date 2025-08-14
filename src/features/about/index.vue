@@ -1,18 +1,18 @@
 <script setup>
-import AboutSectionSkill from '@/features/AboutSectionSkill.vue'
-import AboutSectionInfo from '@/features/AboutSectionInfo.vue'
-import AboutSectionAdvantage from '@/features/AboutSectionAdvantage.vue'
+import Skill from './Skill.vue'
+import Info from './Info.vue'
+import Advantage from './Advantage.vue'
 </script>
 <template>
   <section id="section-about">
     <div class="container">
       <div class="row justify-content-between gy-5 flex-column-reverse flex-lg-row">
         <div class="col-lg-4">
-          <AboutSectionSkill />
-          <AboutSectionAdvantage />
+          <Skill />
+          <Advantage />
         </div>
         <div class="col-lg-6">
-          <AboutSectionInfo />
+          <Info />
         </div>
       </div>
     </div>

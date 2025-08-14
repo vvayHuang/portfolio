@@ -2,7 +2,7 @@
 import IconRight from '@/icons/IconRight.vue'
 import SectionText from '@/components/common/SectionTitle.vue'
 import Modal from '@/components/Modal.vue'
-import projectsItems from '../data/Projects'
+import projectsItems from '../../data/Projects'
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
