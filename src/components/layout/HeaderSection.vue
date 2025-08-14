@@ -90,9 +90,16 @@ function toggleLanguage() {
 .header-grid {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr auto;
+
+  }
 }
 .header-grid > .navbar-brand {
   justify-self: center;
+  @media (max-width:768px) {
+    justify-self: start;
+  }
 }
 .header-grid > .navbar-nav {
   justify-self: end;

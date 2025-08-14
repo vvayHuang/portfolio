@@ -11,3 +11,10 @@
     background-color: var(--wh-light) !important;
   }
 }
+
+@include media-breakpoint-up(xl) {
+  .container,.container-fluid {
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+  }
+}

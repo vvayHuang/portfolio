@@ -22,10 +22,10 @@ onMounted(() => {
   <div class="wrapper">
     <div class="boxes">
       <div class="box">
-        <img class="logo" src="@/assets/img/asset-logo.png" alt="Logo" />
+        <img class=" img-fluid" src="../../assets/img/asset-logo-2x.png" alt="Logo" />
       </div>
       <div class="box">
-        <img class="logo" src="@/assets/img/asset-logo.png" alt="Logo" />
+        <img class=" img-fluid" src="../../assets/img/asset-logo-2x.png" alt="Logo" />
       </div>
     </div>
   </div>
@@ -37,6 +37,9 @@ onMounted(() => {
   height: 33px;
   position: relative;
   overflow: hidden;
+  @media (max-width: 768px) {
+    width: 95px;
+  }
 }
 .box {
   width: 131px;
