@@ -14,7 +14,7 @@ const sectionTitle = {
 
 <template>
   <section id="section-projects">
-    <div class="container">
+    <div class="container-fluid">
       <SectionText>
         <template #heading>{{ sectionTitle[locale] }}</template>
       </SectionText>

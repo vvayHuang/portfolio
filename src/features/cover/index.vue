@@ -52,54 +52,55 @@ const description = {
   <section id="section-hero">
     <div class="d-flex flex-column h-100 justify-content-center overflow-hidden">
       <img
-        class="display-title-scroll mb-3 img-fluid" :class="{'dark-mode-filter': isDarkMode}"
+        class="display-title-scroll mb-3 img-fluid"
+        :class="{ 'dark-mode-filter': isDarkMode }"
         src="@/assets/img/asset-cover-main.png"
         alt=""
       />
       <!-- Clouds -->
-      <div class="cloud-container cloud-1 position-absolute start-0 z-n1" style="top: 10%">
+      <div class="cloud-container cloud-1 position-absolute start-0 z-n1">
         <img
           class="img-fluid cloud-bright"
           src="@/assets/img/ui-cloud-background-01.webp"
           alt="cloud on hero section"
         />
       </div>
-      <div class="cloud-container cloud-2 position-absolute start-0 z-1" style="bottom: 10%">
+      <div class="cloud-container cloud-2 position-absolute start-0 z-1">
         <img
           class="img-fluid cloud-bright"
           src="@/assets/img/ui-cloud-background-02.webp"
           alt="cloud on hero section"
         />
       </div>
-      <div class="cloud-container cloud-3 position-absolute start-0 z-1" style="top: 20%">
+      <div class="cloud-container cloud-3 position-absolute start-0 z-1">
         <img
           class="img-fluid cloud-bright"
           src="@/assets/img/ui-cloud-background-02.webp"
           alt="cloud on hero section"
         />
       </div>
-      <div class="cloud-container cloud-4 position-absolute start-0 z-n1" style="bottom: 25%">
+      <div class="cloud-container cloud-4 position-absolute start-0 z-n1">
         <img
           class="img-fluid cloud-bright"
           src="@/assets/img/ui-cloud-background-01.webp"
           alt="cloud on hero section"
         />
       </div>
-      <div class="cloud-container cloud-5 position-absolute start-0 z-n1" style="top: 18%">
+      <div class="cloud-container cloud-5 position-absolute start-0 z-n1">
         <img
           class="img-fluid cloud-bright"
           src="@/assets/img/ui-cloud-background-01.webp"
           alt="cloud on hero section"
         />
       </div>
-      <div class="cloud-container cloud-6 position-absolute start-0 z-1" style="bottom: 35%">
+      <div class="cloud-container cloud-6 position-absolute start-0 z-1">
         <img
           class="img-fluid cloud-bright"
           src="@/assets/img/ui-cloud-background-02.webp"
           alt="cloud on hero section"
         />
       </div>
-      <div class="cloud-container cloud-7 position-absolute start-0 z-n1" style="top: 12%">
+      <div class="cloud-container cloud-7 position-absolute start-0 z-n1">
         <img
           class="img-fluid cloud-bright"
           src="@/assets/img/ui-cloud-background-02.webp"
@@ -112,25 +113,27 @@ const description = {
         <div class="row">
           <div class="col-auto">
             <div class="overflow-hidden">
-              <p class="animate__animated animate__slideInUp animate__slow mb-0 fs-5">
+              <p class="animate__animated animate__slideInUp animate__slow mb-0 fs-md-5 fs-6">
                 {{ description[locale] }}
               </p>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 </template>
 
 <style scoped>
 #section-hero {
-  height: calc(100vh - 56px);
-  padding-bottom: 80px;
-  margin-bottom: 56px;
+  height: 100vh;
   position: relative;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  #section-hero {
+    height: 100vh;
+  }
 }
 .cloud-bright {
   filter: brightness(0.5);
@@ -165,6 +168,7 @@ const description = {
 
 /* Cloud 1: LTR, Mid-ground */
 .cloud-1 {
+  top: 10%;
   animation-name: drift-ltr;
   animation-duration: 220s;
   animation-delay: -60s;
@@ -173,6 +177,7 @@ const description = {
 
 /* Cloud 2: RTL, Front, Fast */
 .cloud-2 {
+  bottom: 10%;
   animation-name: drift-rtl;
   animation-duration: 150s;
   animation-delay: -100s;
@@ -181,6 +186,7 @@ const description = {
 
 /* Cloud 3: LTR, Front, Very Slow, Small */
 .cloud-3 {
+  top: 20%;
   animation-name: drift-ltr;
   animation-duration: 280s;
   animation-delay: -20s;
@@ -189,6 +195,7 @@ const description = {
 
 /* Cloud 4: RTL, Far-background, Large, Flipped */
 .cloud-4 {
+  bottom: 25%;
   animation-name: drift-rtl;
   animation-duration: 250s;
   animation-delay: -160s;
@@ -199,6 +206,7 @@ const description = {
 
 /* Cloud 5: LTR, Farthest-background, Slowest */
 .cloud-5 {
+  top: 18%;
   animation-name: drift-ltr;
   animation-duration: 350s;
   animation-delay: -150s;
@@ -209,6 +217,7 @@ const description = {
 
 /* Cloud 6: RTL, Front, Very Fast */
 .cloud-6 {
+  bottom: 35%;
   animation-name: drift-rtl;
   animation-duration: 130s;
   animation-delay: -20s;
@@ -216,10 +225,35 @@ const description = {
 }
 /* Cloud 7: LTR, Mid-ground, Clustered */
 .cloud-7 {
+  top: 12%;
   animation-name: drift-ltr;
   animation-duration: 240s;
   animation-delay: -70s;
   transform: scale(1);
   opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .cloud-1 {
+    top: 5%;
+  }
+  .cloud-2 {
+    bottom: 5%;
+  }
+  .cloud-3 {
+    top: 15%;
+  }
+  .cloud-4 {
+    bottom: 20%;
+  }
+  .cloud-5 {
+    top: 10%;
+  }
+  .cloud-6 {
+    bottom: 30%;
+  }
+  .cloud-7 {
+    top: 7%;
+  }
 }
 </style>
