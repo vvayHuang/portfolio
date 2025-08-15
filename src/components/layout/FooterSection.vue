@@ -6,12 +6,14 @@ const currentYear = new Date().getFullYear()
     <div class="container-fluid footer-content">
       <div class="row justify-content-lg-start justify-content-md-center">
         <div class="col-auto">
-          <div class="d-flex gap-3 align-items-center">
-            <div class="footer-logo-img">
-              <img class="img-fluid" src="../../assets/img/asset-footer-logo.png" alt="" />
+          <div class="align-items-md-center d-flex flex-column-reverse flex-md-row gap-5 gap-lg-6">
+            <div class=" d-flex flex-column flex-md-row gap-3">
+              <div class="footer-logo-img">
+                <img class="img-fluid" src="../../assets/img/asset-footer-logo.png" alt="" />
+              </div>
+              <span class="text-muted d-inline-flex">© {{ currentYear }} vvayHuang</span>
             </div>
-            <span class="text-muted d-inline-flex fs-7">© {{ currentYear }} vvayHuang</span>
-            <ul class=" d-flex gap-3 align-items-center list-unstyled mb-0 fs-7">
+            <ul class=" d-flex gap-3 align-items-start align-items-md-center list-unstyled mb-0 flex-column flex-md-row">
               <li><a href="#" class=" link-dark text-decoration-none text-muted">Github</a></li>
               <li><a href="https://music.apple.com/tw/playlist/mixtape1/pl.u-yZyVE33F9EX87X" target="_blank" class=" link-dark text-decoration-none text-muted">#Mixtape1</a></li>
               <li><a href="https://music.apple.com/tw/playlist/mixtape2/pl.u-EdAVz64u5r14P1" target="_blank" class=" link-dark text-decoration-none text-muted">#Mixtape2</a></li>
@@ -39,7 +41,7 @@ const currentYear = new Date().getFullYear()
     height: 20vh;
   }
   @media (max-width: 425px) {
-    height: 14vh;
+    height: 40vh;
   }
 }
 .footer::before {
@@ -56,6 +58,9 @@ const currentYear = new Date().getFullYear()
   z-index: -1;
   opacity: 0.7; /* 可根據需要調整透明度 */
   filter: grayscale(100%); /* 讓圖片變黑白 */
+  @media (max-width:425px) {
+    height: 27%;
+  }
 }
 .footer-content {
   position: relative;
@@ -63,5 +68,6 @@ const currentYear = new Date().getFullYear()
 }
 .footer-logo-img {
   width: 60px;
+  display: flex;
 }
 </style>

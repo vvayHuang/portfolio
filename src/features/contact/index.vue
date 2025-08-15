@@ -50,8 +50,10 @@ const contact = [
 
 <style scoped>
 #section-contact {
-  margin-top: 24px;
   margin-bottom: 160px;
+  @media (max-width:425px) {
+    margin-bottom: 40px;
+  }
 }
 ul > li {
   .bi-arrow-up-right {

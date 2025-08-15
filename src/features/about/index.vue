@@ -22,5 +22,8 @@ import Advantage from './Advantage.vue'
 <style scoped>
 #section-about {
   margin-bottom: 160px;
+  @media screen and (max-width: 425px) {
+    margin-bottom: 40px;
+  }
 }
 </style>

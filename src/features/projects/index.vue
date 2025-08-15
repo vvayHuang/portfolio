@@ -75,6 +75,9 @@ const sectionTitle = {
 <style scoped>
 #section-projects {
   margin-bottom: 160px;
+  @media screen and (max-width: 425px) {
+    margin-bottom: 40px;
+  }
 }
 .projects-entry-cta {
   display: flex;
