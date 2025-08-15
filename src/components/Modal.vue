@@ -27,7 +27,7 @@ onMounted(() => {
     tabindex="-1"
   >
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
+      <div class="modal-content bg-transparent border-0">
         <div class="modal-header border-0 justify-content-center flex-column align-items-start">
           <div
             class="d-flex justify-content-between align-items-center w-100 flex-column-reverse flex-md-row gap-4"
@@ -53,7 +53,7 @@ onMounted(() => {
             ></button>
           </div>
         </div>
-        <div class="modal-body">
+        <div class="modal-body bg-body ">
                     <a
             href="mailto:jyunwayhuang@gmail.com"
             class="btn btn-primary btn-cta"
@@ -129,12 +129,12 @@ onMounted(() => {
 
             <!-- Text Content -->
             <div class="col">
-              <div class="d-flex flex-column h-100">
-                <h3 class="mb-4 text-secondary">
+              <div class="d-flex flex-column h-100 gap-4">
+                <h3 class="text-secondary">
                   {{ project.projectOverview[$i18n.locale] }}
                 </h3>
                 <p>{{ project.description[$i18n.locale] }}</p>
-                <h3 class="mt-4 mb-4 text-secondary">
+                <h3 class="text-secondary">
                   {{ project.technologiesUsed[$i18n.locale] }}
                 </h3>
                 <ul>
@@ -142,7 +142,7 @@ onMounted(() => {
                     <p>{{ item[$i18n.locale] }}</p>
                   </li>
                 </ul>
-                <h3 class="mt-4 mb-4 text-secondary">
+                <h3 class="text-secondary">
                   {{ project.responsibilities[$i18n.locale] }}
                 </h3>
                 <ul>
@@ -150,7 +150,7 @@ onMounted(() => {
                     <p>{{ item[$i18n.locale] }}</p>
                   </li>
                 </ul>
-                <h3 class="mt-4 mb-4 text-secondary">
+                <h3 class="text-secondary">
                   {{ project.keyFeatures[$i18n.locale] }}
                 </h3>
                 <ul>
@@ -158,7 +158,7 @@ onMounted(() => {
                     <p>{{ item[$i18n.locale] }}</p>
                   </li>
                 </ul>
-                <h3 class="mt-4 mb-4 text-secondary">
+                <h3 class="text-secondary">
                   {{ project.challengesOutcomes[$i18n.locale] }}
                 </h3>
                 <ul>
@@ -166,7 +166,7 @@ onMounted(() => {
                     <p>{{ item[$i18n.locale] }}</p>
                   </li>
                 </ul>
-                <h3 class="mt-4 mb-4 text-secondary">
+                <h3 class="text-secondary">
                   {{ project.lessonsLearned[$i18n.locale] }}
                 </h3>
                 <ul>
@@ -208,7 +208,10 @@ onMounted(() => {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
+.btn-close{
+  background-color: var(--wh-light);
+  border-radius: 50px;
+}
 .modal.show .btn-cta {
   transition: none !important;
 }
