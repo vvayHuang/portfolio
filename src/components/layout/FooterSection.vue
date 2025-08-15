@@ -1,94 +1,67 @@
 <script setup>
-const activities = [
-  { label: 'coding-design', value: 30, colorClass: 'progress-one', circleClass: 'circle-one' },
-  { label: 'basketball', value: 30, colorClass: 'progress-two', circleClass: 'circle-two' },
-  { label: 'music', value: 30, colorClass: 'progress-three', circleClass: 'circle-three' },
-  { label: 'sleeping', value: 10, colorClass: 'progress-four', circleClass: 'circle-four' },
-]
-
 const currentYear = new Date().getFullYear()
 </script>
 <template>
-  <footer class="container-footer">
-    <div class="container">
-      <div class="row justify-content-lg-end justify-content-md-center">
+  <footer class="footer">
+    <div class="container-fluid footer-content">
+      <div class="row justify-content-lg-start justify-content-md-center">
         <div class="col-auto">
-          <div class="progress-stacked mb-3 progress-height">
-            <div
-              v-for="activity in activities"
-              :key="activity.label"
-              class="progress"
-              role="progressbar"
-              :aria-label="activity.label"
-              :aria-valuenow="activity.value"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              :style="{ width: activity.value + '%' }"
-            >
-              <div
-                class="progress-bar progress-bar-striped progress-bar-animated"
-                :class="activity.colorClass"
-              ></div>
+          <div class="d-flex gap-3 align-items-center">
+            <div class="footer-logo-img">
+              <img class="img-fluid" src="../../assets/img/asset-footer-logo.png" alt="" />
             </div>
+            <span class="text-muted d-inline-flex fs-7">© {{ currentYear }} vvayHuang</span>
+            <ul class=" d-flex gap-3 align-items-center list-unstyled mb-0 fs-7">
+              <li><a href="#" class=" link-dark text-decoration-none text-muted">Github</a></li>
+              <li><a href="https://music.apple.com/tw/playlist/mixtape1/pl.u-yZyVE33F9EX87X" target="_blank" class=" link-dark text-decoration-none text-muted">#Mixtape1</a></li>
+              <li><a href="https://music.apple.com/tw/playlist/mixtape2/pl.u-EdAVz64u5r14P1" target="_blank" class=" link-dark text-decoration-none text-muted">#Mixtape2</a></li>
+            </ul>
           </div>
-          <span class="text-muted me-3 d-inline-flex fs-7">© {{ currentYear }} vvayHuang</span>
-          <ul class="list-unstyled d-inline-flex flex-wrap">
-            <li
-              class="me-3"
-              v-for="(activity, idx) in activities"
-              :key="activity.label + '-' + idx"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="8"
-                height="8"
-                fill="currentColor"
-                class="bi bi-circle-fill me-2"
-                :class="activity.circleClass"
-                viewBox="0 0 16 16"
-              >
-                <circle cx="8" cy="8" r="8" />
-              </svg>
-              <span class="text-muted me-1 fs-7">{{ activity.label }}</span>
-              <span class="text-muted ms-md-1 me-md-1 fs-7">{{ activity.value }}%</span>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
   </footer>
 </template>
 <style scoped>
-footer.container-footer {
-  margin-top: 24px;
-  margin-bottom: 80px;
+.footer {
+  position: relative;
+  height: 48vh; /* 增加高度以完整顯示圖片 */
+  display: flex;
+  align-items: center; /* 垂直置中內容 */
+  justify-content: center; /* 水平置中內容 */
+  @media (max-width: 1440px) {
+    height: 40vh;
+  }
+  @media (max-width: 1024px) {
+    height: 29vh;
+  }
+  @media (max-width: 768px) {
+    height: 20vh;
+  }
+  @media (max-width: 425px) {
+    height: 14vh;
+  }
 }
-.progress-one {
-  background-color: var(--wh-gray-800);
+.footer::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/img/asset-footer-mountain-removebg-preview.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.7; /* 可根據需要調整透明度 */
+  filter: grayscale(100%); /* 讓圖片變黑白 */
 }
-.progress-two {
-  background-color: var(--wh-gray-700);
+.footer-content {
+  position: relative;
+  z-index: 1;
 }
-.progress-three {
-  background-color: var(--wh-gray-600);
-}
-.progress-four {
-  background-color: var(--wh-gray-500);
-}
-
-.circle-one {
-  fill: var(--wh-gray-800);
-}
-.circle-two {
-  fill: var(--wh-gray-700);
-}
-.circle-three {
-  fill: var(--wh-gray-600);
-}
-.circle-four {
-  fill: var(--wh-gray-500);
-}
-.progress-height {
-  height: 8px;
+.footer-logo-img {
+  width: 60px;
 }
 </style>
