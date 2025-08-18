@@ -151,7 +151,7 @@ const sectionTitle = {
 .project-item-content {
   position: relative;
   z-index: 2;
-  background-color: white;
+  background-color: var(--wh-body);
   transition: background-color 0.3s ease-in-out;
 }
 

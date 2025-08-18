@@ -3,22 +3,21 @@ import { onMounted, onUnmounted, computed, ref } from 'vue'
 import lax from 'lax.js'
 import { useI18n } from 'vue-i18n'
 import { useThemeStore } from '@/stores/theme'
-import Cloud from './Cloud.vue'
-import cloudImg1 from '@/assets/img/ui-cloud-background-01.webp'
-import cloudImg2 from '@/assets/img/ui-cloud-background-02.webp'
 
 const { t, locale } = useI18n()
 const themeStore = useThemeStore()
 
 const isDarkMode = computed(() => themeStore.theme === 'dark')
 
-// --- Mouse Parallax ---
+// --- Start Mouse Parallax ---
 const mouseX = ref(0)
 const mouseY = ref(0)
+
 const handleMouseMove = (event) => {
   mouseX.value = event.clientX - window.innerWidth / 2
   mouseY.value = event.clientY - window.innerHeight / 2
 }
+
 const parallaxWrapperStyle = (intensity) =>
   computed(() => ({
     transform: `translate(${mouseX.value * intensity}px, ${mouseY.value * intensity}px)`,
@@ -26,99 +25,24 @@ const parallaxWrapperStyle = (intensity) =>
   }))
 
 const mainImageStyle = parallaxWrapperStyle(0.015)
+const cloudStyle1 = parallaxWrapperStyle(-0.008) // Background
+const cloudStyle2 = parallaxWrapperStyle(0.025) // Foreground
+const cloudStyle3 = parallaxWrapperStyle(0.02) // Foreground
+const cloudStyle4 = parallaxWrapperStyle(-0.012) // Background
+const cloudStyle5 = parallaxWrapperStyle(-0.005) // Farthest Background
+const cloudStyle6 = parallaxWrapperStyle(0.03) // Foreground
+const cloudStyle7 = parallaxWrapperStyle(-0.01) // Background
+// --- End Mouse Parallax ---
 
-// --- Cloud Configuration ---
-const clouds = ref([
-  {
-    id: 1,
-    zIndex: -1,
-    top: '10%',
-    animationName: 'drift-ltr',
-    duration: 220,
-    delay: -60,
-    opacity: 0.9,
-    imageSrc: cloudImg1,
-    parallaxIntensity: -0.008,
-  },
-  {
-    id: 2,
-    zIndex: 1,
-    bottom: '10%',
-    animationName: 'drift-rtl',
-    duration: 150,
-    delay: -100,
-    scale: 1.1,
-    imageSrc: cloudImg2,
-    parallaxIntensity: 0.025,
-  },
-  {
-    id: 3,
-    zIndex: 1,
-    top: '20%',
-    animationName: 'drift-ltr',
-    duration: 280,
-    delay: -20,
-    scale: 0.7,
-    scaleX: -1,
-    imageSrc: cloudImg2,
-    parallaxIntensity: 0.02,
-  },
-  {
-    id: 4,
-    zIndex: -1,
-    bottom: '25%',
-    animationName: 'drift-rtl',
-    duration: 250,
-    delay: -160,
-    scale: 1.3,
-    scaleX: -1,
-    opacity: 0.7,
-    blur: 1,
-    imageSrc: cloudImg1,
-    parallaxIntensity: -0.012,
-  },
-  {
-    id: 5,
-    zIndex: -1,
-    top: '18%',
-    animationName: 'drift-ltr',
-    duration: 350,
-    delay: -150,
-    scale: 0.8,
-    opacity: 0.6,
-    blur: 1.5,
-    imageSrc: cloudImg1,
-    parallaxIntensity: -0.005,
-  },
-  {
-    id: 6,
-    zIndex: 1,
-    bottom: '35%',
-    animationName: 'drift-rtl',
-    duration: 130,
-    delay: -20,
-    scale: 1.2,
-    imageSrc: cloudImg2,
-    parallaxIntensity: 0.03,
-  },
-  {
-    id: 7,
-    zIndex: -1,
-    top: '12%',
-    animationName: 'drift-ltr',
-    duration: 240,
-    delay: -70,
-    opacity: 0.85,
-    imageSrc: cloudImg2,
-    parallaxIntensity: -0.01,
-  },
-])
-
-// --- Lifecycle Hooks ---
 onMounted(() => {
   // Setup lax
   lax.init()
-  lax.addDriver('scrollY', () => window.scrollY)
+
+  lax.addDriver('scrollY', function () {
+    return window.scrollY
+  })
+
+  // Add your elements
   lax.addElements(
     '.display-title-scroll',
     {
@@ -135,36 +59,42 @@ onMounted(() => {
     },
     [],
   )
-
   window.addEventListener('mousemove', handleMouseMove)
 
-  // Cloud Animation Randomization
-  clouds.value = clouds.value.map((cloud) => {
-    const durationVariance = cloud.duration * (Math.random() * 0.4 - 0.2)
-    const delayVariance = cloud.delay * (Math.random() * 0.4 - 0.2)
-    return {
-      ...cloud,
-      duration: `${cloud.duration + durationVariance}s`,
-      delay: `${cloud.delay + delayVariance}s`,
-    }
+  // --- Start Cloud Animation Randomization ---
+  document.querySelectorAll('.cloud-container').forEach((cloudEl) => {
+    const style = window.getComputedStyle(cloudEl)
+    const currentDuration = parseFloat(style.animationDuration)
+    const currentDelay = parseFloat(style.animationDelay)
+
+    // Add a random variance of +/- 20%
+    const durationVariance = currentDuration * (Math.random() * 0.4 - 0.2)
+    const delayVariance = currentDelay * (Math.random() * 0.4 - 0.2)
+
+    cloudEl.style.animationDuration = `${currentDuration + durationVariance}s`
+    cloudEl.style.animationDelay = `${currentDelay + delayVariance}s`
   })
+  // --- End Cloud Animation Randomization ---
 })
 
 onUnmounted(() => {
+  // Remove the scrollY driver and registered elements to prevent stacking
   lax.removeDriver('scrollY')
   lax.removeElements('.display-title-scroll')
   window.removeEventListener('mousemove', handleMouseMove)
 })
-
-// --- Text Content & Animation ---
+// description 物件用於根據當前語言顯示自我介紹文字，key 為語言代碼（如 'en', 'zh'），value 為對應語言的介紹內容
 const description = {
   en: 'My name is Huang Jyun Wei. I am a job seeker who loves design. I am currently actively seeking job opportunities as a web designer/UI designer',
   zh: '我叫黃俊維，是一位熱愛設計的求職者，目前正在積極尋求網頁設計師/UI設計師的工作機會',
 }
+
+// --- Start Text Animation ---
 const descriptionWords = computed(() => {
   const desc = description[locale.value] || ''
   return desc.split(/\s+/).filter((word) => word.length > 0)
 })
+// --- End Text Animation ---
 </script>
 
 <template>
@@ -178,14 +108,77 @@ const descriptionWords = computed(() => {
           alt=""
         />
       </div>
-
       <!-- Clouds -->
-      <Cloud
-        v-for="cloud in clouds"
-        :key="cloud.id"
-        :config="cloud"
-        :parallaxStyle="parallaxWrapperStyle(cloud.parallaxIntensity)"
-      />
+      <div
+        class="cloud-container cloud-1 position-absolute start-0 z-n1"
+        :style="cloudStyle1"
+      >
+        <img
+          class="img-fluid cloud-bright"
+          src="@/assets/img/ui-cloud-background-01.webp"
+          alt="cloud on hero section"
+        />
+      </div>
+      <div
+        class="cloud-container cloud-2 position-absolute start-0 z-1"
+        :style="cloudStyle2"
+      >
+        <img
+          class="img-fluid cloud-bright"
+          src="@/assets/img/ui-cloud-background-02.webp"
+          alt="cloud on hero section"
+        />
+      </div>
+      <div
+        class="cloud-container cloud-3 position-absolute start-0 z-1"
+        :style="cloudStyle3"
+      >
+        <img
+          class="img-fluid cloud-bright"
+          src="@/assets/img/ui-cloud-background-02.webp"
+          alt="cloud on hero section"
+        />
+      </div>
+      <div
+        class="cloud-container cloud-4 position-absolute start-0 z-n1"
+        :style="cloudStyle4"
+      >
+        <img
+          class="img-fluid cloud-bright"
+          src="@/assets/img/ui-cloud-background-01.webp"
+          alt="cloud on hero section"
+        />
+      </div>
+      <div
+        class="cloud-container cloud-5 position-absolute start-0 z-n1"
+        :style="cloudStyle5"
+      >
+        <img
+          class="img-fluid cloud-bright"
+          src="@/assets/img/ui-cloud-background-01.webp"
+          alt="cloud on hero section"
+        />
+      </div>
+      <div
+        class="cloud-container cloud-6 position-absolute start-0 z-1"
+        :style="cloudStyle6"
+      >
+        <img
+          class="img-fluid cloud-bright"
+          src="@/assets/img/ui-cloud-background-02.webp"
+          alt="cloud on hero section"
+        />
+      </div>
+      <div
+        class="cloud-container cloud-7 position-absolute start-0 z-n1"
+        :style="cloudStyle7"
+      >
+        <img
+          class="img-fluid cloud-bright"
+          src="@/assets/img/ui-cloud-background-02.webp"
+          alt="cloud on hero section"
+        />
+      </div>
       <!-- End Clouds -->
 
       <div class="container-fluid">
@@ -226,9 +219,126 @@ const descriptionWords = computed(() => {
     height: 100vh;
   }
 }
+.cloud-bright {
+  filter: brightness(0.5);
+}
 
 .dark-mode-filter {
   filter: invert(1);
+}
+
+@keyframes drift-ltr {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes drift-rtl {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.cloud-container {
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Cloud 1: LTR, Mid-ground */
+.cloud-1 {
+  top: 10%;
+  animation-name: drift-ltr;
+  animation-duration: 220s;
+  animation-delay: -60s;
+  opacity: 0.9;
+}
+
+/* Cloud 2: RTL, Front, Fast */
+.cloud-2 {
+  bottom: 10%;
+  animation-name: drift-rtl;
+  animation-duration: 150s;
+  animation-delay: -100s;
+  transform: scale(1.1);
+}
+
+/* Cloud 3: LTR, Front, Very Slow, Small */
+.cloud-3 {
+  top: 20%;
+  animation-name: drift-ltr;
+  animation-duration: 280s;
+  animation-delay: -20s;
+  transform: scale(0.7) scaleX(-1);
+}
+
+/* Cloud 4: RTL, Far-background, Large, Flipped */
+.cloud-4 {
+  bottom: 25%;
+  animation-name: drift-rtl;
+  animation-duration: 250s;
+  animation-delay: -160s;
+  transform: scale(1.3) scaleX(-1);
+  opacity: 0.7;
+  filter: blur(1px);
+}
+
+/* Cloud 5: LTR, Farthest-background, Slowest */
+.cloud-5 {
+  top: 18%;
+  animation-name: drift-ltr;
+  animation-duration: 350s;
+  animation-delay: -150s;
+  transform: scale(0.8);
+  opacity: 0.6;
+  filter: blur(1.5px);
+}
+
+/* Cloud 6: RTL, Front, Very Fast */
+.cloud-6 {
+  bottom: 35%;
+  animation-name: drift-rtl;
+  animation-duration: 130s;
+  animation-delay: -20s;
+  transform: scale(1.2);
+}
+/* Cloud 7: LTR, Mid-ground, Clustered */
+.cloud-7 {
+  top: 12%;
+  animation-name: drift-ltr;
+  animation-duration: 240s;
+  animation-delay: -70s;
+  transform: scale(1);
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .cloud-1 {
+    top: 5%;
+  }
+  .cloud-2 {
+    bottom: 5%;
+  }
+  .cloud-3 {
+    top: 15%;
+  }
+  .cloud-4 {
+    bottom: 20%;
+  }
+  .cloud-5 {
+    top: 10%;
+  }
+  .cloud-6 {
+    bottom: 30%;
+  }
+  .cloud-7 {
+    top: 7%;
+  }
 }
 
 /* --- Start Text Animation Styles --- */
