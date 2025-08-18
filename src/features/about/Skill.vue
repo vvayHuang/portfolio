@@ -48,7 +48,7 @@ const skills = [
 ]
 </script>
 <template>
-  <div class="about-skill mb-6">
+  <div class="about-skill">
     <SectionText>
       <template #heading>{{ sectionText[locale] }}</template>
     </SectionText>
@@ -59,3 +59,8 @@ const skills = [
     </List>
   </div>
 </template>
+<style scoped>
+.about-skill{
+  margin-bottom: 4rem;
+}
+</style>

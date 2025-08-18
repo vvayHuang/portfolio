@@ -18,8 +18,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <ul class="list-unstyled">
-    <li v-for="(item, index) in items" :key="item.id !== undefined ? item.id : index" class="py-2">
+  <ul class="list-unstyled d-flex flex-column gap-3">
+    <li v-for="(item, index) in items" :key="item.id !== undefined ? item.id : index">
       <p class="mb-0 fs-5 fw-bold">
         <IconArrowUpRight v-if="showIcon" :class="iconClass" />
         <!--

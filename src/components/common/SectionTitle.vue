@@ -3,8 +3,8 @@ import IconArrow90degDown from '@/icons/IconArrow90degDown.vue'
 </script>
 
 <template>
-  <div class="d-flex py-lg-2 align-items-end mb-3 mb-md-0">
-    <h2 class="fs-5 text-secondary mb-0">
+  <div class="d-flex py-lg-2 align-items-end">
+    <h2 class="fs-5 text-secondary">
       <slot name="heading"></slot>
     </h2>
     <i>

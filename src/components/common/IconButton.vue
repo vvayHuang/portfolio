@@ -1,3 +1,13 @@
+<script setup>
+defineProps({
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
+})
+defineEmits(['click'])
+</script>
+
 <template>
   <button
     class="icon-button"
@@ -8,18 +18,6 @@
     <slot></slot>
   </button>
 </template>
-
-<script>
-export default {
-  name: 'IconButton',
-  props: {
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-  },
-}
-</script>
 
 <style scoped>
 .icon-button {

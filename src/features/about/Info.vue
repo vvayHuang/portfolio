@@ -1,7 +1,10 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
-const { t, locale } = useI18n()
 import SectionText from '@/components/common/SectionTitle.vue'
+import IconArrowUpRight from '@/icons/IconArrowUpRight.vue'
+
+const { locale } = useI18n()
+
 const sectionText = {
   en: 'About Me',
   zh: '關於我',
@@ -44,23 +47,78 @@ const altText = {
   en: 'Personal photo',
   zh: '個人照片',
 }
+const contactSectionText = {
+  en: 'My Contact',
+  zh: '我的聯絡方式',
+}
+const contact = [
+  {
+    id: 1,
+    text: {
+      en: 'If you are interested in collaborating, please contact me via email address.',
+      zh: '如果您有興趣合作，請透過電子郵件地址聯繫我。',
+    },
+    link: {
+      en: 'e-mail',
+      zh: '電子信箱',
+    },
+
+    email: 'jyunwayhuang@gmail.com',
+  },
+]
 </script>
 <template>
   <div class="about-info">
     <SectionText>
       <template #heading>{{ sectionText[locale] }}</template>
     </SectionText>
-    <div>
-      <p v-for="item in info" :key="item.id" class="fs-2 fw-bold">
-        {{ item.text[locale] }}
-      </p>
-    </div>
+    <p v-for="item in info" :key="item.id">
+      {{ item.text[locale] }}
+    </p>
     <img class="mb-2 img-fluid" src="@/assets/img/asset-personal-photo.png" :alt="altText[locale]" />
-    <p class="small text-capitalize">{{ avatar[locale] }}</p>
+    <span class="small text-capitalize d-block mb-5">{{ avatar[locale] }}</span>
+    <div class="mt-5 pt-5">
+      <SectionText>
+        <template #heading>{{ contactSectionText[locale] }}</template>
+      </SectionText>
+      <p class="fs-4 fs-6 fw-bold mb-4 py-2">
+        {{ contact[0].text[locale] }}
+      </p>
+      <ul class="list-unstyled">
+        <li>
+          <a class="nav-link d-inline-block" :href="`mailto:${contact[0].email}`">
+            <IconArrowUpRight />
+            <span class="fw-medium ms-3 text-capitalize">{{ contact[0].link[locale] }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 <style scoped>
 .about-info p {
+  font-size: 32px;
+  font-weight: 700;
   margin-bottom: 4rem;
+}
+ul > li {
+  .bi-arrow-up-right {
+    transition: 0.45s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+  }
+}
+
+ul > li:hover {
+  .bi-arrow-up-right {
+    transform: rotate(45deg);
+  }
+}
+
+.about-info img {
+  filter: saturate(0.8);
+  transition: filter 0.3s ease-in-out;
+}
+
+.about-info img:hover {
+  filter: saturate(1);
 }
 </style>

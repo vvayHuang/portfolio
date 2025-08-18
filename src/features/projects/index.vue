@@ -18,9 +18,9 @@ const sectionTitle = {
       <SectionText>
         <template #heading>{{ sectionTitle[locale] }}</template>
       </SectionText>
-      <ul class="list-unstyled">
+      <ul class="list-unstyled d-flex flex-column gap-4">
         <li
-          class="py-md-4 py-4 border-bottom position-relative"
+          class=" border-bottom pb-4"
           v-for="item in projectsItems"
           :key="item.id"
         >
@@ -73,12 +73,6 @@ const sectionTitle = {
 </template>
 
 <style scoped>
-#section-projects {
-  margin-bottom: 160px;
-  @media screen and (max-width: 425px) {
-    margin-bottom: 40px;
-  }
-}
 .projects-entry-cta {
   display: flex;
   align-items: center;
