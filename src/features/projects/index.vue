@@ -2,7 +2,7 @@
 import IconRight from '@/icons/IconRight.vue'
 import SectionText from '@/components/common/SectionTitle.vue'
 import Modal from '@/components/Modal.vue'
-import projectsItems from '../../data/Projects'
+import projectsModal from '../../data/Projects'
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
@@ -18,13 +18,14 @@ const sectionTitle = {
       <SectionText>
         <template #heading>{{ sectionTitle[locale] }}</template>
       </SectionText>
-      <ul class="list-unstyled d-flex flex-column gap-4">
+      <ul class="list-unstyled d-flex flex-column">
         <li
-          class=" border-bottom pb-4"
-          v-for="item in projectsItems"
+          class="project-item border-bottom py-4"
+          v-for="item in projectsModal"
           :key="item.id"
+          :style="item.images && item.images.length > 0 && { '--bg-image': `url(${item.images[0].src})` }"
         >
-          <div class="row row-cols-md-3 row-cols-2 align-items-center">
+          <div class="project-item-content row row-cols-md-3 row-cols-2 align-items-center">
             <div class="col-lg-6 col">
               <span class="me-3 fs-md-4 fs-6">{{ item.year }}</span>
               <h3 class="d-inline fs-md-4 fs-6">{{ item.title[locale] }}</h3>
@@ -120,5 +121,41 @@ const sectionTitle = {
 }
 .projects-entry-aw-link:hover .circle-icon {
   background-color: var(--wh-dark);
+}
+
+.project-item {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.project-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.project-item:hover::before {
+  opacity: 0.3;
+}
+
+.project-item-content {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.project-item:hover .project-item-content {
+  background-color: transparent;
 }
 </style>
