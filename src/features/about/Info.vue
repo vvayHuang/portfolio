@@ -69,15 +69,19 @@ const contact = [
 </script>
 <template>
   <div class="about-info">
-    <SectionText>
-      <template #heading>{{ sectionText[locale] }}</template>
-    </SectionText>
-    <p v-for="item in info" :key="item.id">
-      {{ item.text[locale] }}
-    </p>
-    <img class="mb-2 img-fluid" src="@/assets/img/asset-personal-photo.png" :alt="altText[locale]" />
-    <span class="small text-capitalize d-block mb-5">{{ avatar[locale] }}</span>
-    <div class="mt-5 pt-5">
+    <div>
+      <SectionText>
+        <template #heading>{{ sectionText[locale] }}</template>
+      </SectionText>
+      <p v-for="item in info" :key="item.id">
+        {{ item.text[locale] }}
+      </p>
+    </div>
+    <div class=" mb-6">
+      <img class="mb-2 img-fluid" src="@/assets/img/asset-personal-photo.png" :alt="altText[locale]" />
+      <span class="small text-capitalize d-block">{{ avatar[locale] }}</span>
+    </div>
+    <div>
       <SectionText>
         <template #heading>{{ contactSectionText[locale] }}</template>
       </SectionText>
@@ -96,10 +100,19 @@ const contact = [
   </div>
 </template>
 <style scoped>
+.about-info{
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+}
 .about-info p {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 4rem;
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+    margin-bottom: 2rem;
+  }
 }
 ul > li {
   .bi-arrow-up-right {
