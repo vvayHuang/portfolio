@@ -104,7 +104,7 @@ const descriptionWords = computed(() => {
         <img
           class="display-title-scroll mb-3 img-fluid"
           :class="{ 'dark-mode-filter': isDarkMode }"
-          src="@/assets/img/asset-cover-main.png"
+          src="@/assets/img/asset-cover-main-2.png"
           alt=""
         />
       </div>
