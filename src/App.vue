@@ -1,15 +1,12 @@
 <script setup>
-import { onMounted } from 'vue'
 import { useThemeStore } from '@/stores/theme'
 import { RouterView } from 'vue-router'
 import HeaderSection from '@/components/layout/HeaderSection.vue'
 import FooterSection from '@/components/layout/FooterSection.vue'
 
-const themeStore = useThemeStore()
-
-onMounted(() => {
-  themeStore.initTheme()
-})
+// By calling useThemeStore() here, we ensure the store is activated
+// and its watchEffect runs on application startup.
+useThemeStore()
 </script>
 
 <template>

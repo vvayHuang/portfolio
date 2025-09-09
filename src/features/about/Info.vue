@@ -99,39 +99,4 @@ const contact = [
     </div>
   </div>
 </template>
-<style scoped>
-.about-info{
-  display: flex;
-  gap: 1.5rem;
-  flex-direction: column;
-}
-.about-info p {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 4rem;
-  @media screen and (max-width: 768px) {
-    font-size: 18px;
-    margin-bottom: 2rem;
-  }
-}
-ul > li {
-  .bi-arrow-up-right {
-    transition: 0.45s cubic-bezier(0.34, 1.56, 0.48, 1.19);
-  }
-}
 
-ul > li:hover {
-  .bi-arrow-up-right {
-    transform: rotate(45deg);
-  }
-}
-
-.about-info img {
-  filter: saturate(0.8);
-  transition: filter 0.3s ease-in-out;
-}
-
-.about-info img:hover {
-  filter: saturate(1);
-}
-</style>

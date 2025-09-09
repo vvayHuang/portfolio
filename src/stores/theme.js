@@ -1,23 +1,23 @@
 import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import { ref, watchEffect } from 'vue'
 
 export const useThemeStore = defineStore('theme', () => {
+  const themes = ['light', 'dark', 'cyberpunk']
+
   const theme = ref(localStorage.getItem('theme') || 'light')
 
-  function setTheme(newTheme) {
-    theme.value = newTheme
-    localStorage.setItem('theme', newTheme)
-    document.documentElement.setAttribute('data-bs-theme', newTheme)
-  }
+  // This effect will run once immediately, and then again
+  // anytime the `theme` ref changes.
+  watchEffect(() => {
+    localStorage.setItem('theme', theme.value)
+    document.documentElement.setAttribute('data-bs-theme', theme.value)
+  })
 
   function toggleTheme() {
-    const newTheme = theme.value === 'light' ? 'dark' : 'light'
-    setTheme(newTheme)
+    const currentIndex = themes.indexOf(theme.value)
+    const nextIndex = (currentIndex + 1) % themes.length
+    theme.value = themes[nextIndex]
   }
 
-  function initTheme() {
-    document.documentElement.setAttribute('data-bs-theme', theme.value)
-  }
-
-  return { theme, toggleTheme, initTheme }
+  return { theme, toggleTheme }
 })

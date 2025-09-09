@@ -5,17 +5,9 @@ import AboutSection from '@/features/about/index.vue'
 </script>
 
 <template>
-  <main>
+  <main class="page-home">
     <CoverSection />
     <ProjectsSection />
     <AboutSection />
   </main>
 </template>
-<style scoped>
-section {
-  margin-bottom: 160px;
-  @media (max-width:425px) {
-    margin-bottom: 40px;
-  }
-}
-</style>

@@ -1,0 +1,17 @@
+[data-bs-theme="dark"] {
+    // Override Bootstrap CSS variables for the dark theme with "wh-" prefix
+    --wh-body-color: #00fd76;
+    --wh-body-bg: #c5f142;
+    --wh-primary: #00fcca;
+    --wh-primary-rgb: 165, 104, 42;
+    --wh-secondary: #6c757d;
+    --wh-secondary-rgb: 108, 117, 125;
+    --wh-link-color: #a5682a;
+    --wh-link-color-rgb: 165, 104, 42;
+    --wh-link-hover-color: #845321;
+    --wh-link-hover-color-rgb: 132, 83, 33;
+  
+    // You can continue to override other variables like
+    // --wh-heading-color, --wh-border-color, etc.
+  }
+  

@@ -3,7 +3,7 @@
 
 // 2. Include any default variable overrides here
 @import './base/base.scss';
-// @import './variables/colors.scss';
+@import './base/colors';
 @import './base/typography.scss';
 @import './base/spacing.scss';
 @import './base/container.scss';
@@ -19,8 +19,10 @@
 @import 'bootstrap/scss/mixins';
 @import 'bootstrap/scss/root';
 
+
 // 6. Include any other optional stylesheet partials as desired; list below is not inclusive of all available stylesheets
 @import 'bootstrap/scss/utilities';
+@import './base/utilities';
 @import 'bootstrap/scss/reboot';
 @import 'bootstrap/scss/type';
 @import 'bootstrap/scss/images';
@@ -29,10 +31,8 @@
 @import 'bootstrap/scss/helpers';
 
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
-@import './base/utilities';
 @import 'bootstrap/scss/utilities/api';
 
-@import './base/custom';
 @import 'bootstrap/scss/navbar';
 @import 'bootstrap/scss/nav';
 @import 'bootstrap/scss/buttons';
@@ -48,5 +48,11 @@
 @import 'bootstrap/scss/tooltip';
 
 // 8. Add additional custom code here
+//Layout
+@import './layout/header.scss';
+@import './layout/footer.scss';
+//Page
+@import './pages/home';
+// @import './base/_variables-dark.scss'; 
+@import './base/_variables-cyberpunk.scss';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
-

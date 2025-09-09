@@ -77,31 +77,3 @@ function toggleLanguage() {
     </nav>
   </header>
 </template>
-<style scoped>
-.header {
-  mix-blend-mode: difference;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-  margin-top: 1.25rem;
-}
-.header-grid {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr auto;
-
-  }
-}
-.header-grid > .navbar-brand {
-  justify-self: center;
-  @media (max-width:768px) {
-    justify-self: start;
-  }
-}
-.header-grid > .navbar-nav {
-  justify-self: end;
-}
-</style>

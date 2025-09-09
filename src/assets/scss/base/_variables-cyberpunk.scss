@@ -1,0 +1,15 @@
+[data-bs-theme="cyberpunk"] {
+  // Override Bootstrap CSS variables for the cyberpunk theme with "wh-" prefix
+  --wh-body-color: #f0f0f0;
+  --wh-body-bg: #0d0221;
+  --wh-primary: #f92672;
+  --wh-primary-rgb: 249, 38, 114;
+  --wh-secondary: #00e5ff;
+  --wh-secondary-rgb: 0, 229, 255;
+  --wh-link-color: #f92672;
+  --wh-link-color-rgb: 249, 38, 114;
+  --wh-link-hover-color: #ff7f9e;
+  --wh-link-hover-color-rgb: 255, 127, 158;
+  --wh-heading-color: #f92672;
+  --wh-border-color: #f92672;
+}

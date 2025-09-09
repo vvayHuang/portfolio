@@ -59,8 +59,3 @@ const skills = [
     </List>
   </div>
 </template>
-<style scoped>
-.about-skill{
-  margin-bottom: 4rem;
-}
-</style>
