@@ -21,6 +21,10 @@
     cursor: pointer;
     display: inline-flex;
     align-items: center;
+    font-size: 1.25rem;
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
   .projects-entry-aw-link:focus {
     color: var(--wh-primary);
@@ -47,7 +51,13 @@
   .projects-entry-aw-link:hover .bi-arrow-up-right {
     transform: rotate(45deg);
   }
-
+  .projects-text{
+    display: inline;
+    font-size: 1.25rem;
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
   .project-item {
     position: relative;
     overflow: hidden;

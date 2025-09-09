@@ -32,29 +32,29 @@ function toggleLanguage() {
 <template>
   <header class="header">
     <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid header-grid align-items-center">
-        <span class="d-none d-lg-flex text-dark text-lg-light"
+      <div class="header-grid align-items-center">
+        <span class="navbar-text"
           >©{{ new Date().getFullYear() }}</span
         >
         <RouterLink class="navbar-brand" to="/"><BrandLogo /></RouterLink>
         <ul class="navbar-nav flex-row justify-content-end">
           <li class="nav-item">
             <a
-              class="nav-link text-light px-2 px-md-4"
+              class="nav-link link-light px-2 px-md-4"
               aria-current="page"
               href="#section-projects"
               >{{ t('PRJ') }}</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light px-2 px-md-4" href="#section-about">{{ t('WHO') }}</a>
+            <a class="nav-link link-light px-2 px-md-4" href="#section-about">{{ t('WHO') }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light px-2 px-md-4" href="#section-contact">{{ t('MSG') }}</a>
+            <a class="nav-link link-light px-2 px-md-4" href="#section-contact">{{ t('MSG') }}</a>
           </li>
           <li class="nav-item">
             <button
-              class="nav-link text-light px-2 px-md-4 btn btn-link"
+              class="nav-link link-light px-2 px-md-4 btn btn-link"
               style="text-decoration: none"
               @click="themeStore.toggleTheme"
             >
@@ -65,7 +65,7 @@ function toggleLanguage() {
           <li class="nav-item">
             <button
               id="lang-toggle-btn"
-              class="nav-link text-light px-2 px-md-4 btn btn-link"
+              class="nav-link link-light px-2 px-md-4 btn btn-link"
               style="text-decoration: none"
               @click="toggleLanguage"
             >

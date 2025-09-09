@@ -185,16 +185,14 @@ const descriptionWords = computed(() => {
         <div class="row">
           <div class="col-auto">
             <div class="overflow-hidden">
-              <p class="mb-0 fs-md-5 fs-6">
-                <span
-                  v-for="(word, index) in descriptionWords"
-                  :key="index"
-                  class="anim-word"
-                  :style="{ 'animation-delay': `${index * 0.2}s` }"
-                >
-                  {{ word + ' ' }}
-                </span>
-              </p>
+              <span
+                v-for="(word, index) in descriptionWords"
+                :key="index"
+                class="anim-word"
+                :style="{ 'animation-delay': `${index * 0.2}s` }"
+              >
+                {{ word + ' ' }}
+              </span>
             </div>
           </div>
         </div>
@@ -361,6 +359,7 @@ const descriptionWords = computed(() => {
   animation-duration: 1.2s;
   animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   animation-fill-mode: forwards;
+  font-size: 1.25rem;
 }
 /* --- End Text Animation Styles --- */
 </style>

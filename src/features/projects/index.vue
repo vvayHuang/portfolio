@@ -27,8 +27,8 @@ const sectionTitle = {
         >
           <div class="project-item-content row row-cols-md-3 row-cols-2 align-items-center">
             <div class="col-lg-6 col">
-              <span class="me-3 fs-md-4 fs-6">{{ item.year }}</span>
-              <h3 class="d-inline fs-md-4 fs-6">{{ item.title[locale] }}</h3>
+              <span class="projects-text me-3">{{ item.year }}</span>
+              <h3 class="projects-text">{{ item.title[locale] }}</h3>
             </div>
             <div class="col-lg-3 d-none d-md-block">
               <ul class="list-unstyled d-flex position-relative">
@@ -37,7 +37,7 @@ const sectionTitle = {
                     v-if="item.figma"
                     :href="item.figma"
                     target="_blank"
-                    class="projects-entry-aw-link fs-md-4 fs-6 me-5"
+                    class="projects-entry-aw-link me-5"
                     >figma</a
                   >
                 </li>
@@ -46,7 +46,7 @@ const sectionTitle = {
                     v-if="item.github"
                     :href="item.github"
                     target="_blank"
-                    class="projects-entry-aw-link fs-md-4 fs-6"
+                    class="projects-entry-aw-link"
                     >github</a
                   >
                 </li>
@@ -59,7 +59,7 @@ const sectionTitle = {
                   target="_blank"
                   :data-bs-target="`#${item.module}`"
                   data-bs-toggle="modal"
-                  class="projects-entry-aw-link fs-6 fs-md-4"
+                  class="projects-entry-aw-link"
                   >{{ t('launch') }}
                   <span class="p-2 rounded-circle ms-3 lh-1 projects-circle-icon"><IconRight /></span>
                 </a>
