@@ -181,20 +181,16 @@ const descriptionWords = computed(() => {
       </div>
       <!-- End Clouds -->
 
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-auto">
-            <div class="overflow-hidden">
-              <span
-                v-for="(word, index) in descriptionWords"
-                :key="index"
-                class="anim-word"
-                :style="{ 'animation-delay': `${index * 0.2}s` }"
-              >
-                {{ word + ' ' }}
-              </span>
-            </div>
-          </div>
+      <div class="container-fluid main-grid">
+        <div class="overflow-hidden hero-desc">
+          <span
+            v-for="(word, index) in descriptionWords"
+            :key="index"
+            class="anim-word"
+            :style="{ 'animation-delay': `${index * 0.2}s` }"
+          >
+            {{ word + ' ' }}
+          </span>
         </div>
       </div>
     </div>
@@ -350,7 +346,14 @@ const descriptionWords = computed(() => {
     opacity: 1;
   }
 }
-
+.main-grid{
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-column-gap: 4.8rem;
+}
+.hero-desc{
+  grid-column: 1 / span 6
+}
 .anim-word {
   display: inline-block;
   transform: translateY(100%);

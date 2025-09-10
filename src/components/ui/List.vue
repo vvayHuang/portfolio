@@ -20,8 +20,8 @@ const props = defineProps({
 <template>
   <ul class="list-unstyled d-flex flex-column gap-3">
     <li v-for="(item, index) in items" :key="item.id !== undefined ? item.id : index">
-      <p class="mb-0 fs-5 fw-bold">
-        <IconArrowUpRight v-if="showIcon" :class="iconClass" />
+      <div class="list-item-icon"><IconArrowUpRight v-if="showIcon" :class="iconClass" /></div>
+      <p class="mb-0 fw-bold d-inline">
         <!--
           Slot Props:
             - item: The current item in the list (type: any)
@@ -36,13 +36,14 @@ const props = defineProps({
 </template>
 
 <style scoped>
-ul > li {
+.list-item-icon {
+  display: inline;
   .bi-arrow-up-right {
     transition: 0.45s cubic-bezier(0.34, 1.56, 0.48, 1.19);
   }
 }
 
-ul > li:hover {
+.list-item-icon:hover {
   .bi-arrow-up-right {
     transform: rotate(45deg);
   }

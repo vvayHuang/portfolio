@@ -2,7 +2,7 @@
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useThemeStore } from '@/stores/theme'
-import BrandLogo from '@/components/common/BrandLogo.vue'
+import BrandLogo from '@/components/ui/BrandLogo.vue'
 import IconTranslate from '@/icons/IconTranslate.vue'
 import IconMoon from '@/icons/IconMoon.vue'
 import IconSun from '@/icons/IconSun.vue'

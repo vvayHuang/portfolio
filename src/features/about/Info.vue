@@ -1,6 +1,6 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
-import SectionText from '@/components/common/SectionTitle.vue'
+import SectionText from '@/components/ui/SectionTitle.vue'
 import IconArrowUpRight from '@/icons/IconArrowUpRight.vue'
 
 const { locale } = useI18n()
@@ -85,7 +85,7 @@ const contact = [
       <SectionText>
         <template #heading>{{ contactSectionText[locale] }}</template>
       </SectionText>
-      <p class="fs-4 fs-6 fw-bold mb-4 py-2">
+      <p class="fw-bold mb-4 py-2">
         {{ contact[0].text[locale] }}
       </p>
       <ul class="list-unstyled">

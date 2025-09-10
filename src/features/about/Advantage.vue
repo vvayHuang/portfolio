@@ -1,8 +1,8 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 const { t, locale } = useI18n()
-import SectionText from '@/components/common/SectionTitle.vue'
-import List from '@/components/common/List.vue'
+import SectionText from '@/components/ui/SectionTitle.vue'
+import List from '@/components/ui/List.vue'
 
 const sectionText = {
   en: 'My Advantage',

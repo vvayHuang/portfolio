@@ -1,77 +1,75 @@
 <script setup>
-import { ref } from 'vue'
-import { useI18n } from 'vue-i18n'
 import IconGithub from '@/icons/IconGithub.vue'
 import IconLink45deg from '@/icons/IconLink45deg.vue'
 import IconFigma from '@/icons/IconFigma.vue'
-import projectsModalData from '../data/Projects'
+import IconEmail from '@/icons/IconEmail.vue'
 import IconCircleFill from '@/icons/IconCircleFill.vue'
-const { t, locale } = useI18n()
+import projects from '@/data/Projects'
+import { onMounted } from 'vue'
+import * as bootstrap from 'bootstrap'
 
-// 預設選中第一個 tab
-const activeTab = ref(projectsModalData[0].module)
-
-// 切換tab
-function changeTab(module) {
-  activeTab.value = module
-}
+onMounted(() => {
+  // Initialize tooltips
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  )
+})
 </script>
 <template>
-  <!-- Nav Pills -->
-  <ul class="bg-light mb-3 nav nav-pills p-2 rounded-5" id="pills-tab" role="tablist">
-    <li
-      v-for="(project, index) in projectsModalData"
-      :key="index"
-      class="nav-item"
-      role="presentation"
-    >
-      <button
-        class="nav-link text-bg-light bg-gradient"
-        :class="{
-          active: activeTab === project.module,
-          'text-bg-dark': activeTab === project.module,
-        }"
-        @click="changeTab(project.module)"
-        :id="project.module"
-        data-bs-toggle="pill"
-        :data-bs-target="'#' + project.module"
-        type="button"
-        role="tab"
-        aria-controls="pills-home"
-        aria-selected="true"
-      >
-        {{ project.title[$i18n.locale] }}
-      </button>
-    </li>
-  </ul>
+  <div
+    v-for="project in projects"
+    :key="project.id"
+    class="modal fade modal-backdrop-filters"
+    :id="project.module"
+    aria-hidden="true"
+    :aria-labelledby="`${project.module}Label`"
+    tabindex="-1"
+  >
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-header border-0 justify-content-center flex-column align-items-start">
+          <div
+            class="d-flex justify-content-between align-items-center w-100 flex-column-reverse flex-md-row gap-4"
+          >
+            <div class="d-flex gap-2 d-md-block">
+              <button
+                v-for="project in projects"
+                :key="project.id"
+                :data-bs-target="`#${project.module}`"
+                data-bs-toggle="modal"
+                type="button"
+                class="btn btn-dark text-bg-dark bg-gradient me-md-3"
+              >
+                {{ project.title[$i18n.locale] }}
+              </button>
+            </div>
 
-  <!-- Tab Content -->
-  <div class="tab-content" id="pills-tabContent">
-    <div
-      v-for="(project, index) in projectsModalData"
-      :key="index"
-      class="tab-pane fade"
-      :class="{ 'show active': activeTab === project.module }"
-      :id="project.module"
-      role="tabpanel"
-      :aria-labelledby="project.module"
-      tabindex="0"
-    >
-      <div class="modal-header border-0 justify-content-center flex-column align-items-start px-0">
-        <div class="container">
-          <div class="row row-cols-md-2 row-cols-1 g-lg-3 g-md-2 gy-2">
+            <button
+              type="button"
+              class="btn-close p-md-3"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+        </div>
+        <div class="modal-body bg-body ">
+                    <a
+            href="mailto:jyunwayhuang@gmail.com"
+            class="btn btn-primary btn-cta"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            :title="$t('contact_me')"
+            ><IconEmail
+          /></a>
+          <div class="row row-cols-md-2 row-cols-1 g-lg-3 g-md-2 gy-2 mb-5">
             <div v-for="(image, index) in project.images" :key="index" class="col">
               <img class="w-100 h-100" :src="image.src" :alt="image.alt" />
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="modal-body text-bg-light rounded-3">
-        <div class="container">
           <div class="flex-column flex-lg-row row">
             <div class="col col-lg-4">
-              <h2 class="text-secondary fs-6">{{ project.type[$i18n.locale] }}</h2>
+              <h2 class="text-secondary fs-6 mb-0">{{ project.type[$i18n.locale] }}</h2>
               <h1 class="modal-title mb-md-3" id="LifeRecordModalLabel">
                 {{ project.title[$i18n.locale] }}
               </h1>
@@ -95,8 +93,8 @@ function changeTab(module) {
                   <IconGithub />
                 </a>
                 <a
-                  v-if="project.webkitURL"
-                  :href="project.webkitURL"
+                  v-if="project.websiteURL"
+                  :href="project.websiteURL"
                   class="link-dark"
                   target="_blank"
                 >
@@ -131,12 +129,12 @@ function changeTab(module) {
 
             <!-- Text Content -->
             <div class="col">
-              <div class="d-flex flex-column h-100">
-                <h3 class="mb-4 text-secondary">
+              <div class="d-flex flex-column h-100 gap-4">
+                <h3 class="text-secondary">
                   {{ project.projectOverview[$i18n.locale] }}
                 </h3>
                 <p>{{ project.description[$i18n.locale] }}</p>
-                <h3 class="mt-4 mb-4 text-secondary">
+                <h3 class="text-secondary">
                   {{ project.technologiesUsed[$i18n.locale] }}
                 </h3>
                 <ul>
@@ -144,7 +142,7 @@ function changeTab(module) {
                     <p>{{ item[$i18n.locale] }}</p>
                   </li>
                 </ul>
-                <h3 class="mt-4 mb-4 text-secondary">
+                <h3 class="text-secondary">
                   {{ project.responsibilities[$i18n.locale] }}
                 </h3>
                 <ul>
@@ -152,7 +150,7 @@ function changeTab(module) {
                     <p>{{ item[$i18n.locale] }}</p>
                   </li>
                 </ul>
-                <h3 class="mt-4 mb-4 text-secondary">
+                <h3 class="text-secondary">
                   {{ project.keyFeatures[$i18n.locale] }}
                 </h3>
                 <ul>
@@ -160,7 +158,7 @@ function changeTab(module) {
                     <p>{{ item[$i18n.locale] }}</p>
                   </li>
                 </ul>
-                <h3 class="mt-4 mb-4 text-secondary">
+                <h3 class="text-secondary">
                   {{ project.challengesOutcomes[$i18n.locale] }}
                 </h3>
                 <ul>
@@ -168,7 +166,7 @@ function changeTab(module) {
                     <p>{{ item[$i18n.locale] }}</p>
                   </li>
                 </ul>
-                <h3 class="mt-4 mb-4 text-secondary">
+                <h3 class="text-secondary">
                   {{ project.lessonsLearned[$i18n.locale] }}
                 </h3>
                 <ul>
@@ -183,29 +181,59 @@ function changeTab(module) {
       </div>
     </div>
   </div>
-  <!-- End of Tab Content -->
 </template>
 <style scoped>
-.nav-link {
-  border-radius: 24px;
-}
-.modal {
+.modal-backdrop-filters {
   backdrop-filter: blur(20px);
 }
 
+.btn-cta {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1055; /* Ensure it's above the modal content */
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--wh-primary);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  color: white; /* Ensure text is visible */
+}
+
+.btn-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.btn-close{
+  background-color: var(--wh-light);
+  border-radius: 50px;
+}
+.modal.show .btn-cta {
+  transition: none !important;
+}
+
+.modal.show .modal-dialog {
+  transform: none !important; /* 移除任何位移 */
+  transition: opacity 0.3s ease-out !important; /* 只保留淡入效果 */
+}
+
 li:nth-of-type(1) .bi-circle-fill {
-  fill: var(--bs-gray-800);
+  fill: var(--wh-gray-800);
 }
 
 li:nth-of-type(2) .bi-circle-fill {
-  fill: var(--bs-gray-700);
+  fill: var(--wh-gray-700);
 }
 
 li:nth-of-type(3) .bi-circle-fill {
-  fill: var(--bs-gray-600);
+  fill: var(--wh-gray-600);
 }
 
 li:nth-of-type(4) .bi-circle-fill {
-  fill: var(--bs-gray-500);
+  fill: var(--wh-gray-500);
 }
 </style>
