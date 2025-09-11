@@ -1,10 +1,17 @@
 <script setup>
 import IconArrow90degDown from '@/icons/IconArrow90degDown.vue'
+
+defineProps({
+  textColorClass: {
+    type: String,
+    default: 'text-dark'
+  }
+})
 </script>
 
 <template>
-  <div class="d-flex py-2 mb-3 align-items-center">
-    <h2 class="fs-7 mb-0 text-dark">
+  <div class="d-flex py-2 align-items-start">
+    <h2 class="fs-2 mb-0" :class="textColorClass">
       <slot name="heading"></slot>
     </h2>
     <div class="section-title-icon">
@@ -21,7 +28,7 @@ import IconArrow90degDown from '@/icons/IconArrow90degDown.vue'
   align-items: center;
 }
 .section-title-icon :deep(svg) {
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
 }
 </style>

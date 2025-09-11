@@ -28,7 +28,6 @@ defineEmits(['click'])
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: inherit;
   font-size: inherit;
 }
 

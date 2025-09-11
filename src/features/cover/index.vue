@@ -49,7 +49,7 @@ onMounted(() => {
       scrollY: {
         translateX: [
           ['elInY', 'elOutY'],
-          [-200, 200],
+          [-500, 500],
         ],
         opacity: [
           [400, 968],
@@ -102,10 +102,10 @@ const descriptionWords = computed(() => {
     <div class="d-flex flex-column h-100 justify-content-center overflow-hidden">
       <div :style="mainImageStyle">
         <img
-          class="display-title-scroll mb-3 img-fluid"
+          class="display-title-scroll hero-image"
           :class="{ 'dark-mode-filter': isDarkMode }"
-          src="@/assets/img/asset-cover-main-2.png"
-          alt=""
+          src="@/assets/img/asset-cover-main-2.svg"
+          alt="首頁視覺名字大圖"
         />
       </div>
       <!-- Clouds -->
@@ -212,6 +212,11 @@ const descriptionWords = computed(() => {
   #section-hero {
     height: 100vh;
   }
+}
+.hero-image{
+  width: 100vw;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
 }
 .cloud-bright {
   filter: brightness(0.5);

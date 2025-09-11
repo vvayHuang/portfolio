@@ -3,7 +3,7 @@
 
 // 2. Include any default variable overrides here
 @import './base/base.scss';
-// @import './base/colors';
+@import './base/colors';
 @import './base/typography.scss';
 @import './base/spacing.scss';
 
@@ -47,8 +47,7 @@
 
 // 8. Add additional custom code here
 //Base
-// @import './base/_variables-dark.scss'; 
-@import './base/_variables-cyberpunk.scss';
+@import './base/variables-dark.scss'; 
 @import './base/container.scss';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 //Layout

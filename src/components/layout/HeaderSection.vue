@@ -4,8 +4,8 @@ import { useI18n } from 'vue-i18n'
 import { useThemeStore } from '@/stores/theme'
 import BrandLogo from '@/components/ui/BrandLogo.vue'
 import IconTranslate from '@/icons/IconTranslate.vue'
-import IconMoon from '@/icons/IconMoon.vue'
-import IconSun from '@/icons/IconSun.vue'
+import IconPalette from '@/icons/IconPalette.vue'
+
 
 const { t, locale } = useI18n()
 const themeStore = useThemeStore()
@@ -40,32 +40,31 @@ function toggleLanguage() {
         <ul class="navbar-nav flex-row justify-content-end">
           <li class="nav-item">
             <a
-              class="nav-link link-light px-2 px-md-4"
+              class="nav-link px-2 px-md-4"
               aria-current="page"
               href="#section-projects"
               >{{ t('PRJ') }}</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link link-light px-2 px-md-4" href="#section-about">{{ t('WHO') }}</a>
+            <a class="nav-link px-2 px-md-4" href="#section-about">{{ t('WHO') }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-light px-2 px-md-4" href="#section-contact">{{ t('MSG') }}</a>
+            <a class="nav-link px-2 px-md-4" href="#section-contact">{{ t('MSG') }}</a>
           </li>
           <li class="nav-item">
             <button
-              class="nav-link link-light px-2 px-md-4 btn btn-link"
+              class="nav-link px-2 px-md-4 btn btn-link"
               style="text-decoration: none"
               @click="themeStore.toggleTheme"
             >
-              <IconMoon v-if="themeStore.theme === 'light'" />
-              <IconSun v-else />
+              <IconPalette />
             </button>
           </li>
           <li class="nav-item">
             <button
               id="lang-toggle-btn"
-              class="nav-link link-light px-2 px-md-4 btn btn-link"
+              class="nav-link px-2 px-md-4 btn btn-link"
               style="text-decoration: none"
               @click="toggleLanguage"
             >

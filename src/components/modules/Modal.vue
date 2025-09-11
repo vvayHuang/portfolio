@@ -27,19 +27,19 @@ onMounted(() => {
     tabindex="-1"
   >
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content bg-transparent border-0">
+      <div class="modal-content border-0">
         <div class="modal-header border-0 justify-content-center flex-column align-items-start">
           <div
             class="d-flex justify-content-between align-items-center w-100 flex-column-reverse flex-md-row gap-4"
           >
-            <div class="d-flex gap-2 d-md-block">
+            <div class="d-flex gap-2">
               <button
                 v-for="project in projects"
                 :key="project.id"
                 :data-bs-target="`#${project.module}`"
                 data-bs-toggle="modal"
                 type="button"
-                class="btn btn-dark text-bg-dark bg-gradient me-md-3"
+                class="btn btn-dark"
               >
                 {{ project.title[$i18n.locale] }}
               </button>
@@ -53,7 +53,7 @@ onMounted(() => {
             ></button>
           </div>
         </div>
-        <div class="modal-body bg-body ">
+        <div class="modal-body">
                     <a
             href="mailto:jyunwayhuang@gmail.com"
             class="btn btn-primary btn-cta"
@@ -69,7 +69,7 @@ onMounted(() => {
           </div>
           <div class="flex-column flex-lg-row row">
             <div class="col col-lg-4">
-              <h2 class="text-secondary fs-6 mb-0">{{ project.type[$i18n.locale] }}</h2>
+              <h2 class="fs-6 mb-0">{{ project.type[$i18n.locale] }}</h2>
               <h1 class="modal-title mb-md-3" id="LifeRecordModalLabel">
                 {{ project.title[$i18n.locale] }}
               </h1>
@@ -120,7 +120,7 @@ onMounted(() => {
                 <span
                   v-for="(tag, index) in project.tag"
                   :key="index"
-                  class="badge rounded-pill text-bg-secondary me-2 text-capitalize"
+                  class="badge rounded-pill text-bg-dark me-2 text-capitalize"
                 >
                   {{ tag }}
                 </span>
@@ -130,11 +130,11 @@ onMounted(() => {
             <!-- Text Content -->
             <div class="col">
               <div class="d-flex flex-column h-100 gap-4">
-                <h3 class="text-secondary">
+                <h3>
                   {{ project.projectOverview[$i18n.locale] }}
                 </h3>
                 <p>{{ project.description[$i18n.locale] }}</p>
-                <h3 class="text-secondary">
+                <h3>
                   {{ project.technologiesUsed[$i18n.locale] }}
                 </h3>
                 <ul>
@@ -142,7 +142,7 @@ onMounted(() => {
                     <p>{{ item[$i18n.locale] }}</p>
                   </li>
                 </ul>
-                <h3 class="text-secondary">
+                <h3>
                   {{ project.responsibilities[$i18n.locale] }}
                 </h3>
                 <ul>
@@ -150,7 +150,7 @@ onMounted(() => {
                     <p>{{ item[$i18n.locale] }}</p>
                   </li>
                 </ul>
-                <h3 class="text-secondary">
+                <h3>
                   {{ project.keyFeatures[$i18n.locale] }}
                 </h3>
                 <ul>
@@ -158,7 +158,7 @@ onMounted(() => {
                     <p>{{ item[$i18n.locale] }}</p>
                   </li>
                 </ul>
-                <h3 class="text-secondary">
+                <h3>
                   {{ project.challengesOutcomes[$i18n.locale] }}
                 </h3>
                 <ul>
@@ -166,7 +166,7 @@ onMounted(() => {
                     <p>{{ item[$i18n.locale] }}</p>
                   </li>
                 </ul>
-                <h3 class="text-secondary">
+                <h3>
                   {{ project.lessonsLearned[$i18n.locale] }}
                 </h3>
                 <ul>

@@ -14,9 +14,9 @@ const sectionTitle = {
 </script>
 
 <template>
-  <section id="section-projects">
+  <section id="section-projects" class="bg-dark">
     <div class="container-fluid">
-      <SectionText>
+      <SectionText text-color-class="text-light">
         <template #heading>{{ sectionTitle[locale] }}</template>
       </SectionText>
     </div>

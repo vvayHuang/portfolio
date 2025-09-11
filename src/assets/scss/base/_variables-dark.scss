@@ -1,17 +1,90 @@
-[data-bs-theme="dark"] {
-    // Override Bootstrap CSS variables for the dark theme with "wh-" prefix
-    --wh-body-color: #00fd76;
-    --wh-body-bg: #c5f142;
-    --wh-primary: #00fcca;
-    --wh-primary-rgb: 165, 104, 42;
-    --wh-secondary: #6c757d;
-    --wh-secondary-rgb: 108, 117, 125;
-    --wh-link-color: #a5682a;
-    --wh-link-color-rgb: 165, 104, 42;
-    --wh-link-hover-color: #845321;
-    --wh-link-hover-color-rgb: 132, 83, 33;
-  
-    // You can continue to override other variables like
-    // --wh-heading-color, --wh-border-color, etc.
+[data-bs-theme=dark] {
+  color-scheme: dark;
+  // --- High Contrast Theme ---
+  // Base
+  --wh-body-color: #FFFFFF;
+  --wh-body-color-rgb: 255, 255, 255;
+  --wh-body-bg: #000000;
+  --wh-body-bg-rgb: 0, 0, 0;
+  --wh-emphasis-color: #FFFFFF;
+  --wh-emphasis-color-rgb: 255, 255, 255;
+
+  // Secondary & Tertiary
+  --wh-secondary-color: #E0E0E0;
+  --wh-secondary-color-rgb: 224, 224, 224;
+  --wh-secondary-bg: #1A1A1A;
+  --wh-secondary-bg-rgb: 26, 26, 26;
+  --wh-tertiary-color: #BDBDBD;
+  --wh-tertiary-color-rgb: 189, 189, 189;
+  --wh-tertiary-bg: #2B2B2B;
+  --wh-tertiary-bg-rgb: 43, 43, 43;
+
+  // Text Emphasis
+  --wh-primary-text-emphasis: #00BFFF;
+  --wh-secondary-text-emphasis: #E0E0E0;
+  --wh-success-text-emphasis: #00FF00;
+  --wh-info-text-emphasis: #00FFFF;
+  --wh-warning-text-emphasis: #FFFF00;
+  --wh-danger-text-emphasis: #FF0000;
+  --wh-light-text-emphasis: #FFFFFF;
+  --wh-dark-text-emphasis: #E0E0E0;
+
+  // Subtle Backgrounds
+  --wh-primary-bg-subtle: #002A3D;
+  --wh-secondary-bg-subtle: #1A1A1A;
+  --wh-success-bg-subtle: #003D00;
+  --wh-info-bg-subtle: #003D3D;
+  --wh-warning-bg-subtle: #3D3D00;
+  --wh-danger-bg-subtle: #3D0000;
+  --wh-light-bg-subtle: #3C3C3C;
+  --wh-dark-bg-subtle: #1A1A1A;
+
+  // Subtle Borders
+  --wh-primary-border-subtle: #007B99;
+  --wh-secondary-border-subtle: #555555;
+  --wh-success-border-subtle: #009900;
+  --wh-info-border-subtle: #009999;
+  --wh-warning-border-subtle: #999900;
+  --wh-danger-border-subtle: #990000;
+  --wh-light-border-subtle: #777777;
+  --wh-dark-border-subtle: #555555;
+
+  // Misc
+  --wh-heading-color: inherit;
+  --wh-link-color: #000000;
+  --wh-link-hover-color: #FFFF99;
+  --wh-link-color-rgb: 0, 0, 0;
+  --wh-link-hover-color-rgb: 0, 0, 0;
+  --wh-code-color: #FF00FF;
+  --wh-highlight-color: #000000;
+  --wh-highlight-bg: #FFFF00;
+  --wh-border-color: #888888;
+  --wh-border-color-translucent: rgba(255, 255, 255, 0.25);
+
+  // Bootstrap Generic
+  --wh-light: #000000;
+  --wh-light-rgb: 0, 0, 0;
+  --wh-dark: #fff;
+  --wh-dark-rgb: 255, 255, 255;
+
+  --wh-btn-color: #fff;
+  --wh-btn-color-rgb: 255, 255, 255;
+  --wh-btn-bg: #007bff;
+  --wh-btn-bg-rgb: 0, 123, 255;
+
+  // Custom rule for .btn-dark in dark mode
+  .btn-dark {
+    --bs-btn-color: #000;
+    --bs-btn-bg: #f8f9fa; // A light gray
+    --bs-btn-border-color: #f8f9fa;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #d3d4d5;
+    --bs-btn-hover-border-color: #c6c7c8;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #c6c7c8;
+    --bs-btn-active-border-color: #babbbc;
+    --bs-btn-disabled-color: #000;
+    --bs-btn-disabled-bg: #f8f9fa;
+    --bs-btn-disabled-border-color: #f8f9fa;
   }
-  
+}
