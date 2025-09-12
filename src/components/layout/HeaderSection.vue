@@ -54,7 +54,7 @@ function toggleLanguage() {
           </li>
           <li class="nav-item">
             <button
-              class="nav-link px-2 px-md-4 btn btn-link"
+              class="nav-link px-2 px-md-4"
               style="text-decoration: none"
               @click="themeStore.toggleTheme"
             >
@@ -64,7 +64,7 @@ function toggleLanguage() {
           <li class="nav-item">
             <button
               id="lang-toggle-btn"
-              class="nav-link px-2 px-md-4 btn btn-link"
+              class="nav-link px-2 px-md-4"
               style="text-decoration: none"
               @click="toggleLanguage"
             >

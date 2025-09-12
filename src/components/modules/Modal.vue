@@ -44,7 +44,6 @@ onMounted(() => {
                 {{ project.title[$i18n.locale] }}
               </button>
             </div>
-
             <button
               type="button"
               class="btn-close p-md-3"
@@ -120,7 +119,7 @@ onMounted(() => {
                 <span
                   v-for="(tag, index) in project.tag"
                   :key="index"
-                  class="badge rounded-pill text-bg-dark me-2 text-capitalize"
+                  class="badge rounded-pill bg-dark text-white  me-2 text-capitalize"
                 >
                   {{ tag }}
                 </span>
@@ -209,8 +208,8 @@ onMounted(() => {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .btn-close{
-  background-color: var(--wh-light);
-  border-radius: 50px;
+  position: fixed;
+  left: 2rem;
 }
 .modal.show .btn-cta {
   transition: none !important;

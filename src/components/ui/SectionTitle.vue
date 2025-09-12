@@ -10,14 +10,12 @@ defineProps({
 </script>
 
 <template>
-  <div class="d-flex py-2 align-items-start">
-    <h2 class="fs-2 mb-0" :class="textColorClass">
-      <slot name="heading"></slot>
-    </h2>
+  <h2 class="fs-2" :class="textColorClass">
+    <slot name="heading"></slot>
     <div class="section-title-icon">
       <IconArrow90degDown />
     </div>
-  </div>
+  </h2>
 </template>
 
 <style scoped>
