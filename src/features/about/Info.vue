@@ -81,7 +81,7 @@ const contact = [
       <img class="mb-2 img-fluid" src="@/assets/img/asset-personal-photo.png" :alt="altText[locale]" />
       <span class="small text-capitalize d-block">{{ avatar[locale] }}</span>
     </div>
-    <div>
+    <div id="contact">
       <SectionText>
         <template #heading>{{ contactSectionText[locale] }}</template>
       </SectionText>

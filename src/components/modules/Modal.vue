@@ -199,7 +199,7 @@ onMounted(() => {
   align-items: center;
   gap: 0.5rem;
   font-weight: bold;
-  color: white; /* Ensure text is visible */
+  color: var(--wh-light); /* Ensure text is visible */
 }
 
 .btn-cta:hover {
@@ -210,6 +210,11 @@ onMounted(() => {
 .btn-close{
   position: fixed;
   left: 2rem;
+  z-index: 1055;
+  border-radius: 50px;
+  @media screen and (max-width: 768px) {
+    bottom: 3rem;
+  }
 }
 .modal.show .btn-cta {
   transition: none !important;
@@ -218,6 +223,11 @@ onMounted(() => {
 .modal.show .modal-dialog {
   transform: none !important; /* 移除任何位移 */
   transition: opacity 0.3s ease-out !important; /* 只保留淡入效果 */
+}
+.modal-dialog-scrollable .modal-content {
+  @media screen and (max-width: 768px) {
+    max-height: 90%;
+  }
 }
 
 li:nth-of-type(1) .bi-circle-fill {

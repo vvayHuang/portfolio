@@ -50,7 +50,7 @@ function toggleLanguage() {
             <a class="nav-link px-2 px-md-4" href="#section-about">{{ t('WHO') }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link px-2 px-md-4" href="#section-contact">{{ t('MSG') }}</a>
+            <a class="nav-link px-2 px-md-4" href="#contact">{{ t('MSG') }}</a>
           </li>
           <li class="nav-item">
             <button
