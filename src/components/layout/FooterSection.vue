@@ -11,7 +11,7 @@ const currentYear = new Date().getFullYear()
               <div class="footer-logo-img">
                 <img class="img-fluid" src="../../assets/img/asset-footer-logo.png" alt="" />
               </div>
-              <span class="text-muted d-inline-flex">© {{ currentYear }} vvayHuang</span>
+              <span class="text-muted d-inline-flex">© {{ currentYear }} wayHuang</span>
             </div>
             <ul class=" d-flex gap-3 align-items-start align-items-md-center list-unstyled mb-0 flex-column flex-md-row">
               <li><a href="https://github.com/vvayHuang" target="_blank" class=" link-dark text-decoration-none text-muted">Github</a></li>

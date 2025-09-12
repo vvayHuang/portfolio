@@ -49,10 +49,10 @@ onMounted(() => {
       scrollY: {
         translateX: [
           ['elInY', 'elOutY'],
-          [-500, 500],
+          [-100, 100],
         ],
         opacity: [
-          [400, 968],
+          [100, 968],
           [1, 0],
         ],
       },
@@ -88,17 +88,10 @@ const description = {
   en: 'My name is Huang Jyun Wei. I am a job seeker who loves design. I am currently actively seeking job opportunities as a web designer/UI designer',
   zh: '我叫黃俊維，是一位熱愛設計的求職者，目前正在積極尋求網頁設計師/UI設計師的工作機會',
 }
-
-// --- Start Text Animation ---
-const descriptionWords = computed(() => {
-  const desc = description[locale.value] || ''
-  return desc.split(/\s+/).filter((word) => word.length > 0)
-})
-// --- End Text Animation ---
 </script>
 
 <template>
-  <section id="section-hero">
+  <section id="section-hero" class=" position-relative overflow-hidden">
     <div class="d-flex flex-column h-100 justify-content-center overflow-hidden">
       <div :style="mainImageStyle">
         <img
@@ -183,14 +176,9 @@ const descriptionWords = computed(() => {
 
       <div class="container-fluid main-grid">
         <div class="overflow-hidden hero-desc">
-          <span
-            v-for="(word, index) in descriptionWords"
-            :key="index"
-            class="anim-word"
-            :style="{ 'animation-delay': `${index * 0.2}s` }"
-          >
-            {{ word + ' ' }}
-          </span>
+          <p class="anim-word">
+            {{ locale === 'en' ? description.en : description.zh }}
+          </p>
         </div>
       </div>
     </div>
@@ -198,22 +186,8 @@ const descriptionWords = computed(() => {
 </template>
 
 <style scoped>
-#section-hero {
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-
-#section-hero img {
-  transition: filter 1.5s ease;
-}
-
-@media (max-width: 768px) {
-  #section-hero {
-    height: 100vh;
-  }
-}
 .hero-image{
+  transition: filter 1.5s ease;
   width: 100vw;
   margin-top: 5rem;
   margin-bottom: 1rem;
