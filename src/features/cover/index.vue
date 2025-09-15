@@ -50,7 +50,7 @@ onMounted(() => {
       scrollY: {
         translateX: [
           ['elInY', 'elOutY'],
-          ['-elWidth/4', 'elWidth/4'],
+          ['-100', '100'],
         ],
         opacity: [
           [100, 968],
