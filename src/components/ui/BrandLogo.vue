@@ -30,25 +30,3 @@ onMounted(() => {
     </div>
   </div>
 </template>
-
-<style scoped>
-.wrapper {
-  width: 131px;
-  height: 33px;
-  position: relative;
-  overflow: hidden;
-  @media (max-width: 768px) {
-    width: 95px;
-  }
-}
-.box {
-  width: 131px;
-  height: 33px;
-  position: absolute;
-}
-
-.boxes {
-  position: relative;
-  left: -131px;
-}
-</style>

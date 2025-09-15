@@ -34,18 +34,3 @@ const props = defineProps({
     </li>
   </ul>
 </template>
-
-<style scoped>
-.list-item-icon {
-  display: inline;
-  .bi-arrow-up-right {
-    transition: 0.45s cubic-bezier(0.34, 1.56, 0.48, 1.19);
-  }
-}
-
-.list-item-icon:hover {
-  .bi-arrow-up-right {
-    transform: rotate(45deg);
-  }
-}
-</style>

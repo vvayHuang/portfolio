@@ -3,8 +3,9 @@ import { onMounted, onUnmounted, computed, ref } from 'vue'
 import lax from 'lax.js'
 import { useI18n } from 'vue-i18n'
 import { useThemeStore } from '@/stores/theme'
+import Clouds from '@/components/ui/Clouds.vue'
 
-const { t, locale } = useI18n()
+const { locale } = useI18n()
 const themeStore = useThemeStore()
 
 const isDarkMode = computed(() => themeStore.theme === 'dark')
@@ -49,7 +50,7 @@ onMounted(() => {
       scrollY: {
         translateX: [
           ['elInY', 'elOutY'],
-          [-100, 100],
+          ['-elWidth/4', 'elWidth/4'],
         ],
         opacity: [
           [100, 968],
@@ -60,21 +61,6 @@ onMounted(() => {
     [],
   )
   window.addEventListener('mousemove', handleMouseMove)
-
-  // --- Start Cloud Animation Randomization ---
-  document.querySelectorAll('.cloud-container').forEach((cloudEl) => {
-    const style = window.getComputedStyle(cloudEl)
-    const currentDuration = parseFloat(style.animationDuration)
-    const currentDelay = parseFloat(style.animationDelay)
-
-    // Add a random variance of +/- 20%
-    const durationVariance = currentDuration * (Math.random() * 0.4 - 0.2)
-    const delayVariance = currentDelay * (Math.random() * 0.4 - 0.2)
-
-    cloudEl.style.animationDuration = `${currentDuration + durationVariance}s`
-    cloudEl.style.animationDelay = `${currentDelay + delayVariance}s`
-  })
-  // --- End Cloud Animation Randomization ---
 })
 
 onUnmounted(() => {
@@ -101,78 +87,15 @@ const description = {
           alt="首頁視覺名字大圖"
         />
       </div>
-      <!-- Clouds -->
-      <div
-        class="cloud-container cloud-1 position-absolute start-0 z-n1"
-        :style="cloudStyle1"
-      >
-        <img
-          class="img-fluid cloud-bright"
-          src="@/assets/img/ui-cloud-background-01.webp"
-          alt="cloud on hero section"
-        />
-      </div>
-      <div
-        class="cloud-container cloud-2 position-absolute start-0 z-1"
-        :style="cloudStyle2"
-      >
-        <img
-          class="img-fluid cloud-bright"
-          src="@/assets/img/ui-cloud-background-02.webp"
-          alt="cloud on hero section"
-        />
-      </div>
-      <div
-        class="cloud-container cloud-3 position-absolute start-0 z-1"
-        :style="cloudStyle3"
-      >
-        <img
-          class="img-fluid cloud-bright"
-          src="@/assets/img/ui-cloud-background-02.webp"
-          alt="cloud on hero section"
-        />
-      </div>
-      <div
-        class="cloud-container cloud-4 position-absolute start-0 z-n1"
-        :style="cloudStyle4"
-      >
-        <img
-          class="img-fluid cloud-bright"
-          src="@/assets/img/ui-cloud-background-01.webp"
-          alt="cloud on hero section"
-        />
-      </div>
-      <div
-        class="cloud-container cloud-5 position-absolute start-0 z-n1"
-        :style="cloudStyle5"
-      >
-        <img
-          class="img-fluid cloud-bright"
-          src="@/assets/img/ui-cloud-background-01.webp"
-          alt="cloud on hero section"
-        />
-      </div>
-      <div
-        class="cloud-container cloud-6 position-absolute start-0 z-1"
-        :style="cloudStyle6"
-      >
-        <img
-          class="img-fluid cloud-bright"
-          src="@/assets/img/ui-cloud-background-02.webp"
-          alt="cloud on hero section"
-        />
-      </div>
-      <div
-        class="cloud-container cloud-7 position-absolute start-0 z-n1"
-        :style="cloudStyle7"
-      >
-        <img
-          class="img-fluid cloud-bright"
-          src="@/assets/img/ui-cloud-background-02.webp"
-          alt="cloud on hero section"
-        />
-      </div>
-      <!-- End Clouds -->
+      <Clouds
+        :cloud-style1="cloudStyle1"
+        :cloud-style2="cloudStyle2"
+        :cloud-style3="cloudStyle3"
+        :cloud-style4="cloudStyle4"
+        :cloud-style5="cloudStyle5"
+        :cloud-style6="cloudStyle6"
+        :cloud-style7="cloudStyle7"
+      />
 
       <div class="container-fluid main-grid">
         <div class="overflow-hidden hero-desc">
@@ -192,126 +115,8 @@ const description = {
   margin-top: 5rem;
   margin-bottom: 1rem;
 }
-.cloud-bright {
-  filter: brightness(0.5);
-}
-
 .dark-mode-filter {
   filter: invert(1);
-}
-
-@keyframes drift-ltr {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(100vw);
-  }
-}
-
-@keyframes drift-rtl {
-  from {
-    transform: translateX(100vw);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.cloud-container {
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-
-/* Cloud 1: LTR, Mid-ground */
-.cloud-1 {
-  top: 10%;
-  animation-name: drift-ltr;
-  animation-duration: 220s;
-  animation-delay: -60s;
-  opacity: 0.9;
-}
-
-/* Cloud 2: RTL, Front, Fast */
-.cloud-2 {
-  bottom: 10%;
-  animation-name: drift-rtl;
-  animation-duration: 150s;
-  animation-delay: -100s;
-  transform: scale(1.1);
-}
-
-/* Cloud 3: LTR, Front, Very Slow, Small */
-.cloud-3 {
-  top: 20%;
-  animation-name: drift-ltr;
-  animation-duration: 280s;
-  animation-delay: -20s;
-  transform: scale(0.7) scaleX(-1);
-}
-
-/* Cloud 4: RTL, Far-background, Large, Flipped */
-.cloud-4 {
-  bottom: 25%;
-  animation-name: drift-rtl;
-  animation-duration: 250s;
-  animation-delay: -160s;
-  transform: scale(1.3) scaleX(-1);
-  opacity: 0.7;
-  filter: blur(1px);
-}
-
-/* Cloud 5: LTR, Farthest-background, Slowest */
-.cloud-5 {
-  top: 18%;
-  animation-name: drift-ltr;
-  animation-duration: 350s;
-  animation-delay: -150s;
-  transform: scale(0.8);
-  opacity: 0.6;
-  filter: blur(1.5px);
-}
-
-/* Cloud 6: RTL, Front, Very Fast */
-.cloud-6 {
-  bottom: 35%;
-  animation-name: drift-rtl;
-  animation-duration: 130s;
-  animation-delay: -20s;
-  transform: scale(1.2);
-}
-/* Cloud 7: LTR, Mid-ground, Clustered */
-.cloud-7 {
-  top: 12%;
-  animation-name: drift-ltr;
-  animation-duration: 240s;
-  animation-delay: -70s;
-  transform: scale(1);
-  opacity: 0.85;
-}
-
-@media (max-width: 768px) {
-  .cloud-1 {
-    top: 5%;
-  }
-  .cloud-2 {
-    bottom: 5%;
-  }
-  .cloud-3 {
-    top: 15%;
-  }
-  .cloud-4 {
-    bottom: 20%;
-  }
-  .cloud-5 {
-    top: 10%;
-  }
-  .cloud-6 {
-    bottom: 30%;
-  }
-  .cloud-7 {
-    top: 7%;
-  }
 }
 
 /* --- Start Text Animation Styles --- */

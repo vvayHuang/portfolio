@@ -30,7 +30,6 @@
 
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import 'bootstrap/scss/utilities/api';
-
 @import 'bootstrap/scss/navbar';
 @import 'bootstrap/scss/nav';
 @import 'bootstrap/scss/buttons';
@@ -50,6 +49,13 @@
 @import './base/variables-dark.scss'; 
 @import './base/container.scss';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
+// Component
+@import 'components/brand-logo';
+@import 'components/icon-button';
+@import 'components/list';
+@import 'components/modal';
+@import 'components/section-title';
+@import 'components/clouds';
 //Layout
 @import './layout/header.scss';
 @import './layout/footer.scss';

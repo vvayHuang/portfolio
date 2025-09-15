@@ -17,16 +17,3 @@ defineProps({
     </div>
   </h2>
 </template>
-
-<style scoped>
-.section-title-icon {
-  transform: rotateY(180deg);
-  margin-left: 0.5rem;
-  display: inline-flex;
-  align-items: center;
-}
-.section-title-icon :deep(svg) {
-  width: 12px;
-  height: 12px;
-}
-</style>
