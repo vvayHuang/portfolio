@@ -19,7 +19,7 @@ app.use(i18n)
 if (import.meta.env.PROD) {
   app.use(VueGtag, {
     property: {
-      id: 'G-0G9XXZN7QN'
+      id: import.meta.env.VITE_GTAG_ID
     }
   }, router)
 }

@@ -11,6 +11,8 @@ useThemeStore()
 
 <template>
   <HeaderSection />
-  <router-view />
+  <main>
+    <router-view />
+  </main>
   <FooterSection />
 </template>

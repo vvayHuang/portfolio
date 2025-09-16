@@ -5,9 +5,9 @@ import AboutSection from '@/features/about/index.vue'
 </script>
 
 <template>
-  <main class="page-home">
+  <div class="page-home">
     <CoverSection />
     <ProjectsSection />
     <AboutSection />
-  </main>
+  </div>
 </template>
