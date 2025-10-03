@@ -15,6 +15,15 @@
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -32,11 +41,26 @@
     <meta name="twitter:description" content="我叫黃俊維，是一位熱愛設計的求職者，目前正在積極尋求網頁設計師/UI設計師的工作機會" />
     <meta name="twitter:image" content="https://vvayhuang.github.io/portfolio/apple-touch-icon.png" />
 
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "黃俊維 (Way Huang)",
+      "jobTitle": "Creative Developer & UI Designer",
+      "description": "我叫黃俊維，是一位熱愛設計的求職者，目前正在積極尋求網頁設計師/UI設計師的工作機會",
+      "url": "https://vvayhuang.github.io/portfolio/",
+      "sameAs": [
+        "https://github.com/vvayHuang"
+      ],
+      "knowsAbout": ["Vue.js", "UI/UX Design", "Web Development", "GSAP", "Figma", "JavaScript"],
+      "nationality": "Taiwan"
+    }
+    </script>
+
   </head>
   <body>
     <div id="app"></div>
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
