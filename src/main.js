@@ -9,6 +9,15 @@ import router from './router'
 import i18n from './i18n'
 import VueGtag from 'vue-gtag-next'
 
+import Hotjar from '@hotjar/browser';
+const siteId = 6552662;
+const hotjarVersion = 6;
+Hotjar.init(siteId, hotjarVersion);
+
+import Clarity from '@microsoft/clarity';
+const projectId = 'ttk3ubjgdk';
+Clarity.init(projectId);
+
 const app = createApp(App)
 const pinia = createPinia()
 
