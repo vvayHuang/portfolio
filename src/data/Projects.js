@@ -7,7 +7,105 @@ import bhpreview1 from '@/assets/img/project-buddy-house-preview-01.png'
 import bhpreview2 from '@/assets/img/project-buddy-house-preview-02.png'
 import bhpreview3 from '@/assets/img/project-buddy-house-preview-03.gif'
 import bhpreview4 from '@/assets/img/project-buddy-house-preview-04.gif'
+// import stratumDemo from '@/assets/img/project-stratum-demo.gif' // TODO: Add your demo GIF here
+import stratumPreview1 from '@/assets/img/project-stratum-preview-01.png'
 const projectsModal = [
+  {
+    id: 'StratumModal',
+    title: { en: 'Stratum - AI Career Advisor', zh: 'Stratum - AI 職涯顧問' },
+    type: { en: 'AI Career Application', zh: 'AI 職涯應用程式' },
+    year: 2025,
+    module: 'StratumModal',
+    github: 'https://github.com/vvayHuang/sidebling',
+    websiteURL: 'https://sidebling-kq76.onrender.com/',
+    projectOverview: { en: 'Project Overview', zh: '專案簡介' },
+    description: {
+      en: 'Stratum is an AI-powered career advisor built with Nuxt 3. It leverages the Google Gemini API to generate creative career ideas based on user interests. The project uses Tailwind CSS for styling, GSAP for animations, and is integrated with Supabase for user authentication and database storage. It features community sharing, personal idea management, and detailed career guides. (Guest access available for testing)',
+      zh: 'Stratum 是一個基於 Nuxt 3 構建的 AI 職涯顧問應用程式。它利用 Google Gemini API 根據使用者的興趣生成創意的職涯點子。專案使用 Tailwind CSS 進行樣式設計，GSAP 製作動畫，並整合 Supabase 處理使用者認證與資料儲存。功能包含社群分享、個人點子管理以及詳細的職涯指南生成。(提供訪客測試帳號)',
+    },
+    technologiesUsed: { en: 'Technologies Used', zh: '開發技術' },
+    technologiesUsedItem: [
+      {
+        en: 'Framework: Nuxt 3, Vue 3, Tailwind CSS',
+        zh: '框架：Nuxt 3, Vue 3, Tailwind CSS',
+      },
+      {
+        en: 'Backend & Database: Supabase (PostgreSQL, Auth, RLS policies)',
+        zh: '後端與資料庫：Supabase (PostgreSQL, 身份驗證, RLS 策略)',
+      },
+      {
+        en: 'AI Integration: Google Gemini API (Server-side)',
+        zh: 'AI 整合：Google Gemini API (伺服器端處理)',
+      },
+      { en: 'Animations: GSAP', zh: '動畫特效：GSAP' },
+    ],
+    responsibilities: { en: 'Responsibilities', zh: '負責項目' },
+    responsibilitiesItem: [
+      {
+        en: 'Designed a scalable System Architecture: Nuxt 3 Client ↔ Server API Proxy ↔ External Services (Gemini/Supabase), ensuring strict separation of concerns',
+        zh: '設計可擴展的系統架構：Nuxt 3 客戶端 ↔ 伺服器端 API 代理 ↔ 外部服務 (Gemini/Supabase)，確保職責分離',
+      },
+      {
+        en: 'Configured Supabase Auth & RLS policies to secure user data and managed session states across the full stack',
+        zh: '設定 Supabase Auth 與 RLS 策略保護資料，並管理全端應用程式的 Session 狀態',
+      },
+      {
+        en: 'Optimized Performance: Achieved high Lighthouse scores by leveraging Nuxt SSR, asset compression, and efficient GSAP animations',
+        zh: '效能優化：利用 Nuxt SSR、資源壓縮與高效的 GSAP 動畫，達成優異的 Lighthouse 評分',
+      },
+      {
+        en: 'Developed a custom Material Design 3 theme with Tailwind CSS, ensuring accessibility and responsive layouts',
+        zh: '使用 Tailwind CSS 開發 Material Design 3 主題，確保無障礙設計與響應式排版',
+      },
+    ],
+    keyFeatures: { en: 'Key Features', zh: '主要功能' },
+    keyFeaturesItem: [
+      {
+        en: 'AI-Powered Suggestions: Generates personalized career paths based on user interests',
+        zh: 'AI 智能建議：根據使用者興趣生成個人化的職涯路徑',
+      },
+      {
+        en: 'Detailed Guides via Server-Side Streaming: Provides step-by-step career guides with real-time feedback',
+        zh: '伺服器端串流指南：即時生成包含步驟的詳細職涯指南',
+      },
+      {
+        en: 'Community & Personal Management: Share creative ideas and manage private prompt history',
+        zh: '社群與個人管理：分享創意並管理個人的提示詞紀錄',
+      },
+    ],
+    challengesOutcomes: { en: 'Challenges & Outcomes', zh: '挑戰與成果' },
+    challengesOutcomesItem: [
+      {
+        en: 'Seamlessly integrated AI responses with frontend UI using stream handling for a responsive UX',
+        zh: '利用串流處理技術整合 AI 回應，提供即時且流暢的使用者體驗',
+      },
+      {
+        en: 'Ensured robust security by processing all sensitive API requests on the server side, preventing key leakage',
+        zh: '透過伺服器端處理所有敏感 API 請求，確保金鑰安全不外洩',
+      },
+    ],
+    lessonsLearned: { en: 'Lessons Learned', zh: '學習收穫' },
+    lessonsLearnedItem: [
+      {
+        en: 'Deepened understanding of Nuxt 3 server engine (Nitro) and secure API architecture',
+        zh: '深入理解 Nuxt 3 伺服器引擎 (Nitro) 與安全 API 架構設計',
+      },
+      {
+        en: 'Mastered the integration of Generative AI streams with Vue 3 reactive state',
+        zh: '掌握生成式 AI 串流與 Vue 3 響應式狀態的整合技巧',
+      },
+    ],
+    tag: ['nuxt', 'vue', 'tailwind', 'supabase', 'gemini'],
+    language: [
+      { label: 'vue', value: 80 },
+      { label: 'typescript', value: 15 },
+      { label: 'css', value: 5 },
+    ],
+    images: [
+      { src: stratumPreview1, alt: 'Stratum project preview 1' },
+      // { src: stratumDemo, alt: 'Stratum AI Generation Demo' }, // Uncomment when GIF is added
+    ],
+  },
   {
     id: 'BuddyHouseModal',
     title: { en: 'Buddy House', zh: 'Buddy House' },
