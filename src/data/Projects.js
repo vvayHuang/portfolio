@@ -18,6 +18,11 @@ const projectsModal = [
     module: 'StratumModal',
     github: 'https://github.com/vvayHuang/sidebling',
     websiteURL: 'https://sidebling-kq76.onrender.com/',
+    websiteURL: 'https://sidebling-kq76.onrender.com/',
+    summary: {
+      en: 'AI-powered career advisor generating creative paths.',
+      zh: 'AI 驅動的職涯顧問，為您生成創意職涯路徑。',
+    },
     projectOverview: { en: 'Project Overview', zh: '專案簡介' },
     description: {
       en: 'Stratum is an AI-powered career advisor built with Nuxt 3. It leverages the Google Gemini API to generate creative career ideas based on user interests. The project uses Tailwind CSS for styling, GSAP for animations, and is integrated with Supabase for user authentication and database storage. It features community sharing, personal idea management, and detailed career guides. (Guest access available for testing)',
@@ -116,6 +121,11 @@ const projectsModal = [
       'https://www.figma.com/design/lgKC4901ViopAmKbNRokKc/Buddy-House?node-id=1742-44934&t=YCzVZdwqg6PAbMny-1',
     github: 'https://github.com/vvayHuang/buddyhouseV2',
     websiteURL: 'https://buddy-house.vercel.app/',
+    websiteURL: 'https://buddy-house.vercel.app/',
+    summary: {
+      en: 'Concept website for a cozy restaurant experience.',
+      zh: '傳遞溫馨餐飲體驗的餐廳形象官網。',
+    },
     projectOverview: { en: 'Project Overview', zh: '專案簡介' },
     description: {
       en: 'Buddy House is a conceptual restaurant website designed to convey the warmth of “dining and drinking at home,” creating a cozy and welcoming atmosphere. The design was crafted in Figma, using Material Theme Builder to quickly establish a color scheme inspired by the metro green line and a consistent typography system, reinforcing brand recognition. Figma’s Variables feature was employed to efficiently adjust design elements for flexibility and scalability. Illustrations were generated using the AI tool Recraft, producing unique visuals aligned with the brand’s friendly image. This project integrates design and technology, showcasing my skills in brand identity design, tool utilization, and creating a heartfelt dining experience.',
@@ -217,6 +227,11 @@ const projectsModal = [
       'https://www.figma.com/design/RX78vjYDu0Wtd3591akmX9/GalaxyBoyz?m=auto&t=1tlrYtTjsZWEFB0q-6',
     github: 'https://github.com/vvayHuang/galaxyBoyzV3',
     websiteURL: 'https://vvayhuang.github.io/galaxyBoyzV3/',
+    websiteURL: 'https://vvayhuang.github.io/galaxyBoyzV3/',
+    summary: {
+      en: 'Official website simulation for a modern music band.',
+      zh: '模擬當代樂團形象的官方網站。',
+    },
     projectOverview: { en: 'Project Overview', zh: '專案簡介' },
     description: {
       en: 'GalaxyBoyz is a project that simulates the official website of a modern music band. Starting with design drafts created in Figma, the second version update focuses on improving layout and user experience to better reflect a professional artist image. The website is developed using Vue 3 and Vite for efficiency, combined with Tailwind CSS to create a responsive and modern design. This project demonstrates my ability to integrate frontend development with design, using detailed layouts and interactive features to emulate the feel of a real band website, delivering a professional and creative brand image.',
@@ -336,6 +351,11 @@ const projectsModal = [
     module: 'LifeRecordModal',
     github: 'https://github.com/vvayHuang/lifeRecord',
     websiteURL: 'https://vvayhuang.github.io/lifeRecord/',
+    websiteURL: 'https://vvayhuang.github.io/lifeRecord/',
+    summary: {
+      en: 'Mock online record store for music enthusiasts.',
+      zh: '專為音樂愛好者打造的模擬線上唱片行。',
+    },
     projectOverview: { en: 'Project Overview', zh: '專案簡介' },
     description: {
       en: 'Life Record is a mock online record store website designed for music enthusiasts. The platform offers a variety of record genres, allowing users to browse album covers, descriptions, and tracks with ease. Users can fill out a notification form for records they are interested in, ensuring a seamless connection for inquiries or reservations. Additionally, the website features a music news section to keep users informed about the latest updates in the industry. Developed with Bootstrap, the site achieves a clean design and responsive layout, ensuring an excellent user experience across devices. This project highlights my planning skills for music-themed websites and my hands-on experience with frontend development.',

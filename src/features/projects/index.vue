@@ -14,64 +14,86 @@ const sectionTitle = {
 </script>
 
 <template>
-  <section id="section-projects" class="bg-dark">
-    <div class="container-fluid">
-      <SectionText text-color-class="text-light">
+  <section id="section-projects" class="bg-dark overflow-hidden">
+    <div class="container-fluid p-0">
+      <SectionText text-color-class="text-light text-center" class="py-5">
         <template #heading>{{ sectionTitle[locale] }}</template>
       </SectionText>
-    </div>
-    <ul class="list-unstyled d-flex flex-column">
-      <li
-        class="project-item"
-        v-for="item in projectsModal"
-        :key="item.id"
-        :style="item.images && item.images.length > 0 && { '--bg-image': `url(${item.images[0].src})` }"
-      >
-        <div class="project-item-content row row-cols-md-3 row-cols-2 align-items-center">
-          <div class="col-lg-6 col">
-            <span class="projects-text me-3">{{ item.year }}</span>
-            <h3 class="projects-text">{{ item.title[locale] }}</h3>
+
+      <!-- List container -->
+      <!-- List container -->
+      <div class="d-flex flex-column gap-5 pb-5">
+        <!-- Main Projects (Vertical Stack) -->
+        <div v-for="(item, index) in projectsModal.slice(0, projectsModal.length - 2)" :key="item.id"
+          class="project-card w-100 d-flex flex-column justify-content-between pt-5 mb-5"
+          style="height: 100vh; max-height: 1000px;">
+          <!-- Text Content -->
+          <div class="container project-content flex-shrink-0 mb-5 z-2">
+            <div class="row justify-content-center">
+              <div class="col-lg-8 col-md-10">
+                <h2 class="project-title text-white fw-bold mb-3 display-4 text-center">{{ item.title[locale] }}</h2>
+                <p class="project-subtitle text-secondary fs-4 mb-4 text-center">{{ item.summary[locale] }}</p>
+
+                <div class="d-flex justify-content-center gap-3">
+                  <a v-if="item.module" href="#" class="btn btn-primary rounded-pill px-4 py-2" @click.prevent
+                    data-bs-toggle="modal" :data-bs-target="`#${item.module}`">
+                    {{ locale === 'zh' ? '進一步了解' : 'Learn More' }}
+                  </a>
+                  <a v-if="item.websiteURL" :href="item.websiteURL" target="_blank"
+                    class="btn btn-outline-light rounded-pill px-4 py-2">
+                    Website
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-3 d-none d-md-block">
-            <ul class="list-unstyled d-flex position-relative">
-              <li>
-                <a
-                  v-if="item.figma"
-                  :href="item.figma"
-                  target="_blank"
-                  class="projects-entry-aw-link me-5"
-                  >figma</a
-                >
-              </li>
-              <li>
-                <a
-                  v-if="item.github"
-                  :href="item.github"
-                  target="_blank"
-                  class="projects-entry-aw-link"
-                  >github</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3">
-            <div class="projects-entry-cta">
-              <IconButton
-                v-if="item.module"
-                :data-bs-target="`#${item.module}`"
-                data-bs-toggle="modal"
-                class="projects-entry-aw-link"
-              >
-                {{ t('launch') }}
-                <span class="p-2 rounded-circle ms-3 lh-1 projects-circle-icon"
-                  ><IconRight
-                /></span>
-              </IconButton>
+
+          <!-- Hero Image Container (Top Center Aligned) -->
+          <div class="w-100 flex-grow-1 position-relative overflow-hidden">
+            <div class="container h-100 position-relative">
+              <div class="position-absolute bottom-0 start-50 translate-middle-x project-image-wrapper"
+                style="width: 100%; max-width: 1200px; height: 90%;">
+                <img v-if="item.images && item.images.length > 0" :src="item.images[0].src" :alt="item.images[0].alt"
+                  class="img-fluid rounded-top-4 shadow-lg w-100 h-100 object-fit-cover"
+                  style="object-position: top center;" />
+              </div>
             </div>
           </div>
         </div>
-      </li>
-    </ul>
+
+        <!-- Last 2 Projects (Side-by-Side Grid) -->
+        <div class="container pb-5">
+          <div class="row g-4">
+            <div v-for="(item, index) in projectsModal.slice(projectsModal.length - 2)" :key="item.id" class="col-md-6">
+              <div
+                class="project-card h-100 d-flex flex-column justify-content-between pt-4 bg-dark bg-opacity-50 overflow-hidden">
+                <!-- Text Content -->
+                <div class="px-4 pt-3 pb-4 text-center flex-shrink-0">
+                  <h3 class="text-white fw-bold mb-2">{{ item.title[locale] }}</h3>
+                  <p class="text-secondary mb-3">{{ item.summary[locale] }}</p>
+                  <div class="d-flex justify-content-center gap-2">
+                    <a v-if="item.module" href="#" class="btn btn-sm btn-primary rounded-pill px-3" @click.prevent
+                      data-bs-toggle="modal" :data-bs-target="`#${item.module}`">
+                      {{ locale === 'zh' ? '進一步了解' : 'Learn More' }}
+                    </a>
+                    <a v-if="item.websiteURL" :href="item.websiteURL" target="_blank"
+                      class="btn btn-sm btn-outline-light rounded-pill px-3">
+                      Website
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Grid Image -->
+                <div class="flex-grow-1 position-relative overflow-hidden" style="min-height: 300px;">
+                  <img v-if="item.images && item.images.length > 0" :src="item.images[0].src" :alt="item.images[0].alt"
+                    class="w-100 h-100 object-fit-cover" style="object-position: top center;" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <Modal />
   </section>
 </template>
