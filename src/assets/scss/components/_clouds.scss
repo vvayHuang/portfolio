@@ -95,23 +95,30 @@
 @media (max-width: 768px) {
   .cloud-1 {
     top: 5%;
+    transform: scale(0.6);
   }
   .cloud-2 {
     bottom: 5%;
+    transform: scale(0.7);
   }
   .cloud-3 {
     top: 15%;
+    transform: scale(0.5) scaleX(-1);
   }
   .cloud-4 {
     bottom: 20%;
+    transform: scale(0.8) scaleX(-1);
   }
   .cloud-5 {
     top: 10%;
+    transform: scale(0.5);
   }
   .cloud-6 {
     bottom: 30%;
+    transform: scale(0.7);
   }
   .cloud-7 {
     top: 7%;
+    transform: scale(0.6);
   }
 }

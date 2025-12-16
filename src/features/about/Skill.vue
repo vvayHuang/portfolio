@@ -5,8 +5,8 @@ import SectionText from '@/components/ui/SectionTitle.vue'
 import List from '@/components/ui/List.vue'
 
 const sectionText = {
-  en: 'My Skill',
-  zh: '我的技能',
+  en: 'Skill',
+  zh: '技能',
 }
 
 const skills = [

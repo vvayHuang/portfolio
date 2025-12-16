@@ -9,6 +9,9 @@ import bhpreview3 from '@/assets/img/project-buddy-house-preview-03.gif'
 import bhpreview4 from '@/assets/img/project-buddy-house-preview-04.gif'
 // import stratumDemo from '@/assets/img/project-stratum-demo.gif' // TODO: Add your demo GIF here
 import stratumPreview1 from '@/assets/img/project-stratum-preview-01.png'
+import stratumPreview2 from '@/assets/img/project-stratum-preview-02.png'
+import stratumPreview3 from '@/assets/img/project-stratum-preview-03.png'
+import stratumPreview4 from '@/assets/img/project-stratum-preview-04.png'
 const projectsModal = [
   {
     id: 'StratumModal',
@@ -108,6 +111,9 @@ const projectsModal = [
     ],
     images: [
       { src: stratumPreview1, alt: 'Stratum project preview 1' },
+      { src: stratumPreview2, alt: 'Stratum project preview 2' },
+      { src: stratumPreview3, alt: 'Stratum project preview 3' },
+      { src: stratumPreview4, alt: 'Stratum project preview 4' },
       // { src: stratumDemo, alt: 'Stratum AI Generation Demo' }, // Uncomment when GIF is added
     ],
   },

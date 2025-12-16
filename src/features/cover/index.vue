@@ -80,22 +80,12 @@ const description = {
   <section id="section-hero" class=" position-relative overflow-hidden">
     <div class="d-flex flex-column h-100 justify-content-center overflow-hidden">
       <div :style="mainImageStyle">
-        <img
-          class="display-title-scroll hero-image"
-          :class="{ 'dark-mode-filter': isDarkMode }"
-          src="@/assets/img/asset-cover-main-2.svg"
-          alt="首頁視覺名字大圖"
-        />
+        <img class="display-title-scroll hero-image" :class="{ 'dark-mode-filter': isDarkMode }"
+          src="@/assets/img/asset-cover-main-2.svg" alt="首頁視覺名字大圖" />
       </div>
-      <Clouds
-        :cloud-style1="cloudStyle1"
-        :cloud-style2="cloudStyle2"
-        :cloud-style3="cloudStyle3"
-        :cloud-style4="cloudStyle4"
-        :cloud-style5="cloudStyle5"
-        :cloud-style6="cloudStyle6"
-        :cloud-style7="cloudStyle7"
-      />
+      <Clouds :cloud-style1="cloudStyle1" :cloud-style2="cloudStyle2" :cloud-style3="cloudStyle3"
+        :cloud-style4="cloudStyle4" :cloud-style5="cloudStyle5" :cloud-style6="cloudStyle6"
+        :cloud-style7="cloudStyle7" />
 
       <div class="container-fluid main-grid">
         <div class="overflow-hidden hero-desc">
@@ -109,12 +99,15 @@ const description = {
 </template>
 
 <style scoped>
-.hero-image{
+.hero-image {
   transition: filter 1.5s ease;
   width: 100vw;
+  height: 80vh;
+  object-fit: contain;
   margin-top: 5rem;
   margin-bottom: 1rem;
 }
+
 .dark-mode-filter {
   filter: invert(1);
 }
@@ -125,19 +118,23 @@ const description = {
     transform: translateY(100%);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
   }
 }
-.main-grid{
+
+.main-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-column-gap: 4.8rem;
 }
-.hero-desc{
+
+.hero-desc {
   grid-column: 1 / span 6
 }
+
 .anim-word {
   display: inline-block;
   transform: translateY(100%);
@@ -146,7 +143,12 @@ const description = {
   animation-duration: 1.2s;
   animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   animation-fill-mode: forwards;
-  font-size: 1.25rem;
+  font-size: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 }
+
 /* --- End Text Animation Styles --- */
 </style>

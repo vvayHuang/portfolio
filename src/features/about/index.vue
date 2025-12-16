@@ -5,7 +5,7 @@ import Advantage from './Advantage.vue'
 </script>
 <template>
   <section id="section-about">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row justify-content-between gy-6 flex-column-reverse flex-lg-row">
         <div class="col-lg-4">
           <Skill />
