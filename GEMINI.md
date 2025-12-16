@@ -13,6 +13,7 @@ This is a personal portfolio website built with Vue 3 and Vite. It showcases des
 - **Internationalization**: vue-i18n
 - **Styling**: SCSS, Bootstrap 5
 - **Animation**: GSAP
+- **Image Optimization**: vite-plugin-image-optimizer
 - **Analytics**: Google Analytics, Hotjar, Microsoft Clarity
 
 ## Building and Running
@@ -73,7 +74,7 @@ The project follows a standard Vue 3 + Vite structure.
 
 ## Development Conventions
 
-- **Coding Style**: The project uses ESLint and Prettier to enforce a consistent coding style.
+- **Coding Style**: The project uses ESLint and Prettier to enforce a consistent coding style. The configuration has been migrated to the modern flat config format (`eslint.config.js`).
 - **Component-Based Architecture**: The application is structured around Vue components, with a clear separation of concerns.
 - **Internationalization**: Text strings are managed in JSON files in the `src/locales` directory and accessed through `vue-i18n`.
 - **State Management**: Global application state is managed using Pinia.
