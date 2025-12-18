@@ -21,6 +21,7 @@ export default defineConfig({
         quality: 80,
       },
       gif: {}, // 啟用 GIF 壓縮但不指定質量
+      encodeImagesTo: 'webp', // Add this line to convert to WebP
     }),
   ],
   resolve: {

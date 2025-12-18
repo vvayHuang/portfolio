@@ -15,7 +15,6 @@
   "dependencies": {
     "@hotjar/browser": "^1.0.9",
     "@microsoft/clarity": "^1.0.0",
-    "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.13.1",
     "gsap": "^3.12.5",
@@ -29,7 +28,6 @@
   "devDependencies": {
     "@eslint/js": "^9.21.0",
     "@vitejs/plugin-vue": "^5.0.4",
-    "autoprefixer": "^10.4.20",
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.0.2",
     "eslint-plugin-prettier": "^5.2.3",

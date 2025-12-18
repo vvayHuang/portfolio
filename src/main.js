@@ -1,5 +1,6 @@
 // 樣式導入
 import './assets/scss/main.scss'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 // 第三方函式庫導入
 import * as bootstrap from 'bootstrap'
