@@ -4,7 +4,7 @@ import IconArrow90degDown from '@/icons/IconArrow90degDown.vue'
 defineProps({
   textColorClass: {
     type: String,
-    default: 'text-dark'
+    default: ''
   }
 })
 </script>

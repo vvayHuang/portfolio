@@ -26,7 +26,7 @@ onMounted(() => {
           <div class="d-flex justify-content-between align-items-center w-100 flex-column-reverse flex-md-row gap-4">
             <div class="d-flex gap-2">
               <button v-for="project in projects" :key="project.id" :data-bs-target="`#${project.module}`"
-                data-bs-toggle="modal" type="button" class="btn btn-dark">
+                data-bs-toggle="modal" type="button" class="btn btn-secondary">
                 {{ project.title[$i18n.locale] }}
               </button>
             </div>
@@ -56,14 +56,14 @@ onMounted(() => {
               </h1>
 
               <!-- Icon Links -->
-              <div class="mb-3">
-                <a v-if="project.figma" :href="project.figma" class="link-dark me-3" target="_blank">
+              <div class="d-flex gap-3 mb-3">
+                <a v-if="project.figma" :href="project.figma" target="_blank">
                   <IconFigma />
                 </a>
-                <a v-if="project.github" :href="project.github" class="link-dark me-3" target="_blank">
+                <a v-if="project.github" :href="project.github" target="_blank">
                   <IconGithub />
                 </a>
-                <a v-if="project.websiteURL" :href="project.websiteURL" class="link-dark" target="_blank">
+                <a v-if="project.websiteURL" :href="project.websiteURL" target="_blank">
                   <IconLink45deg />
                 </a>
               </div>
