@@ -190,8 +190,6 @@
     box-sizing: border-box; /* Ensure padding doesn't overflow width */
     @media (min-width: 768px) {
       grid-column-gap: 4.8rem; /* Restore gap for desktop */
-      padding-left: 0;
-      padding-right: 0;
     }
   }
 
