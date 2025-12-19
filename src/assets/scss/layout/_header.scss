@@ -6,6 +6,10 @@
   left: 0;
   z-index: 1030;
   margin-top: 1.25rem;
+
+  &.menu-open {
+    mix-blend-mode: normal;
+  }
 }
 
 .header-grid {
@@ -39,5 +43,46 @@
   color: $light;
   @media (max-width: 768px) {
     display: none;
+  }
+}
+
+// Mobile Menu Overlay
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Use CSS variable if available, fallback to black/dark for now as 'design system color' */
+  background-color: var(--bs-dark, #1C1B1B);
+  z-index: 2000;
+  overflow-y: auto;
+  padding-bottom: 2rem;
+}
+
+.menu-link {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.social-icons a {
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Adjust size for smaller screens if needed */
+@media (max-width: 576px) {
+  .menu-link {
+    font-size: 1.75rem;
   }
 }

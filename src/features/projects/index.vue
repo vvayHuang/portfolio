@@ -13,7 +13,7 @@ const { t, locale } = useI18n()
 
 const sectionTitle = {
   en: 'Projects',
-  zh: '精選專案'
+  zh: '專案作品'
 }
 
 onMounted(() => {

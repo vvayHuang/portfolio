@@ -48,8 +48,8 @@ const altText = {
   zh: '個人照片',
 }
 const contactSectionText = {
-  en: 'My Contact',
-  zh: '我的聯絡方式',
+  en: 'Contact',
+  zh: '聯絡方式',
 }
 const contact = [
   {
@@ -99,4 +99,3 @@ const contact = [
     </div>
   </div>
 </template>
-
