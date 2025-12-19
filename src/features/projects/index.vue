@@ -52,9 +52,9 @@ onMounted(() => {
       <div class="d-flex flex-column gap-6 pb-5">
         <!-- Main Projects (Responsive Row: Mobile Stack / Desktop Left-Right) -->
         <div v-for="(item, index) in projectsModal" :key="item.id"
-          class="project-card project-anim-target row align-items-center flex-column flex-lg-row pt-5 mb-5 g-5">
+          class="project-card project-anim-target row align-items-center flex-column justify-content-center flex-lg-row pt-5 mb-5 g-5">
           <!-- Text Content (Col-5) -->
-          <div class="col-md-4 z-2 order-1 order-lg-1">
+          <div class="col-lg-4 z-2 order-1 order-lg-1">
             <div class="project-content text-center text-lg-start position-relative">
               <h2 class="project-title fw-bold mb-3 display-5 display-md-4">{{ item.title[locale] }}</h2>
               <p class="project-subtitle fs-5 fs-md-4 mb-4">{{ item.summary[locale] }}</p>
@@ -72,7 +72,7 @@ onMounted(() => {
             </div>
           </div>
           <!-- Hero Image Container (Col-7) -->
-          <div class="col-md-8 order-2 order-lg-2">
+          <div class="col-lg-7 order-2 order-lg-2">
             <div class="position-relative w-100">
               <div class="project-image-wrapper w-100 project-image-hover ms-lg-auto" style="max-width: 1200px;">
                 <img v-if="item.images && item.images.length > 0" :src="item.images[0].src" :alt="item.images[0].alt"

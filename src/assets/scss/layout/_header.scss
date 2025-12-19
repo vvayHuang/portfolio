@@ -54,19 +54,25 @@
   width: 100vw;
   height: 100vh;
   /* Use CSS variable if available, fallback to black/dark for now as 'design system color' */
-  background-color: var(--bs-dark, #1C1B1B);
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px) invert(0.7);
   z-index: 2000;
   overflow-y: auto;
   padding-bottom: 2rem;
 }
-
+.mobile-menu-list {
+  li{
+    display: flex;
+  }
+}
 .menu-link {
   font-size: 2rem;
-  color: white;
+  color: var(--wh-body-color);
   text-decoration: none;
   font-weight: 400;
   transition: opacity 0.3s;
-
+  background-color: var(--wh-body-bg);
+  padding: 1.5rem;
   &:hover {
     opacity: 0.8;
   }

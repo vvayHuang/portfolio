@@ -6,109 +6,9 @@
     @media (max-width:425px) {
       padding-top: 2.4rem;
       padding-bottom: 0rem;
-      margin-bottom: 0;
+      margin-bottom: 40px;
     }
   }
-  .projects-entry-cta {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  .projects-entry-aw-link {
-    color: var(--wh-light);
-    font-weight: 500;
-    transition: color 0.3s ease-in-out;
-    text-decoration: none;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-transform: capitalize;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    font-size: 1.25rem;
-    @media screen and (max-width: 768px) {
-      font-size: 1rem;
-    }
-  }
-  .projects-entry-aw-link:focus {
-    color: $primary;
-    outline: none;
-  }
-  .projects-circle-icon {
-    width: 40px; 
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--wh-light);
-    color: var(--wh-dark);
-    transition:
-      background-color 0.3s ease-in-out,
-      transform 0.3s ease-in-out;
-  }
-  .projects-entry-aw-link .bi-arrow-up-right,
-  .projects-entry-aw-link .circle-icon {
-    transition: 0.45s cubic-bezier(0.34, 1.56, 0.48, 1.19);
-  }
-
-  .projects-entry-aw-link:hover .bi-arrow-up-right {
-    transform: rotate(45deg);
-  }
-  .projects-text{
-    display: inline;
-    font-size: 1.25rem;
-    color: var(--wh-light);
-    @media screen and (max-width: 768px) {
-      font-size: 1rem;
-    }
-  }
-  .project-item {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    padding-left: 4.8rem;
-    padding-right: 4.8rem;
-    padding-top: 4.8rem;
-    padding-bottom: 4.8rem;
-    @media screen and (max-width: 768px) {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
-    }
-  }
-
-  .project-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: var(--bg-image);
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-    z-index: -1;
-  }
-
-  .project-item:hover::before {
-    opacity: 0.3;
-  }
-
-  .project-item-content {
-    position: relative;
-    z-index: 2;
-    background-color: var(--wh-body);
-    transition: background-color 0.3s ease-in-out;
-  }
-
-  .project-item:hover .project-item-content {
-    background-color: transparent;
-  }
-
   .about-skill{
     margin-bottom: 4rem;
   }
@@ -119,8 +19,9 @@
   }
   .about-info p {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 3rem;
+    line-height: 1.6;
     @media screen and (max-width: 768px) {
       font-size: 18px;
       margin-bottom: 2rem;
