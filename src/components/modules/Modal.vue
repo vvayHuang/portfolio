@@ -18,30 +18,26 @@ onMounted(() => {
 })
 </script>
 <template>
-  <div v-for="project in projects" :key="project.id" class="modal fade modal-backdrop-filters" :id="project.module"
-    aria-hidden="true" :aria-labelledby="`${project.module}Label`" tabindex="-1">
+  <div v-for="project in projects" :key="project.id" class="modal fade" :id="project.module" aria-hidden="true"
+    :aria-labelledby="`${project.module}Label`" tabindex="-1">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content border-0">
-        <div class="modal-header border-0 justify-content-center flex-column align-items-start">
-          <div class="d-flex justify-content-between align-items-center w-100 flex-column-reverse flex-md-row gap-4">
-            <div class="d-flex gap-2">
-              <button v-for="project in projects" :key="project.id" :data-bs-target="`#${project.module}`"
-                data-bs-toggle="modal" type="button" class="btn btn-secondary">
-                {{ project.title[$i18n.locale] }}
-              </button>
-            </div>
-            <!-- Close Button using IconButton -->
-            <IconButton class="modal-close-btn action-btn" data-bs-dismiss="modal" aria-label="Close">
-              <i class="bi bi-x-lg fs-5"></i>
-            </IconButton>
+        <!-- Header: Transparent Overlay, Hidden on mobile (d-none d-sm-flex), Wider gap (gap-5) -->
+        <div class="modal-header border-0 justify-content-end align-items-center d-none d-sm-flex p-4">
+          <!-- Social Icons moved to Header Right -->
+          <div class="d-flex gap-5">
+            <a v-if="project.figma" :href="project.figma" class="link-light" target="_blank">
+              <IconFigma />
+            </a>
+            <a v-if="project.github" :href="project.github" class="link-light" target="_blank">
+              <IconGithub />
+            </a>
+            <a v-if="project.websiteURL" :href="project.websiteURL" class="link-light" target="_blank">
+              <IconLink45deg />
+            </a>
           </div>
         </div>
-        <div class="modal-body">
-          <!-- Contact Me Button using IconButton -->
-          <IconButton class="btn-cta action-btn" data-bs-toggle="tooltip" data-bs-placement="top"
-            :title="$t('contact_me')" @click="() => { window.location.href = 'mailto:jyunwayhuang@gmail.com' }">
-            <IconEmail />
-          </IconButton>
+        <div class="modal-body position-relative">
 
           <div class="row row-cols-md-2 row-cols-1 g-lg-3 g-md-2 gy-2 mb-5 mt-3">
             <div v-for="(image, index) in project.images" :key="index" class="col">
@@ -54,29 +50,6 @@ onMounted(() => {
               <h1 class="modal-title mb-md-3" id="LifeRecordModalLabel">
                 {{ project.title[$i18n.locale] }}
               </h1>
-
-              <!-- Icon Links -->
-              <div class="d-flex gap-3 mb-3">
-                <a v-if="project.figma" :href="project.figma" target="_blank">
-                  <IconFigma />
-                </a>
-                <a v-if="project.github" :href="project.github" target="_blank">
-                  <IconGithub />
-                </a>
-                <a v-if="project.websiteURL" :href="project.websiteURL" target="_blank">
-                  <IconLink45deg />
-                </a>
-              </div>
-
-              <!-- Language List -->
-              <ul class="list-unstyled d-inline-flex flex-wrap">
-                <li v-for="(language, index) in project.language" :key="index" class="d-flex align-items-center me-3">
-                  <IconCircleFill class="me-3" />
-                  <small class="text-muted me-1 text-uppercase">{{ language.label }}</small>
-                  <small class="text-muted me-1 text-uppercase">{{ language.value + '%' }}</small>
-                </li>
-              </ul>
-
               <!-- Tags -->
               <div class="mb-3">
                 <span v-for="(tag, index) in project.tag" :key="index"
@@ -88,7 +61,8 @@ onMounted(() => {
 
             <!-- Text Content -->
             <div class="col">
-              <div class="d-flex flex-column h-100 gap-4">
+              <div class="d-flex flex-column h-100 gap-4 mb-5 pb-5">
+                <!-- Added mb-5 pb-5 to ensure content isn't covered by fixed bottom elements -->
                 <h3>
                   {{ project.projectOverview[$i18n.locale] }}
                 </h3>
@@ -139,77 +113,31 @@ onMounted(() => {
         </div>
       </div>
     </div>
+
+    <!-- Fixed Elements Layer (Outside modal-dialog content flow but visually on top) -->
+    <!-- Note: Bootstrap modal backdrop handling might require these to be inside or carefully handled. 
+         Putting them inside modal-dialog but fixed works relative to viewport if transform is removed. -->
+
+    <!-- Close Button (Bottom Left) -->
+    <IconButton class="modal-close-btn action-btn" data-bs-dismiss="modal" aria-label="Close">
+      <i class="bi bi-x-lg fs-5"></i>
+    </IconButton>
+
+    <!-- Project Navigation (Bottom Center) - Hidden on mobile -->
+    <div class="project-nav-container d-none d-sm-block">
+      <div class="d-flex gap-2 justify-content-center">
+        <button v-for="project in projects" :key="project.id" :data-bs-target="`#${project.module}`"
+          data-bs-toggle="modal" type="button" class="btn btn-secondary">
+          {{ project.title[$i18n.locale] }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Contact Button (Bottom Right) -->
+    <IconButton tag="a" href="mailto:jyunwayhuang@gmail.com" class="action-btn modal-contact-btn"
+      data-bs-toggle="tooltip" data-bs-placement="top" :title="$t('contact_me')">
+      <IconEmail />
+    </IconButton>
+
   </div>
 </template>
-
-<style scoped lang="scss">
-.modal {
-  padding-right: 0 !important;
-
-  // Slide up animation
-  &.fade .modal-dialog {
-    transform: translate(0, 100%);
-    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1); // Smooth transition
-  }
-
-  &.show .modal-dialog {
-    transform: none;
-  }
-}
-
-.modal-dialog {
-  max-width: 100%;
-  margin: 0;
-  margin-top: 60px;
-  height: calc(100% - 60px);
-  display: flex;
-  align-items: flex-end;
-}
-
-.modal-content {
-  height: 100%;
-  border-radius: 20px 20px 0 0;
-  border: none;
-  background-color: var(--wh-body-bg);
-  color: var(--wh-body-color);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.modal-header {
-  flex-shrink: 0;
-}
-
-.modal-body {
-  overflow-y: auto;
-}
-
-// Unified Action Buttons (Close & Contact)
-.action-btn {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px; // Slightly soft squares
-  background-color: var(--wh-secondary-bg); // Use theme secondary bg
-  color: var(--wh-body-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  padding: 0;
-
-  &:hover {
-    background-color: var(--wh-tertiary-bg);
-    transform: scale(1.05);
-  }
-
-  // Specific tweaks if needed
-  &.modal-close-btn {
-    position: fixed;
-    bottom: 24px;
-    left: 24px;
-    z-index: 1060;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-}
-</style>

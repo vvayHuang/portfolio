@@ -4,17 +4,25 @@ defineProps({
     type: Boolean,
     default: false,
   },
+  tag: {
+    type: String,
+    default: 'button',
+  },
+  href: {
+    type: String,
+    default: undefined,
+  },
+  target: {
+    type: String,
+    default: undefined,
+  },
 })
 defineEmits(['click'])
 </script>
 
 <template>
-  <button
-    class="icon-button"
-    :class="{ 'icon-button--disabled': disabled }"
-    :disabled="disabled"
-    @click="$emit('click', $event)"
-  >
+  <component :is="tag" class="icon-button" :class="{ 'icon-button--disabled': disabled }" :disabled="disabled"
+    :href="href" :target="target" @click="$emit('click', $event)">
     <slot></slot>
-  </button>
+  </component>
 </template>
