@@ -20,22 +20,22 @@ const info = [
   {
     id: 2,
     text: {
-      en: 'My journey into development has equipped me with a robust full-stack skill set. I am proficient in building modern web applications with Vue 3 and Nuxt 3, managing state with Pinia, and creating fluid animations with GSAP. On the backend, I have hands-on experience with Supabase, where I\'ve managed databases, implemented user authentication, and secured data with RLS policies. This holistic understanding allows me to bridge the gap between design and development, creating user interfaces that are both aesthetically pleasing and technically sound.',
-      zh: '我的開發歷程使我具備了全面的全端技術能力。我精通使用 Vue 3 與 Nuxt 3 建構現代網頁應用，並擅長以 Pinia 進行狀態管理及 GSAP 製作流暢動畫。在後端方面，我擁有 Supabase 的實務經驗，能夠管理資料庫、實作使用者驗證並透過 RLS 策略保護資料安全。這種跨足前後端的整體理解，讓我能有效填補設計與開發之間的鴻溝，打造兼具美學與技術穩定性的使用者介面。',
+      en: "Specializing in modern web development, I focus on building responsive applications using Vue 3 and Nuxt 3. My workflow integrates efficient state management with Pinia and immersive animations via GSAP. While primarily focused on frontend and design, exposure to backend services like Supabase—including database basics and authentication—provides a valuable perspective for bridging the gap between visual design and technical implementation.",
+      zh: '專注於現代網頁開發領域，使用 Vue 3 與 Nuxt 3 建構響應式應用是我的核心專長。在開發流程中，我習慣運用 Pinia 進行狀態管理，並透過 GSAP 打造沉浸式的動畫體驗。雖然主要致力於前端與設計，但對 Supabase 等後端服務（包含資料庫基礎與驗證）的涉獵，讓我能以更全面的視角連結視覺設計與程式實作。',
     },
   },
   {
     id: 3,
     text: {
-      en: "I actively leverage AI-powered tools to enhance my workflow, from using the Gemini API for generative features to employing the Gemini CLI for development assistance. My design process, centered in Figma, is complemented by tools like Material Design Builder and AI-driven asset generators. I am also experienced in using modern development tools like Vite and Git, and I utilize analytics platforms like Microsoft Clarity to gather insights and continuously improve the user experience.",
-      zh: '我積極運用 AI 工具來提升工作流程，從整合 Gemini API 開發生成式功能，到在開發過程中使用 Gemini CLI 輔助編碼。我以 Figma 為核心的設計流程，也透過 Material Design Builder 和 AI 視覺生成工具加以輔助。同時，我熟悉 Vite 與 Git 等現代開發工具，並利用 Microsoft Clarity 等分析平台，從數據洞察中持續優化使用者體驗。',
+      en: "Leveraging AI-powered tools significantly enhances my workflow, from integrating the Gemini API for generative features to utilizing the Gemini CLI for development assistance. My design process centers on Figma, complemented by Material Design Builder and AI-driven asset generators. Furthermore, familiarity with Vite, Git, and analytics platforms like Microsoft Clarity ensures a data-driven approach to continuous user experience improvement.",
+      zh: 'AI 工具的運用大幅提升了我的工作效率，包括整合 Gemini API 開發生成式功能，以及使用 Gemini CLI 輔助編碼。設計流程以 Figma 為核心，並輔以 Material Design Builder 和 AI 視覺生成工具。此外，結合 Vite、Git 等現代開發工具，以及 Microsoft Clarity 等分析平台，確保能從數據洞察中持續優化使用者體驗。',
     },
   },
   {
     id: 4,
     text: {
-      en: 'I am adept at managing the entire project lifecycle, from initial requirements analysis to final implementation. My goal is to collaborate effectively with teams, apply creative problem-solving, and deliver exceptional, user-centric digital experiences.',
-      zh: '我熟悉從初期需求分析到最終產品實現的完整專案流程。我的目標是與團隊高效協作，運用創造性思維解決問題，最終交付以使用者為中心的卓越數位體驗。',
+      en: 'Managing the project lifecycle from requirements analysis to implementation is a key strength. The goal is always to collaborate effectively with teams, applying creative problem-solving to deliver exceptional, user-centric digital experiences.',
+      zh: '掌握從需求分析到產品實現的完整流程是我的優勢之一。始終致力於與團隊高效協作，運用創造性思維解決問題，最終交付以使用者為中心的卓越數位體驗。',
     },
   },
 ]
