@@ -1,1 +1,0 @@
-const t={PRJ:{t:0,b:{t:2,i:[{t:3}],s:"專案作品"}},MSG:{t:0,b:{t:2,i:[{t:3}],s:"聯絡"}},WHO:{t:0,b:{t:2,i:[{t:3}],s:"關於我"}},"language-zh":{t:0,b:{t:2,i:[{t:3}],s:"繁體中文"}},"language-en":{t:0,b:{t:2,i:[{t:3}],s:"英文"}},launch:{t:0,b:{t:2,i:[{t:3}],s:"瀏覽"}},contact_me:{t:0,b:{t:2,i:[{t:3}],s:"聯繫我"}}};export{t as default};
