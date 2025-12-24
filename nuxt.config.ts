@@ -61,10 +61,7 @@ export default defineNuxtConfig({
     appManifest: false
   },
 
-  modules: [
-    '@pinia/nuxt',
-    '@nuxtjs/i18n'
-  ],
+  modules: ['@pinia/nuxt', '@nuxtjs/i18n', '@nuxt/image', '@vueuse/nuxt', '@nuxt/fonts'],
 
   css: [
     'bootstrap-icons/font/bootstrap-icons.css',

@@ -34,70 +34,77 @@ onMounted(() => {
       class="cloud-container cloud-1 position-absolute start-0 z-n1"
       :style="cloudStyle1"
     >
-      <img
+      <NuxtImg
         class="img-fluid cloud-bright"
-        src="~/assets/img/ui-cloud-background-01.webp"
+        src="/img/ui-cloud-background-01.webp"
         alt="cloud on hero section"
+        format="webp"
       />
     </div>
     <div
       class="cloud-container cloud-2 position-absolute start-0 z-1"
       :style="cloudStyle2"
     >
-      <img
+      <NuxtImg
         class="img-fluid cloud-bright"
-        src="~/assets/img/ui-cloud-background-02.webp"
+        src="/img/ui-cloud-background-02.webp"
         alt="cloud on hero section"
+        format="webp"
       />
     </div>
     <div
       class="cloud-container cloud-3 position-absolute start-0 z-1"
       :style="cloudStyle3"
     >
-      <img
+      <NuxtImg
         class="img-fluid cloud-bright"
-        src="~/assets/img/ui-cloud-background-02.webp"
+        src="/img/ui-cloud-background-02.webp"
         alt="cloud on hero section"
+        format="webp"
       />
     </div>
     <div
       class="cloud-container cloud-4 position-absolute start-0 z-n1"
       :style="cloudStyle4"
     >
-      <img
+      <NuxtImg
         class="img-fluid cloud-bright"
-        src="~/assets/img/ui-cloud-background-01.webp"
+        src="/img/ui-cloud-background-01.webp"
         alt="cloud on hero section"
+        format="webp"
       />
     </div>
     <div
       class="cloud-container cloud-5 position-absolute start-0 z-n1"
       :style="cloudStyle5"
     >
-      <img
+      <NuxtImg
         class="img-fluid cloud-bright"
-        src="~/assets/img/ui-cloud-background-01.webp"
+        src="/img/ui-cloud-background-01.webp"
         alt="cloud on hero section"
+        format="webp"
       />
     </div>
     <div
       class="cloud-container cloud-6 position-absolute start-0 z-1"
       :style="cloudStyle6"
     >
-      <img
+      <NuxtImg
         class="img-fluid cloud-bright"
-        src="~/assets/img/ui-cloud-background-02.webp"
+        src="/img/ui-cloud-background-02.webp"
         alt="cloud on hero section"
+        format="webp"
       />
     </div>
     <div
       class="cloud-container cloud-7 position-absolute start-0 z-n1"
       :style="cloudStyle7"
     >
-      <img
+      <NuxtImg
         class="img-fluid cloud-bright"
-        src="~/assets/img/ui-cloud-background-02.webp"
+        src="/img/ui-cloud-background-02.webp"
         alt="cloud on hero section"
+        format="webp"
       />
     </div>
     <!-- End Clouds -->

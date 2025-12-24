@@ -1,17 +1,3 @@
-import lrpreview1 from '~/assets/img/project-life-record-preview-01.png'
-import lrpreview2 from '~/assets/img/project-life-record-preview-02.png'
-import gb2preview1 from '~/assets/img/project-galaxy-boyz-v2-preview-01.png'
-import gb2preview2 from '~/assets/img/project-galaxy-boyz-v2-preview-02.png'
-import gb2preview3 from '~/assets/img/project-galaxy-boyz-v2-preview-03.png'
-import bhpreview1 from '~/assets/img/project-buddy-house-preview-01.png'
-import bhpreview2 from '~/assets/img/project-buddy-house-preview-02.png'
-import bhpreview3 from '~/assets/img/project-buddy-house-preview-03.gif'
-import bhpreview4 from '~/assets/img/project-buddy-house-preview-04.gif'
-// import stratumDemo from '~/assets/img/project-stratum-demo.gif' // TODO: Add your demo GIF here
-import stratumPreview1 from '~/assets/img/project-stratum-preview-01.png'
-import stratumPreview2 from '~/assets/img/project-stratum-preview-02.png'
-import stratumPreview3 from '~/assets/img/project-stratum-preview-03.png'
-import stratumPreview4 from '~/assets/img/project-stratum-preview-04.png'
 const projectsModal = [
   {
     id: 'StratumModal',
@@ -20,7 +6,6 @@ const projectsModal = [
     year: 2025,
     module: 'StratumModal',
     github: 'https://github.com/vvayHuang/sidebling',
-    websiteURL: 'https://sidebling-kq76.onrender.com/',
     websiteURL: 'https://sidebling-kq76.onrender.com/',
     summary: {
       en: 'AI-powered career advisor generating creative paths.',
@@ -110,11 +95,10 @@ const projectsModal = [
       { label: 'css', value: 5 },
     ],
     images: [
-      { src: stratumPreview1, alt: 'Stratum project preview 1' },
-      { src: stratumPreview2, alt: 'Stratum project preview 2' },
-      { src: stratumPreview3, alt: 'Stratum project preview 3' },
-      { src: stratumPreview4, alt: 'Stratum project preview 4' },
-      // { src: stratumDemo, alt: 'Stratum AI Generation Demo' }, // Uncomment when GIF is added
+      { src: '/img/project-stratum-preview-01.png', alt: 'Stratum project preview 1' },
+      { src: '/img/project-stratum-preview-02.png', alt: 'Stratum project preview 2' },
+      { src: '/img/project-stratum-preview-03.png', alt: 'Stratum project preview 3' },
+      { src: '/img/project-stratum-preview-04.png', alt: 'Stratum project preview 4' },
     ],
   },
   {
@@ -126,7 +110,6 @@ const projectsModal = [
     figma:
       'https://www.figma.com/design/lgKC4901ViopAmKbNRokKc/Buddy-House?node-id=1742-44934&t=YCzVZdwqg6PAbMny-1',
     github: 'https://github.com/vvayHuang/buddyhouseV2',
-    websiteURL: 'https://buddy-house.vercel.app/',
     websiteURL: 'https://buddy-house.vercel.app/',
     summary: {
       en: 'Concept website for a cozy restaurant experience.',
@@ -217,10 +200,10 @@ const projectsModal = [
       { label: 'html', value: 2.9 },
     ],
     images: [
-      { src: bhpreview1, alt: 'Buddy House project preview 1' },
-      { src: bhpreview2, alt: 'Buddy House project preview 2' },
-      { src: bhpreview3, alt: 'Buddy House project preview 3' },
-      { src: bhpreview4, alt: 'Buddy House project preview 4' },
+      { src: '/img/project-buddy-house-preview-01.png', alt: 'Buddy House project preview 1' },
+      { src: '/img/project-buddy-house-preview-02.png', alt: 'Buddy House project preview 2' },
+      { src: '/img/project-buddy-house-preview-03.gif', alt: 'Buddy House project preview 3' },
+      { src: '/img/project-buddy-house-preview-04.gif', alt: 'Buddy House project preview 4' },
     ],
   },
   {
@@ -232,7 +215,6 @@ const projectsModal = [
     figma:
       'https://www.figma.com/design/RX78vjYDu0Wtd3591akmX9/GalaxyBoyz?m=auto&t=1tlrYtTjsZWEFB0q-6',
     github: 'https://github.com/vvayHuang/galaxyBoyzV3',
-    websiteURL: 'https://vvayhuang.github.io/galaxyBoyzV3/',
     websiteURL: 'https://vvayhuang.github.io/galaxyBoyzV3/',
     summary: {
       en: 'Official website simulation for a modern music band.',
@@ -340,9 +322,9 @@ const projectsModal = [
       { label: 'html', value: 0.4 },
     ],
     images: [
-      { src: gb2preview1, alt: 'GalaxyBoyz project preview 1' },
-      { src: gb2preview2, alt: 'GalaxyBoyz project preview 2' },
-      { src: gb2preview3, alt: 'GalaxyBoyz project preview 3' },
+      { src: '/img/project-galaxy-boyz-v2-preview-01.png', alt: 'GalaxyBoyz project preview 1' },
+      { src: '/img/project-galaxy-boyz-v2-preview-02.png', alt: 'GalaxyBoyz project preview 2' },
+      { src: '/img/project-galaxy-boyz-v2-preview-03.png', alt: 'GalaxyBoyz project preview 3' },
       {
         src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeG84Y2MxY2o1am4wY2V1bXk1OWFoanJ3dGdkZHhlZGc2bG1vcWJncCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mXG3de6F4xUgptp1C7/giphy.gif',
         alt: 'GalaxyBoyz project preview 4',
@@ -356,7 +338,6 @@ const projectsModal = [
     year: 2022,
     module: 'LifeRecordModal',
     github: 'https://github.com/vvayHuang/lifeRecord',
-    websiteURL: 'https://vvayhuang.github.io/lifeRecord/',
     websiteURL: 'https://vvayhuang.github.io/lifeRecord/',
     summary: {
       en: 'Mock online record store for music enthusiasts.',
@@ -441,7 +422,7 @@ const projectsModal = [
         zh: '提升對於音樂相關網站資訊架構的設計與規劃能力',
       },
     ],
-    tag: ['vite', 'bootstrap'], // Use array format and wrap each item in quotes
+    tag: ['vite', 'bootstrap'],
     language: [
       { label: 'html', value: 54.7 },
       { label: 'css', value: 34.2 },
@@ -449,8 +430,8 @@ const projectsModal = [
       { label: 'javascript', value: 0.1 },
     ],
     images: [
-      { src: lrpreview1, alt: 'Life Record project preview 1' },
-      { src: lrpreview2, alt: 'Life Record project preview 2' },
+      { src: '/img/project-life-record-preview-01.png', alt: 'Life Record project preview 1' },
+      { src: '/img/project-life-record-preview-02.png', alt: 'Life Record project preview 2' },
       {
         src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjlib21kY244d3VoczkxdmQ3OTEzOGVlNXV2MXM1a3pzNjF0cndrNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MI5xlX5LSP0CD2Br1C/giphy.gif',
         alt: 'Life Record project preview 3',

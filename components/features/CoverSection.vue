@@ -35,7 +35,7 @@ onMounted(async () => {
   // 動態引入 lax 避免 SSR 錯誤
   const { default: lax } = await import('lax.js')
   laxInstance = lax
-  
+
   // Setup lax
   laxInstance.init()
 
@@ -85,8 +85,8 @@ const description = {
   <section id="section-hero" class=" position-relative overflow-hidden">
     <div class="d-flex flex-column h-100 justify-content-center overflow-hidden">
       <div :style="mainImageStyle">
-        <img class="display-title-scroll hero-image" :class="{ 'dark-mode-filter': isDarkMode }"
-          src="~/assets/img/asset-cover-main-2.svg" alt="首頁視覺名字大圖" />
+        <NuxtImg class="display-title-scroll hero-image" :class="{ 'dark-mode-filter': isDarkMode }"
+          src="/img/asset-cover-main-2.svg" alt="首頁視覺名字大圖" />
       </div>
       <Clouds :cloud-style1="cloudStyle1" :cloud-style2="cloudStyle2" :cloud-style3="cloudStyle3"
         :cloud-style4="cloudStyle4" :cloud-style5="cloudStyle5" :cloud-style6="cloudStyle6"

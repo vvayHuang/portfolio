@@ -68,9 +68,9 @@ onMounted(async () => {
           <div class="col-lg-7 order-2 order-lg-2">
             <div class="position-relative w-100">
               <div class="project-image-wrapper w-100 project-image-hover ms-lg-auto" style="max-width: 1200px;">
-                <img v-if="item.images && item.images.length > 0" :src="item.images[0].src" :alt="item.images[0].alt"
+                <NuxtImg v-if="item.images && item.images.length > 0" :src="item.images[0].src" :alt="item.images[0].alt"
                   class="img-fluid rounded-4 shadow-lg w-100 project-image-parallax" style="height: auto;"
-                  loading="lazy" />
+                  loading="lazy" format="webp" quality="80" />
               </div>
             </div>
           </div>

@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
           <div class="align-items-md-center d-flex flex-column-reverse flex-md-row gap-5 gap-lg-6">
             <div class=" d-flex flex-column flex-md-row gap-3">
               <div class="footer-logo-img">
-                <img class="img-fluid" src="~/assets/img/asset-footer-logo.png" alt="" />
+                <NuxtImg class="img-fluid" src="/img/asset-footer-logo.png" alt="" />
               </div>
               <span class="text-muted d-inline-flex">© {{ currentYear }} wayHuang</span>
             </div>

@@ -23,10 +23,10 @@ onMounted(async () => {
   <div class="wrapper">
     <div class="boxes">
       <div class="box">
-        <img class=" img-fluid" src="~/assets/img/asset-logo-2x.png" alt="Logo" />
+        <NuxtImg class=" img-fluid" src="/img/asset-logo-2x.png" alt="Logo" />
       </div>
       <div class="box">
-        <img class=" img-fluid" src="~/assets/img/asset-logo-2x.png" alt="Logo" />
+        <NuxtImg class=" img-fluid" src="/img/asset-logo-2x.png" alt="Logo" />
       </div>
     </div>
   </div>

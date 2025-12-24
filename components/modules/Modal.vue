@@ -36,7 +36,7 @@ onMounted(async () => {
 
           <div class="row row-cols-md-2 row-cols-1 g-lg-3 g-md-2 gy-2 mb-5 mt-3">
             <div v-for="(image, index) in project.images" :key="index" class="col">
-              <img class="w-100 h-100" :src="image.src" :alt="image.alt" />
+              <NuxtImg class="w-100 h-100" :src="image.src" :alt="image.alt" format="webp" quality="85" />
             </div>
           </div>
           <div class="flex-column flex-lg-row row">

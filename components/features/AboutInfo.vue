@@ -66,7 +66,7 @@ const contact = [
       </p>
     </div>
     <div class=" mb-6">
-      <img class="mb-2 img-fluid" src="~/assets/img/asset-personal-photo.png" :alt="altText[locale]" />
+      <NuxtImg class="mb-2 img-fluid" src="/img/asset-personal-photo.png" :alt="altText[locale]" />
       <span class="small text-capitalize d-block">{{ avatar[locale] }}</span>
     </div>
     <div id="contact">
