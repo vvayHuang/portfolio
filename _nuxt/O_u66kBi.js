@@ -1,0 +1,1 @@
+const t={PRJ:{t:0,b:{t:2,i:[{t:3}],s:"Projects"}},MSG:{t:0,b:{t:2,i:[{t:3}],s:"Contact"}},WHO:{t:0,b:{t:2,i:[{t:3}],s:"About Me"}},"language-zh":{t:0,b:{t:2,i:[{t:3}],s:"Traditional Chinese"}},"language-en":{t:0,b:{t:2,i:[{t:3}],s:"English"}},launch:{t:0,b:{t:2,i:[{t:3}],s:"Launch"}},contact_me:{t:0,b:{t:2,i:[{t:3}],s:"Contact Me"}}};export{t as default};
