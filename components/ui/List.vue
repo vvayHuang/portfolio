@@ -18,8 +18,10 @@ const props = defineProps({
 <template>
   <ul class="list-unstyled d-flex flex-column gap-3">
     <li v-for="(item, index) in items" :key="item.id !== undefined ? item.id : index">
-      <div class="list-item-icon"><IconArrowUpRight v-if="showIcon" :class="iconClass" /></div>
-      <p class="mb-0 fw-bold d-inline">
+      <div class="list-item-icon">
+        <IconArrowUpRight v-if="showIcon" :class="iconClass" />
+      </div>
+      <p class="mb-0 d-inline">
         <!--
           Slot Props:
             - item: The current item in the list (type: any)

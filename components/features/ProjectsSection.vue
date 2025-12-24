@@ -49,7 +49,7 @@ onMounted(async () => {
           <!-- Text Content (Col-5) -->
           <div class="col-lg-4 z-2 order-1 order-lg-1">
             <div class="project-content text-center text-lg-start position-relative">
-              <h2 class="project-title fw-bold mb-3 display-5 display-md-4">{{ item.title[locale] }}</h2>
+              <h2 class="project-title mb-3 display-5 display-md-4">{{ item.title[locale] }}</h2>
               <p class="project-subtitle fs-5 fs-md-4 mb-4">{{ item.summary[locale] }}</p>
 
               <div class="d-flex justify-content-center justify-content-lg-start gap-3">
