@@ -9,7 +9,7 @@
     "build": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy": "npm run build && npx gh-pages -d .output/public -b gh-pages -r origin -t true",
+    "deploy": "npm run build && npx gh-pages -d .output/public -b gh-pages -t",
     "lint": "eslint . --ext .js,.vue,.ts --fix",
     "format": "prettier --write \"**/*.{js,vue,scss,css,ts,json}\""
   },
