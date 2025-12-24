@@ -16,10 +16,10 @@ const props = defineProps({
 </script>
 
 <template>
-  <ul class="list-unstyled d-flex flex-column gap-3">
+  <ul class="ui-list list-unstyled d-flex flex-column gap-3 gap-md-5">
     <li v-for="(item, index) in items" :key="item.id !== undefined ? item.id : index">
       <div class="list-item-icon">
-        <IconArrowUpRight v-if="showIcon" :class="iconClass" />
+        <Icon name="bi:arrow-up-right" v-if="showIcon" :class="['icon', iconClass]" />
       </div>
       <p class="mb-0 d-inline">
         <!--

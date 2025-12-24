@@ -83,7 +83,7 @@ const onLeave = async (el, done) => {
         </NuxtLink>
         <div class="d-lg-none ms-auto">
           <button class="btn border-0 p-0 text-light" @click="toggleMenu" aria-label="Toggle navigation">
-            <IconNavToggleIcon />
+            <Icon name="bi:list" />
           </button>
         </div>
         <ul class="navbar-nav flex-row justify-content-end d-none d-lg-flex">
@@ -98,13 +98,13 @@ const onLeave = async (el, done) => {
           </li>
           <li class="nav-item">
             <button class="nav-link px-2 px-md-4" style="text-decoration: none" @click="themeStore.toggleTheme">
-              <IconPalette />
+              <Icon name="bi:palette" />
             </button>
           </li>
           <li class="nav-item">
             <button id="lang-toggle-btn" class="nav-link px-2 px-md-4" style="text-decoration: none"
               @click="toggleLanguage">
-              <IconTranslate />
+              <Icon name="bi:translate" />
             </button>
           </li>
         </ul>
@@ -115,14 +115,14 @@ const onLeave = async (el, done) => {
       <div v-if="isMenuOpen" class="mobile-menu-overlay d-flex flex-column">
         <div class="mobile-menu-top-bar d-flex justify-content-between align-items-center p-4 bg-body">
           <button class="btn border-0 p-0" @click="closeMenu">
-            <IconClose />
+            <Icon name="bi:x" size="32" />
           </button>
           <div class="d-flex gap-5">
             <button class="btn p-0" @click="themeStore.toggleTheme">
-              <IconPalette />
+              <Icon name="bi:palette" />
             </button>
             <button class="btn p-0" @click="toggleLanguage">
-              <IconTranslate />
+              <Icon name="bi:translate" />
             </button>
           </div>
         </div>
@@ -137,10 +137,10 @@ const onLeave = async (el, done) => {
               <div class="menu-footer ">
                 <div class="social-icons d-inline-flex flex-wrap gap-4 p-4 bg-body">
                   <a href="https://github.com/vvayHuang" target="_blank">
-                    <IconGithub width="24" height="24" />
+                    <Icon name="bi:github" size="24" />
                   </a>
                   <a href="https://www.linkedin.com/in/vvayhuang/" target="_blank">
-                    <IconLinkedin width="24" height="24" />
+                    <Icon name="bi:linkedin" size="24" />
                   </a>
                   <a href="https://music.apple.com/tw/playlist/mixtape1/pl.u-yZyVE33F9EX87X" target="_blank"
                     class=" text-decoration-none small align-self-center">Mixtape1</a>

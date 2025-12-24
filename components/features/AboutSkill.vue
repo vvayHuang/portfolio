@@ -98,8 +98,8 @@ const skillCategories = [
       <template #heading>{{ $t('SKILLS') }}</template>
     </SectionTitle>
     <div v-for="category in skillCategories" :key="category.id" class="mb-4">
-      <h4 class="fw-bold mb-3 mt-5 fs-5">{{ category.category[locale] }}</h4>
-      <List :items="category.skills" :show-icon="false">
+      <h4 class="mb-3 mt-5 fs-5">{{ category.category[locale] }}</h4>
+      <List :items="category.skills" :show-icon="true">
         <template #list-item="{ item }">
           {{ item.text[locale] }}
         </template>

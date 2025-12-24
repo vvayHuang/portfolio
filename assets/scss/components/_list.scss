@@ -1,12 +1,15 @@
-.list-item-icon {
-  display: inline;
-  .bi-arrow-up-right {
-    transition: 0.45s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+.ui-list li {
+  .list-item-icon {
+    display: inline;
+    .icon, svg {
+      display: inline-block;
+      transition: 0.45s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+    }
   }
-}
 
-.list-item-icon:hover {
-  .bi-arrow-up-right {
-    transform: rotate(45deg);
+  &:hover .list-item-icon {
+    .icon, svg {
+      transform: rotate(45deg);
+    }
   }
 }

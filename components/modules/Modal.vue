@@ -4,7 +4,7 @@ import projects from '~/data/Projects'
 onMounted(async () => {
   // 動態引入 bootstrap 避免 SSR 錯誤
   const bootstrap = await import('bootstrap')
-  
+
   // Initialize tooltips
   const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
   const tooltipList = [...tooltipTriggerList].map(
@@ -22,13 +22,13 @@ onMounted(async () => {
           <!-- Social Icons moved to Header Right -->
           <div class="d-flex gap-5">
             <a v-if="project.figma" :href="project.figma" class="link-light" target="_blank">
-              <IconFigma />
+              <Icon name="simple-icons:figma" size="24" />
             </a>
             <a v-if="project.github" :href="project.github" class="link-light" target="_blank">
-              <IconGithub />
+              <Icon name="bi:github" size="24" />
             </a>
             <a v-if="project.websiteURL" :href="project.websiteURL" class="link-light" target="_blank">
-              <IconLink45deg />
+              <Icon name="bi:link-45deg" size="24" />
             </a>
           </div>
         </div>
@@ -115,7 +115,7 @@ onMounted(async () => {
 
     <!-- Close Button (Bottom Left) -->
     <IconButton class="modal-close-btn action-btn" data-bs-dismiss="modal" aria-label="Close">
-      <i class="bi bi-x-lg fs-5"></i>
+      <Icon name="bi:x-lg" size="24" />
     </IconButton>
 
     <!-- Project Navigation (Bottom Center) - Hidden on mobile -->
@@ -129,10 +129,16 @@ onMounted(async () => {
     </div>
 
     <!-- Contact Button (Bottom Right) -->
+
     <IconButton tag="a" href="mailto:jyunwayhuang@gmail.com" class="action-btn modal-contact-btn"
       data-bs-toggle="tooltip" data-bs-placement="top" :title="$t('contact_me')">
-      <IconEmail />
+
+      <Icon name="fa6-solid:envelope" size="24" />
+
     </IconButton>
 
+
+
   </div>
+
 </template>

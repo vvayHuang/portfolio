@@ -79,7 +79,7 @@ const contact = [
       <ul class="list-unstyled">
         <li>
           <a class="nav-link d-inline-block" :href="`mailto:${contact[0].email}`">
-            <IconArrowUpRight />
+            <Icon name="bi:arrow-up-right" class="icon" />
             <span class="fw-medium ms-3 text-capitalize">{{ contact[0].link[locale] }}</span>
           </a>
         </li>

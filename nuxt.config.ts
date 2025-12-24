@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     appManifest: false
   },
 
-  modules: ['@pinia/nuxt', '@nuxtjs/i18n', '@nuxt/image', '@vueuse/nuxt', '@nuxt/fonts'],
+  modules: ['@pinia/nuxt', '@nuxtjs/i18n', '@nuxt/image', '@vueuse/nuxt', '@nuxt/fonts', '@nuxt/icon'],
 
   fonts: {
     families: [
@@ -16,7 +16,6 @@ export default defineNuxtConfig({
   },
 
   css: [
-    'bootstrap-icons/font/bootstrap-icons.css',
     '~/assets/scss/main.scss'
   ],
 
