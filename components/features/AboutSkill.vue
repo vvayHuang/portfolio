@@ -1,11 +1,6 @@
 <script setup>
 const { locale } = useI18n()
 
-const sectionText = {
-  en: 'Skills',
-  zh: '專業技能',
-}
-
 const skillCategories = [
   {
     id: 1,
@@ -70,7 +65,7 @@ const skillCategories = [
         id: 'ai-3',
         text: {
           en: 'Skilled in leveraging AI-driven asset generators like Recraft AI to create visual components and illustrations.',
-          zh: '擅長運用 Recraft AI 等 AI 視覺生成工具，產出高品質的元件素材與插畫。',
+          zh: '擅長運用 Recraft AI 等 AI視覺生成工具，產出高品質的元件素材與插畫。',
         },
       },
     ],
@@ -100,7 +95,7 @@ const skillCategories = [
 <template>
   <div class="about-skill">
     <SectionTitle>
-      <template #heading>{{ sectionText[locale] }}</template>
+      <template #heading>{{ $t('SKILLS') }}</template>
     </SectionTitle>
     <div v-for="category in skillCategories" :key="category.id" class="mb-4">
       <h4 class="fw-bold mb-3 mt-5 fs-5">{{ category.category[locale] }}</h4>

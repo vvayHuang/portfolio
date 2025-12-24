@@ -3,11 +3,6 @@ import projectsModal from '~/data/Projects.js'
 
 const { t, locale } = useI18n()
 
-const sectionTitle = {
-  en: 'Projects',
-  zh: '專案作品'
-}
-
 onMounted(async () => {
   // 動態引入 gsap 確保 SSR 安全
   const { default: gsap } = await import('gsap')
@@ -43,7 +38,7 @@ onMounted(async () => {
   <section id="section-projects" class="overflow-hidden">
     <div class="container">
       <SectionTitle text-color-class="text-center" class="py-5 project-anim-target">
-        <template #heading>{{ sectionTitle[locale] }}</template>
+        <template #heading>{{ $t('PRJ') }}</template>
       </SectionTitle>
 
       <!-- List container -->

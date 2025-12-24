@@ -1,5 +1,5 @@
 <script setup>
-const { t, locale } = useI18n()
+const { t, locale, setLocale } = useI18n()
 const themeStore = useThemeStore()
 const isMenuOpen = ref(false)
 
@@ -9,7 +9,11 @@ const supportedLanguages = ['en', 'zh']
 function toggleLanguage() {
   const currentIndex = supportedLanguages.indexOf(locale.value)
   const nextIndex = (currentIndex + 1) % supportedLanguages.length
-  locale.value = supportedLanguages[nextIndex]
+  const newLocale = supportedLanguages[nextIndex]
+
+  // 使用 setLocale 確保 Nuxt i18n 正確更新全域狀態與 Cookie
+  setLocale(newLocale)
+
   setTimeout(() => {
     const tooltipTrigger = document.getElementById('lang-toggle-btn')
     if (tooltipTrigger && window.bootstrap) {
@@ -84,13 +88,13 @@ const onLeave = async (el, done) => {
         </div>
         <ul class="navbar-nav flex-row justify-content-end d-none d-lg-flex">
           <li class="nav-item">
-            <a class="nav-link px-2 px-md-4" aria-current="page" href="#section-projects">{{ t('PRJ') }}</a>
+            <a class="nav-link px-2 px-md-4" aria-current="page" href="#section-projects">{{ $t('PRJ') }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link px-2 px-md-4" href="#section-about">{{ t('WHO') }}</a>
+            <a class="nav-link px-2 px-md-4" href="#section-about">{{ $t('WHO') }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link px-2 px-md-4" href="#contact">{{ t('MSG') }}</a>
+            <a class="nav-link px-2 px-md-4" href="#contact">{{ $t('MSG') }}</a>
           </li>
           <li class="nav-item">
             <button class="nav-link px-2 px-md-4" style="text-decoration: none" @click="themeStore.toggleTheme">
@@ -126,9 +130,9 @@ const onLeave = async (el, done) => {
           <div class="row h-100 align-items-end">
             <div class="col-12 col-md-8 offset-md-2">
               <ul class="mobile-menu-list list-unstyled d-flex flex-column mb-0">
-                <li><a href="#section-projects" @click="closeMenu" class="menu-link">{{ t('PRJ') }}</a></li>
-                <li><a href="#section-about" @click="closeMenu" class="menu-link">{{ t('WHO') }}</a></li>
-                <li><a href="#contact" @click="closeMenu" class="menu-link">{{ t('MSG') }}</a></li>
+                <li><a href="#section-projects" @click="closeMenu" class="menu-link">{{ $t('PRJ') }}</a></li>
+                <li><a href="#section-about" @click="closeMenu" class="menu-link">{{ $t('WHO') }}</a></li>
+                <li><a href="#contact" @click="closeMenu" class="menu-link">{{ $t('MSG') }}</a></li>
               </ul>
               <div class="menu-footer ">
                 <div class="social-icons d-inline-flex flex-wrap gap-4 p-4 bg-body">

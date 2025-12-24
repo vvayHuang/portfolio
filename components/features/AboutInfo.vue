@@ -1,16 +1,12 @@
 <script setup>
 const { locale } = useI18n()
 
-const sectionText = {
-  en: 'About Me',
-  zh: '關於我',
-}
 const info = [
   {
     id: 1,
     text: {
       en: "Hello, I'm Chun-Wei Huang, a passionate designer specializing in web design and UI/UX design, actively seeking professional opportunities in these fields.",
-      zh: '您好，我是黃俊維，一名熱愛設計且專注於網頁設計與 UI/UX 設計的工作者，正在積極尋找相關的職業發展機會。',
+      zh: '您好，我是黃俊維，一名熱愛設計且專注於網頁設計與 UI/UX 設計的工作者，正在積極尋求相關的職業發展機會。',
     },
   },
   {
@@ -43,10 +39,6 @@ const altText = {
   en: 'Personal photo',
   zh: '個人照片',
 }
-const contactSectionText = {
-  en: 'Contact',
-  zh: '聯絡方式',
-}
 const contact = [
   {
     id: 1,
@@ -67,7 +59,7 @@ const contact = [
   <div class="about-info">
     <div>
       <SectionTitle>
-        <template #heading>{{ sectionText[locale] }}</template>
+        <template #heading>{{ $t('WHO') }}</template>
       </SectionTitle>
       <p v-for="item in info" :key="item.id">
         {{ item.text[locale] }}
@@ -79,7 +71,7 @@ const contact = [
     </div>
     <div id="contact">
       <SectionTitle>
-        <template #heading>{{ contactSectionText[locale] }}</template>
+        <template #heading>{{ $t('MSG') }}</template>
       </SectionTitle>
       <p class="fw-bold mb-4 py-2">
         {{ contact[0].text[locale] }}
