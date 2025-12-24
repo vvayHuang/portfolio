@@ -10,6 +10,7 @@
 - **狀態管理**: Pinia (整合 `@pinia/nuxt`)
 - **國際化**: `@nuxtjs/i18n` (支援中英雙語)
 - **樣式**: SCSS, Bootstrap 5
+- **圖示系統**: `@nuxt/icon`
 - **動畫**: GSAP, Lax.js
 - **分析**: Microsoft Clarity, Hotjar, Google Analytics
 

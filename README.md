@@ -30,7 +30,7 @@
 ### 樣式與動畫
 - **CSS 框架**: SCSS + Bootstrap 5
 - **動畫庫**: GSAP (GreenSock Animation Platform)
-- **圖示**: Bootstrap Icons
+- **圖示**: `@nuxt/icon` (整合 Bootstrap Icons & Simple Icons)
 - **視差效果**: Lax.js
 
 ### 設計與開發
@@ -48,7 +48,6 @@ portfolio/
 ├── 📁 assets/              # SCSS 樣式與圖片資源
 ├── 📁 components/          # 自動引入的 Vue 元件
 │   ├── 📁 features/       # 頁面主要功能區塊
-│   ├── 📁 icons/          # SVG 圖示元件
 │   ├── 📁 layout/         # 全域佈局元件 (Header, Footer)
 │   ├── 📁 modules/        # 模組化組件 (如 Modal)
 │   └── 📁 ui/             # 通用 UI 元件
@@ -82,14 +81,4 @@ npm run build # 執行 nuxt generate
 ```bash
 npm run deploy
 ```
-
----
-
-## 📝 聯絡資訊
-
-如有任何問題或建議，歡迎透過以下方式聯絡：
-
-- **GitHub**: [vvayHuang](https://github.com/vvayHuang)
-- **作品集**: [vvayhuang.online](https://vvayhuang.online/)
-
 ---
