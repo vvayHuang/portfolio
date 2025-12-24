@@ -5,7 +5,10 @@
   right: 0;
   left: 0;
   z-index: 1030;
-  margin-top: 1.25rem;
+  padding: 1.25rem;
+  @media (max-width: 768px) {
+    padding: .5rem;
+  }
 
   &.menu-open {
     mix-blend-mode: normal;

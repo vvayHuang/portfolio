@@ -4,11 +4,9 @@ const themeStore = useThemeStore()
 </script>
 
 <template>
-  <div>
-    <HeaderSection />
-    <main>
-      <NuxtPage />
-    </main>
-    <FooterSection />
-  </div>
+  <HeaderSection />
+  <main>
+    <NuxtPage />
+  </main>
+  <FooterSection />
 </template>

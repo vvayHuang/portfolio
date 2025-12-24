@@ -2,7 +2,7 @@
 defineProps({
   textColorClass: {
     type: String,
-    default: ''
+    default: 'text-body'
   }
 })
 </script>
