@@ -5,9 +5,6 @@ export default defineNuxtConfig({
 
   // GitHub Pages 部署設定
   app: {
-    // 如果你是使用 https://vvayhuang.github.io/portfolio/ 
-    // 請將 baseURL 改為 '/portfolio/'
-    // 但因為你有 CNAME (vvayhuang.online)，所以預設為 '/'
     baseURL: '/', 
     buildAssetsDir: '/_nuxt/',
     head: {
