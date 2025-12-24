@@ -3,54 +3,13 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
 
-  experimental: {
-    appManifest: false
-  },
-
-  modules: [
-    '@pinia/nuxt',
-    '@nuxtjs/i18n'
-  ],
-
-  css: [
-    'bootstrap-icons/font/bootstrap-icons.css',
-    '~/assets/scss/main.scss'
-  ],
-
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          api: 'modern-compiler'
-        }
-      }
-    }
-  },
-
-  components: [
-    {
-      path: '~/components',
-      pathPrefix: false,
-    }
-  ],
-
-  i18n: {
-    lazy: true,
-    langDir: 'locales',
-    locales: [
-      { code: 'en', iso: 'en-US', file: 'en.json' },
-      { code: 'zh', iso: 'zh-TW', file: 'zh.json' }
-    ],
-    defaultLocale: 'zh',
-    strategy: 'no_prefix',
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root',
-    }
-  },
-
+  // GitHub Pages 部署設定
   app: {
+    // 如果你是使用 https://vvayhuang.github.io/portfolio/ 
+    // 請將 baseURL 改為 '/portfolio/'
+    // 但因為你有 CNAME (vvayhuang.online)，所以預設為 '/'
+    baseURL: '/', 
+    buildAssetsDir: '/_nuxt/',
     head: {
       htmlAttrs: {
         lang: 'zh-TW'
@@ -98,6 +57,53 @@ export default defineNuxtConfig({
           })
         }
       ]
+    }
+  },
+
+  experimental: {
+    appManifest: false
+  },
+
+  modules: [
+    '@pinia/nuxt',
+    '@nuxtjs/i18n'
+  ],
+
+  css: [
+    'bootstrap-icons/font/bootstrap-icons.css',
+    '~/assets/scss/main.scss'
+  ],
+
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler'
+        }
+      }
+    }
+  },
+
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    }
+  ],
+
+  i18n: {
+    lazy: true,
+    langDir: 'locales',
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.json' },
+      { code: 'zh', iso: 'zh-TW', file: 'zh.json' }
+    ],
+    defaultLocale: 'zh',
+    strategy: 'no_prefix',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
     }
   }
 })
