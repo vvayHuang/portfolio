@@ -1,82 +1,58 @@
-# Gemini Project Analysis
+# Gemini 專案分析報告 (Nuxt 3 遷移版)
 
-## Project Overview
+## 專案概述
 
-This is a personal portfolio website built with Vue 3 and Vite. It showcases design and front-end development skills, featuring multi-language support (Chinese/English), responsive design, and interactive animations.
+本專案已成功從原本的 Vue 3 + Vite 架構遷移至 **Nuxt 3**。這是一個個人作品集網站，核心目標是展示高品質的設計與前端開發技能。遷移至 Nuxt 3 帶來了更強大的開發體驗、自動化的組件管理，以及對 GitHub Pages 部署更友好的 SSG 支持。
 
-### Key Technologies
+### 核心技術
 
-- **Framework**: Vue 3 (Composition API)
-- **Build Tool**: Vite
-- **State Management**: Pinia
-- **Routing**: Vue Router
-- **Internationalization**: vue-i18n
-- **Styling**: SCSS, Bootstrap 5
-- **Animation**: GSAP
-- **Image Optimization**: vite-plugin-image-optimizer
-- **Analytics**: Google Analytics, Hotjar, Microsoft Clarity
+- **框架**: Nuxt 3 (Composition API)
+- **狀態管理**: Pinia (整合 `@pinia/nuxt`)
+- **國際化**: `@nuxtjs/i18n` (支援中英雙語)
+- **樣式**: SCSS, Bootstrap 5
+- **動畫**: GSAP, Lax.js
+- **分析**: Microsoft Clarity, Hotjar, Google Analytics
 
-## Building and Running
+## 建置與執行
 
-### Development
-
-To run the development server:
+### 開發環境
 
 ```bash
 npm install
 npm run dev
 ```
+開發伺服器預設運行於 `http://localhost:3000`。
 
-The server will be accessible at `http://localhost:8080`.
+### 生產建置 (SSG)
 
-### Build
-
-To build the project for production:
+由於專案部署於靜態空間，我們使用 `nuxt generate`：
 
 ```bash
 npm run build
 ```
+輸出檔案將位於 `.output/public` 目錄。
 
-The output files will be in the `dist` directory.
-
-### Deployment
-
-The project is deployed to GitHub Pages. The deployment process is handled by the `deploy` script:
+### 部署
 
 ```bash
 npm run deploy
 ```
+此指令會先執行建置，再使用 `gh-pages` 將內容推送到 GitHub。
 
-This script first builds the project and then uses `gh-pages` to deploy the `dist` directory.
+## 專案結構與慣例
 
-### Linting and Formatting
+專案採用 Nuxt 3 標準目錄結構：
 
-- To lint the code: `npm run lint`
-- To format the code: `npm run format`
+- `assets/`: 存放 SCSS 全域樣式與組件引用的圖片。
+- `components/`: 所有 Vue 組件。Nuxt 會自動掃描此目錄，無需手動 `import`。
+- `data/`: 存放靜態專案資料，方便管理內容。
+- `i18n/`: 存放語系 JSON 檔案。
+- `pages/`: 路由入口。`index.vue` 對應首頁。
+- `plugins/`: 存放僅限客戶端執行的插件 (如 Bootstrap JS, Analytics)。
+- `stores/`: Pinia 狀態管理模組，自動引入。
 
-## Project Structure
+## 開發慣例
 
-The project follows a standard Vue 3 + Vite structure.
-
-- `src/`: Contains the main source code.
-- `src/assets/`: Static assets like images and SCSS files.
-- `src/components/`: Reusable Vue components.
-- `src/data/`: Static data used in the application.
-- `src/features/`: Components that represent a specific feature or section of the site.
-- `src/icons/`: SVG icons as Vue components.
-- `src/locales/`: Translation files for vue-i18n.
-- `src/router/`: Vue Router configuration.
-- `src/stores/`: Pinia store modules.
-- `src/views/`: Top-level view components.
-- `public/`: Static assets that are not processed by the build.
-- `vite.config.js`: Vite configuration file.
-- `package.json`: Project dependencies and scripts.
-
-## Development Conventions
-
-- **Coding Style**: The project uses ESLint and Prettier to enforce a consistent coding style. The configuration has been migrated to the modern flat config format (`eslint.config.js`).
-- **Component-Based Architecture**: The application is structured around Vue components, with a clear separation of concerns.
-- **Internationalization**: Text strings are managed in JSON files in the `src/locales` directory and accessed through `vue-i18n`.
-- **State Management**: Global application state is managed using Pinia.
-- **Styling**: SCSS is used for styling, with a modular approach.
-- **Build Optimization**: The Vite configuration includes chunk splitting to optimize the build size.
+- **自動引入 (Auto-imports)**：Vue 核心 API (ref, computed)、Store 與 Components 皆為自動引入，請避免在組件中撰寫冗餘的 import 陳述式。
+- **SSR 安全性**：所有涉及 DOM 操作 (如 window, document, GSAP) 的邏輯必須封裝在 `onMounted` 內，或使用 `if (process.client)` 檢查。
+- **樣式管理**：全域樣式由 `assets/scss/main.scss` 統一控管，遵循自定義變數覆蓋 Bootstrap 的模式。

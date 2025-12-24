@@ -1,0 +1,236 @@
+[data-bs-theme=dark] {
+  color-scheme: dark;
+
+  // --------------------------------------------------------------------------
+  // Bootstrap Dark Theme Overrides
+  // --------------------------------------------------------------------------
+  // This file contains the CSS variables that define Bootstrap's dark theme.
+  // You can customize these values to create your own unique dark theme.
+  // I have added comments explaining each variable and suggestions based on your original theme.
+  // --------------------------------------------------------------------------
+
+
+  // [1] Body Colors
+  // These variables control the default background and text color of the page.
+  // --------------------------------------------------------------------------
+
+  // The default text color for the entire page body.
+  // Customization: Change this for your base text. Your original theme used #FFFFFF.
+  --bs-body-color: #F4F0EF;
+  --bs-body-color-rgb: 244, 240, 239;
+
+  // The main background color for the entire page body.
+  // Customization: You can change this to your preferred dark background. Your original theme used #000000.
+  --bs-body-bg: #313030;
+  --bs-body-bg-rgb: 49, 48, 48;
+
+  // The color for emphasized text. By default, it's brighter than body-color.
+  --bs-emphasis-color: #fff;
+  --bs-emphasis-color-rgb: 255, 255, 255;
+
+
+  // [2] Secondary & Tertiary Colors
+  // For less important text and backgrounds.
+  // --------------------------------------------------------------------------
+
+  // A slightly muted text color for secondary information (e.g., subtitles).
+  --bs-secondary-color: rgba(222, 226, 230, 0.75);
+  --bs-secondary-color-rgb: 222, 226, 230;
+
+  // A background color for secondary page sections.
+  // Customization: Your original theme used #111111 for this role.
+  --bs-secondary-bg: #343a40;
+  --bs-secondary-bg-rgb: 52, 58, 64;
+
+  // An even more muted text color for tertiary information.
+  --bs-tertiary-color: rgba(222, 226, 230, 0.5);
+  --bs-tertiary-color-rgb: 222, 226, 230;
+
+  // A background color for tertiary page sections.
+  // Customization: Your original theme used #222222 for this role.
+  --bs-tertiary-bg: #2b3035;
+  --bs-tertiary-bg-rgb: 43, 48, 53;
+
+
+  // [3] Text Emphasis Colors
+  // Used for Bootstrap's `.text-*` color utilities to make text stand out on a dark background.
+  // --------------------------------------------------------------------------
+
+  // Used for .text-primary
+  // Customization: Your original theme used #00BFFF.
+  --bs-primary-text-emphasis: #6ea8fe;
+
+  // Used for .text-secondary
+  // Customization: Your original theme used #E0E0E0.
+  --bs-secondary-text-emphasis: #a7acb1;
+
+  // Used for .text-success
+  // Customization: Your original theme used #00FF00.
+  --bs-success-text-emphasis: #75b798;
+  
+  // Used for .text-info
+  // Customization: Your original theme used #00FFFF.
+  --bs-info-text-emphasis: #6edff6;
+
+  // Used for .text-warning
+  // Customization: Your original theme used #FFFF00.
+  --bs-warning-text-emphasis: #ffda6a;
+
+  // Used for .text-danger
+  // Customization: Your original theme used #FF0000.
+  --bs-danger-text-emphasis: #ea868f;
+
+  // Used for .text-light
+  --bs-light-text-emphasis: #f8f9fa;
+
+  // Used for .text-dark
+  --bs-dark-text-emphasis: #dee2e6;
+
+
+  // [4] Subtle Background Colors
+  // Used for subtle backgrounds on alerts, list groups, etc. (e.g., .bg-success-subtle)
+  // --------------------------------------------------------------------------
+  
+  // Used for .bg-primary-subtle
+  // Customization: Your original theme used #003366.
+  --bs-primary-bg-subtle: #031633;
+
+  // Used for .bg-secondary-subtle
+  // Customization: Your original theme used #222222.
+  --bs-secondary-bg-subtle: #161719;
+
+  // Used for .bg-success-subtle
+  // Customization: Your original theme used #004D00.
+  --bs-success-bg-subtle: #051b11;
+
+  // Used for .bg-info-subtle
+  // Customization: Your original theme used #004D4D.
+  --bs-info-bg-subtle: #032830;
+  
+  // Used for .bg-warning-subtle
+  // Customization: Your original theme used #4D4D00.
+  --bs-warning-bg-subtle: #332701;
+  
+  // Used for .bg-danger-subtle
+  // Customization: Your original theme used #4D0000.
+  --bs-danger-bg-subtle: #2c0b0e;
+
+  // Used for .bg-light-subtle
+  --bs-light-bg-subtle: #343a40;
+  
+  // Used for .bg-dark-subtle
+  --bs-dark-bg-subtle: #1a1d20;
+
+
+  // [5] Subtle Border Colors
+  // Used for subtle borders on alerts, list groups, etc.
+  // --------------------------------------------------------------------------
+  
+  // Used for .border-primary-subtle
+  // Customization: Your original theme used #0099CC.
+  --bs-primary-border-subtle: #084298;
+
+  // Used for .border-secondary-subtle
+  // Customization: Your original theme used #666666.
+  --bs-secondary-border-subtle: #41464b;
+
+  // Used for .border-success-subtle
+  // Customization: Your original theme used #00CC00.
+  --bs-success-border-subtle: #0f5132;
+
+  // Used for .border-info-subtle
+  // Customization: Your original theme used #00CCCC.
+  --bs-info-border-subtle: #087990;
+
+  // Used for .border-warning-subtle
+  // Customization: Your original theme used #CCCC00.
+  --bs-warning-border-subtle: #997404;
+
+  // Used for .border-danger-subtle
+  // Customization: Your original theme used #CC0000.
+  --bs-danger-border-subtle: #842029;
+
+  // Used for .border-light-subtle
+  --bs-light-border-subtle: #495057;
+  
+  // Used for .border-dark-subtle
+  --bs-dark-border-subtle: #343a40;
+
+
+  // [6] General Elements (Links, Code, Borders)
+  // --------------------------------------------------------------------------
+
+  // Default heading color. Inherits from body-color by default.
+  --bs-heading-color: inherit;
+
+  // Default link color.
+  // Customization: Your original theme used #3399FF.
+  --bs-link-color: #F4F0EF;
+  --bs-link-color-rgb: 244, 240, 239;
+
+  // Link color on hover.
+  // Customization: Your original theme used #FFFF99.
+  --bs-link-hover-color: #8bb9fe;
+  --bs-link-hover-color-rgb: 139, 185, 254;
+
+  // Color for inline `code` elements.
+  --bs-code-color: #e685b5;
+
+  // Text and background color for highlighted text (e.g., using <mark>).
+  --bs-highlight-color: #dee2e6;
+  --bs-highlight-bg: #664d03;
+
+  // Default border color for components like cards, modals.
+  --bs-border-color: #495057;
+  --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
+
+
+  // [7] Form Control Colors
+  // Colors for form validation states.
+  // --------------------------------------------------------------------------
+
+  --bs-form-valid-color: #75b798;
+  --bs-form-valid-border-color: #75b798;
+  --bs-form-invalid-color: #ea868f;
+  --bs-form-invalid-border-color: #ea868f;
+
+  
+  // [8] Your Custom Rules
+  // These rules from your original file have been preserved.
+  // --------------------------------------------------------------------------
+
+
+  // This rule overrides Bootstrap's default .btn-dark with light-themed colors for high contrast.
+  .btn-primary {
+    --bs-btn-color: #313030;
+    --bs-btn-bg: #F4F0EF;
+    --bs-btn-border-color: #313030;
+    --bs-btn-hover-color: #313030;
+    --bs-btn-hover-bg: #F4F0EF;
+    --bs-btn-hover-border-color: #313030;
+    --bs-btn-focus-shadow-rgb: 38, 38, 38;
+    --bs-btn-active-color: #313030;
+    --bs-btn-active-bg: #F4F0EF;
+    --bs-btn-active-border-color: black;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #313030;
+    --bs-btn-disabled-border-color: #313030;
+}
+.btn-outline-primary {
+    --bs-btn-color: #F4F0EF;
+    --bs-btn-border-color: #F4F0EF;
+    --bs-btn-hover-color: #313030;
+    --bs-btn-hover-bg: #F4F0EF;
+    --bs-btn-hover-border-color: #313030;
+    --bs-btn-focus-shadow-rgb: 0, 0, 0;
+    --bs-btn-active-color: #F4F0EF;
+    --bs-btn-active-bg: #313030;
+    --bs-btn-active-border-color: #313030;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #313030;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #313030;
+    --bs-gradient: none;
+}
+}
