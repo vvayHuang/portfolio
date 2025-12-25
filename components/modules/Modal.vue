@@ -133,7 +133,7 @@ onMounted(async () => {
     <IconButton tag="a" href="mailto:jyunwayhuang@gmail.com" class="action-btn modal-contact-btn"
       data-bs-toggle="tooltip" data-bs-placement="top" :title="$t('contact_me')">
 
-      <Icon name="fa6-solid:envelope" size="24" />
+      <Icon name="ic:outline-send" size="24" />
 
     </IconButton>
 
